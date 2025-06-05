@@ -36,4 +36,12 @@
 a {
   text-decoration: none;
   color: inherit;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    color: var(--primary-color);
+    transform: translateY(-1px);
+  }
 }
