@@ -13,7 +13,7 @@ const Home = () => {
         <title>{getPageTitle('Subtle. Roasted. Paris.', { inverted: true })}</title>
       </Helmet>
       <section className={styles['intro']}>
-        <AnimatedTextReveal as="h1" className={styles['title']} stagger={true} duration={1.2} scrollTrigger={false}>
+        <AnimatedTextReveal as="h1" className={styles['title']} duration={1.2} scrollTrigger={false}>
           FIND<br /> YOUR <span className={`${styles['highlight']} interactive`}>FAVE</span>
         </AnimatedTextReveal>
         <ParallaxBeans />
