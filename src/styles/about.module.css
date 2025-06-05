@@ -1,0 +1,203 @@
+.aboutContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.heroSection {
+  text-align: center;
+  margin-bottom: 4rem;
+  opacity: 0;
+  transform: translateY(20px);
+  position: relative;
+}
+
+.heroImage {
+  width: 100%;
+  height: 70vh;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.heroImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.heroImage:hover img {
+  transform: scale(1.05);
+}
+
+.title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  position: relative;
+  z-index: 2;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .contentGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.storySection,
+.atmosphereSection {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.storyImage,
+.atmosphereImage {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.storyImage img,
+.atmosphereImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.storyImage:hover img,
+.atmosphereImage:hover img {
+  transform: scale(1.05);
+}
+
+.storySection h2,
+.atmosphereSection h2,
+.teamSection h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.storySection p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.valuesList {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.valueCard {
+  padding: 1.5rem;
+  background: var(--background-secondary);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.valueCard:hover {
+  transform: translateY(-5px);
+}
+
+.valueCard h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary-color);
+}
+
+.teamSection {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.teamCard {
+  padding: 1.5rem;
+  background: var(--background-secondary);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.teamCard:hover {
+  transform: translateY(-5px);
+}
+
+.teamMemberImage {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.teamMemberImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.teamCard:hover .teamMemberImage img {
+  transform: scale(1.05);
+}
+
+.memberName {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.memberRole {
+  display: block;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.memberDescription {
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.animate {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 

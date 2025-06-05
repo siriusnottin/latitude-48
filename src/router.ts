@@ -9,7 +9,14 @@ export type Path =
   | `/contact`
   | `/events`
   | `/menu`
+  | `/menu/argentina`
+  | `/menu/brasil`
+  | `/menu/chili`
+  | `/menu/coffees/brasil`
+  | `/menu/coffees/italian`
+  | `/menu/ethiopia`
   | `/menu/food/cookies`
+  | `/menu/italian`
   | `/merch`
 
 export type Params = {

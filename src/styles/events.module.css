@@ -1,0 +1,509 @@
+:root {
+  --coffee-dark: #2C1810;
+  --coffee-medium: #8B4513;
+  --coffee-light: #D2691E;
+  --espresso: #3C2218;
+  --cream: #FFF8DC;
+  --caramel: #C65D57;
+  --mocha: #6F4E37;
+}
+
+.eventsContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+}
+
+.verticalLine {
+  position: fixed;
+  top: 0;
+  left: 4rem;
+  width: 1px;
+  height: 100vh;
+  background: var(--primary-color);
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.heroSection {
+  text-align: center;
+  margin-bottom: 8rem;
+  position: relative;
+}
+
+.heroImage {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.heroImage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent);
+  z-index: 1;
+}
+
+.heroImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  position: relative;
+  z-index: 2;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 300;
+  position: relative;
+  z-index: 2;
+}
+
+.featuredEvents,
+.regularEvents {
+  margin-bottom: 8rem;
+  position: relative;
+}
+
+.featuredEvents::before,
+.regularEvents::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 1px;
+  background: var(--text-primary);
+  opacity: 0.2;
+}
+
+.featuredEvents h2,
+.regularEvents h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+}
+
+.eventGrid,
+.regularEventGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+}
+
+.eventCard,
+.regularEventCard {
+  background: var(--bg-primary, #fff);
+  padding: 2.5rem;
+  border: 1px solid var(--text-primary);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.eventCard::before,
+.regularEventCard::before {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-primary);
+  opacity: 0.2;
+}
+
+.eventCard:hover,
+.regularEventCard:hover {
+  border-color: var(--text-primary);
+  transform: none;
+}
+
+.eventImage,
+.regularEventImage {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  border-radius: 2px;
+}
+
+.eventImage img,
+.regularEventImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.eventCard:hover .eventImage img,
+.regularEventCard:hover .regularEventImage img {
+  transform: scale(1.05);
+}
+
+.eventContent,
+.regularEventContent {
+  padding: 0;
+}
+
+.eventMeta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.eventContent h3,
+.regularEventContent h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.eventContent p,
+.regularEventContent p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.eventDetails {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--bg-secondary, #f8f8f8);
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 2px;
+}
+
+.eventPrice {
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.eventSpots {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.regularEventSchedule {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  padding: 1rem;
+  background: var(--bg-secondary, #f8f8f8);
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.registerButton,
+.contactButton {
+  background: var(--text-primary);
+  color: var(--bg-primary, #fff);
+  padding: 1.25rem 2.5rem;
+  border: none;
+  border-radius: 2px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  width: auto;
+}
+
+.registerButton:hover,
+.contactButton:hover {
+  background: var(--text-secondary);
+}
+
+.callToAction {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: var(--bg-primary, #fff);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.callToAction::before {
+  content: '';
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: var(--text-primary);
+  opacity: 0.2;
+}
+
+.callToAction h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.callToAction p {
+  max-width: 600px;
+  margin: 0 auto 4rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.hostingForm {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding: 3rem;
+}
+
+.hostingForm::before,
+.hostingForm::after {
+  content: '';
+  position: absolute;
+  background: var(--text-primary);
+  transition: all 0.6s ease;
+}
+
+.hostingForm::before {
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 0;
+}
+
+.hostingForm::after {
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 0;
+}
+
+.hostingForm:hover::before,
+.hostingForm:hover::after {
+  height: 100%;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  position: relative;
+}
+
+.formGrid::before,
+.formGrid::after {
+  content: '';
+  position: absolute;
+  background: var(--text-primary);
+  transition: all 0.6s ease;
+}
+
+.formGrid::before {
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 1px;
+}
+
+.formGrid::after {
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+}
+
+.hostingForm:hover .formGrid::before,
+.hostingForm:hover .formGrid::after {
+  width: 100%;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.inputGroup.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+
+.input,
+.textarea {
+  padding: 1rem;
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 2px;
+  background: var(--bg-primary, #fff);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--text-primary);
+  outline: none;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.formActions {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.formActions::before {
+  content: '';
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: var(--text-primary);
+  opacity: 0.2;
+}
+
+.submitButton {
+  background: var(--text-primary);
+  color: var(--bg-primary, #fff);
+  padding: 1.25rem 3rem;
+  border: none;
+  border-radius: 2px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: relative;
+  overflow: hidden;
+}
+
+.submitButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.submitButton:hover::before {
+  left: 100%;
+}
+
+.submitButton:hover {
+  background: var(--text-secondary);
+}
+
+.formNote {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .verticalLine {
+    display: none;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .eventGrid,
+  .regularEventGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroImage {
+    height: 50vh;
+  }
+
+  .registerButton,
+  .contactButton {
+    width: 100%;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .hostingForm {
+    padding: 2rem 1rem;
+  }
+
+  .submitButton {
+    width: 100%;
+  }
+} 

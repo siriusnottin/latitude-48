@@ -1,6 +1,5 @@
 import type {Path} from '../../router';
 import {Link} from '../../router';
-import {getSiteTitle} from '../../utils/siteTitle';
 import { AnimatedTextReveal } from './AnimatedTextReveal';
 
 import styles from './footer.module.css';
