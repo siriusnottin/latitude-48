@@ -10,7 +10,6 @@
 
 main {
   grid-area: main;
-  min-height: 0; /* Prevents main content from pushing footer down unnecessarily */
 }
 
 header {
