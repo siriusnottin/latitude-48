@@ -80,8 +80,14 @@ function Footer() {
 					</AnimatedTextReveal>
 				</article>
 			</section>
-			<section className={styles['footer-bottom']}>
-				<p>© {currentYear} {getSiteTitle()}. All rights reserved.</p>
+			<section className={styles['footer-legal']}>
+				<h1 className={styles['title']}>LATITUDE48</h1>
+				<div>
+					<p className={styles['copy']}>© Copyright {currentYear}. All rights reserved.</p>
+					<p className={styles['made']}>
+						<span className={styles['made-with']}>Made with ☕️ and 🤎️</span> <span className={styles['made-by']}>by Kaiji x Sirius</span>
+					</p>
+				</div>
 			</section>
 			<div className={styles['bean']}>
 				<img src={bean} alt="Coffee bean" className={styles['bean-image']} />

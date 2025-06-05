@@ -3,7 +3,7 @@
 	color: var(--secondary-color);
 	row-gap: 0.625rem;
 	column-gap: 1.875rem;
-	padding: 2.5rem 0 0 4.3rem;
+	padding: 2.5rem 4.3rem 0 4.3rem;
 	position: relative;
 	overflow: hidden;
 
@@ -20,7 +20,9 @@
 .footer-content {
 	display: flex;
 	justify-content: space-between;
-	padding: 7.3125rem;
+	padding: 7.3125rem 0;
+	width: 100%;
+	
 	.contact-infos {
 	}
 
@@ -67,7 +69,7 @@
 }
 
 .footer-legal {
-	position: inherit;
+	position: relative;
 	z-index: 10;
 	font-size: 0.75rem;
 	display: flex;
@@ -79,11 +81,11 @@
 		font-size: 4.375rem;
 		margin: 0;
 		text-transform: uppercase;
-		font-weight: extrabold;
+		font-weight: bolder;
 		color: #8C8C8C;
 	}
 
-	.copyright,
+	.copy,
 	.made {
 		color: #DDDDDD;
 	}
@@ -109,5 +111,4 @@
 		filter: blur(2.547484874725342px);
 		opacity: 0.32;
 	}
-	clear: both;
 }
