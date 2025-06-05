@@ -1,11 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import generouted from '@generouted/react-router/plugin'
+import devtoolsJson from 'vite-plugin-devtools-json'
 import beep from '@rollup/plugin-beep'
 import { imagetools } from 'vite-imagetools';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), beep(), imagetools()],
+  plugins: [react(), generouted(), devtoolsJson(), beep(), imagetools()],
   css: {
     postcss: {
       map: true

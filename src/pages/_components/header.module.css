@@ -1,0 +1,38 @@
+header {
+  padding: 2.875rem 2.6875rem;
+  display: grid;
+  grid-template-columns: max-content auto max-content;
+  align-items: center;
+  gap: 2.6875rem;
+}
+
+nav {
+  ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+
+    li {
+      padding: 0.5rem 0;
+      a {
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        color: inherit;
+        position: relative;
+        display: inline-block;
+        transition: transform 0.3s ease, color 0.3s ease;
+        
+        &:hover {
+          color: var(--primary-color);
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  font-weight: bold;
+}

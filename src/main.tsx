@@ -1,11 +1,18 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import 'modern-normalize/modern-normalize.css'
-import './index.css'
-import App from './components/App.tsx'
+import { Routes } from '@generouted/react-router';
+import 'modern-normalize/modern-normalize.css';
+import './styles/index.css';
+import ErrorBoundary from './components/ErrorBoundary';
+import MouseTracker from './components/MouseTracker';
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+	<>
+		<StrictMode>
+			<MouseTracker />
+			<ErrorBoundary>
+				<Routes />
+			</ErrorBoundary>
+		</StrictMode>
+	</>
+);
