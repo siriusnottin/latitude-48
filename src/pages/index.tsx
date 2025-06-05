@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet';
 import { getPageTitle } from '../utils/pageTitle';
-import TextReveal from './_components/TextReveal';
+import { AnimatedTextReveal } from './_components/AnimatedTextReveal';
 import ParallaxBeans from '../components/ParallaxBeans';
 import FirstSection from '../components/FirstSection';
 
@@ -13,9 +13,9 @@ const Home = () => {
         <title>{getPageTitle('Subtle. Roasted. Paris.', { inverted: true })}</title>
       </Helmet>
       <section className={styles['intro']}>
-        <TextReveal as="h1" className={styles['title']} stagger={true} duration={1.2} delay={0.2}>
+        <AnimatedTextReveal as="h1" className={styles['title']} stagger={true} duration={1.2} scrollTrigger={false}>
           FIND<br /> YOUR <span className={`${styles['highlight']} interactive`}>FAVE</span>
-        </TextReveal>
+        </AnimatedTextReveal>
         <ParallaxBeans />
       </section>
       <main>

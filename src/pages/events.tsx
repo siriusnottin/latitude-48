@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet';
 import { getPageTitle } from '../utils/pageTitle';
-import TextReveal from './_components/TextReveal';
+import { AnimatedTextReveal } from './_components/AnimatedTextReveal';
 
 const Events = () => {
   return (
@@ -9,7 +9,7 @@ const Events = () => {
         <title>{getPageTitle('Events')}</title>
       </Helmet>
       <main>
-        <TextReveal as="h1">Events</TextReveal>
+        <AnimatedTextReveal as="h1" scrollTrigger={false}>Events</AnimatedTextReveal>
         <p>Check out our upcoming events!</p>
         <ul>
           <li>Coffee Tasting - March 15, 2024</li>

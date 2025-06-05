@@ -1,9 +1,7 @@
 import type {Path} from '../../router';
 import {Link} from '../../router';
 import {getSiteTitle} from '../../utils/siteTitle';
-import TextReveal from './TextReveal';
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
+import { AnimatedTextReveal } from './AnimatedTextReveal';
 
 import styles from './footer.module.css';
 
@@ -40,38 +38,38 @@ function Footer() {
 		<footer className={styles['site-footer']}>
 			<section className={styles['footer-content']}>
 				<article className={styles['contact-infos']}>
-					<TextReveal as="h1" delay={0.2}>Contact</TextReveal>
+					<AnimatedTextReveal as="h1" delay={0.2}>Contact</AnimatedTextReveal>
 					<div>
-						<TextReveal as="address" delay={0.4}>
+						<AnimatedTextReveal as="address" delay={0.4}>
 							{contactInfo.address.street}
 							<br />
 							{contactInfo.address.zip} {contactInfo.address.city}
 							<br />
 							{contactInfo.address.country}
-						</TextReveal>
-						<TextReveal as="p" delay={0.5}>
+						</AnimatedTextReveal>
+						<AnimatedTextReveal as="p" delay={0.5}>
 							<a
 								href={`mailto:${contactInfo.email}`}
 								className={styles['email']}
 							>
 								{contactInfo.email}
 							</a>
-						</TextReveal>
+						</AnimatedTextReveal>
 					</div>
 				</article>
 				<div className={styles['get-coffee']}>
-					<TextReveal as="h1" className={styles['title']} delay={0.3}>Get Some Coffee</TextReveal>
-					<TextReveal as="ul" className={styles['menu_items']} delay={0.5}>
+					<AnimatedTextReveal as="h1" className={styles['title']} delay={0.3}>Get Some Coffee</AnimatedTextReveal>
+					<AnimatedTextReveal as="ul" className={styles['menu_items']} delay={0.5}>
 						{menuItems.map((item, index) => (
 							<li key={`${item.path}-${index}`} className={styles['menu_item']}>
 								<Link to={item.path}>{item.label}</Link>
 							</li>
 						))}
-					</TextReveal>
+					</AnimatedTextReveal>
 				</div>
 				<article className={styles['infos']}>
-					<TextReveal as="h1" delay={0.4}>Infos</TextReveal>
-					<TextReveal as="ul" className={styles['infos-list']} delay={0.6}>
+					<AnimatedTextReveal as="h1" delay={0.4}>Infos</AnimatedTextReveal>
+					<AnimatedTextReveal as="ul" className={styles['infos-list']} delay={0.6}>
 						{infosItems.map((item, index) => (
 							<li key={`${item.path}-${index}`}>
 								<Link to={item.path} className={styles['info-item']}>
@@ -79,26 +77,11 @@ function Footer() {
 								</Link>
 							</li>
 						))}
-					</TextReveal>
+					</AnimatedTextReveal>
 				</article>
 			</section>
-			<section className={styles['footer-legal']}>
-				<h1 className={styles['title']}>
-					{getSiteTitle()}
-				</h1>
-				<div>
-					<p className={styles['copyright']}>
-						&copy; Copyright {currentYear}. All rights reserved.
-					</p>
-					<div className={styles['made']}>
-						<span className={styles['made-with']}>
-							Made with ☕️ and 🤎
-						</span>
-						<span className={styles['made-by']}>
-							by <b>Kaiji</b> x <b>Sirius</b>
-						</span>
-					</div>
-				</div>
+			<section className={styles['footer-bottom']}>
+				<p>© {currentYear} {getSiteTitle()}. All rights reserved.</p>
 			</section>
 			<div className={styles['bean']}>
 				<img src={bean} alt="Coffee bean" className={styles['bean-image']} />

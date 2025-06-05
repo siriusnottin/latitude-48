@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useLayoutEffect } from 'react';
+import React, { useRef, useEffect, createContext, useContext, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
@@ -6,76 +6,88 @@ import { SplitText } from 'gsap/SplitText';
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
-// Create a shared context for coordinating animations
-const animationContext = gsap.context(() => {});
+// Create context for managing reveal sequence
+const RevealContext = createContext<number>(0);
+
+export const RevealProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [count] = useState(0);
+  return (
+    <RevealContext.Provider value={count}>
+      {children}
+    </RevealContext.Provider>
+  );
+};
 
 // Define TypeScript props interface
-interface TextRevealProps {
+export interface TextRevealProps {
   children: React.ReactNode;
   as?: React.ElementType;
   className?: string;
-  stagger?: boolean;
   duration?: number;
+  scrollTrigger?: boolean;
+  animationKey?: string;
 }
 
 const TextReveal: React.FC<TextRevealProps> = ({
   children,
   as: Component = 'div',
   className = '',
-  stagger = false,
   duration = 0.8,
+  scrollTrigger = true,
+  animationKey,
 }) => {
   const textRef = useRef<HTMLDivElement>(null);
+  const index = useContext(RevealContext);
+  const timelineRef = useRef<gsap.core.Timeline | null>(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (!textRef.current) return;
 
-    // Create a SplitText instance to split the text into characters or words
+    // Create a SplitText instance
     const splitText = new SplitText(textRef.current, {
-      type: stagger ? 'chars,words' : 'lines',
+      type: 'lines',
       linesClass: 'line',
-      charsClass: 'char',
-      wordsClass: 'word',
     });
 
     // Set initial state - hidden
-    gsap.set(stagger ? splitText.chars : splitText.lines, {
-      y: 50,
-      opacity: 0,
+    const setInitialState = () => {
+      gsap.set(splitText.lines, {
+        y: 50,
+        opacity: 0,
+      });
+    };
+
+    setInitialState();
+
+    // Create the animation timeline
+    timelineRef.current = gsap.timeline({
+      paused: true,
+    }).to(splitText.lines, {
+      y: 0,
+      opacity: 1,
+      duration: duration,
+      stagger: 0.15,
+      ease: 'power3.out',
+      delay: index * 0.2,
     });
 
-    // Add to the shared context timeline
-    animationContext.add(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: textRef.current,
-          start: 'top 85%',
-          toggleActions: 'play none none none',
-        },
-      });
-
-      // Animate the text with automatic staggering
-      tl.to(
-        stagger ? splitText.chars : splitText.lines,
-        {
-          y: 0,
-          opacity: 1,
-          duration: duration,
-          stagger: stagger ? 0.03 : 0.15,
-          ease: 'power3.out',
-        },
-        '>-0.5' // Overlap with previous animation for smoother flow
-      );
-
-      return tl;
+    // Create ScrollTrigger
+    const trigger = ScrollTrigger.create({
+      trigger: textRef.current,
+      start: 'top 85%',
+      onEnter: () => timelineRef.current?.restart(),
+      onEnterBack: () => timelineRef.current?.restart(),
+      onLeave: () => timelineRef.current?.progress(0),
+      onLeaveBack: () => timelineRef.current?.progress(0),
     });
 
     // Cleanup function
     return () => {
+      timelineRef.current?.kill();
       splitText.revert();
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      trigger.kill();
     };
-  }, [stagger, duration]);
+  }, [duration, index]);
 
   // Dynamically create the component type (h1, p, div, etc.)
   return React.createElement(

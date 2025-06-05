@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet';
 import { getPageTitle } from '../utils/pageTitle';
-import TextReveal from './_components/TextReveal';
+import { AnimatedTextReveal } from './_components/AnimatedTextReveal';
 
 const Merch = () => {
   return (
@@ -9,7 +9,7 @@ const Merch = () => {
         <title>{getPageTitle('Merch')}</title>
       </Helmet>
       <main>
-        <TextReveal as="h1">Merchandise</TextReveal>
+        <AnimatedTextReveal as="h1">Merchandise</AnimatedTextReveal>
         <p>Check out our exclusive merchandise!</p>
         <ul>
           <li>Logo T-Shirt - $20</li>

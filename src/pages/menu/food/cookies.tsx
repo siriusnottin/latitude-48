@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet';
 import { getPageTitle } from '../../../utils/pageTitle';
-import TextReveal from '../../_components/TextReveal';
+import { AnimatedTextReveal } from '../../_components/AnimatedTextReveal';
 
 const Cookies = () => {
   return (
@@ -9,7 +9,7 @@ const Cookies = () => {
         <title>{getPageTitle('Cookies')}</title>
       </Helmet>
       <main>
-        <TextReveal as="h1">Cookies</TextReveal>
+        <AnimatedTextReveal as="h1" scrollTrigger={false}>Cookies</AnimatedTextReveal>
         <p>Discover our delicious cookies selection!</p>
       </main>
     </>

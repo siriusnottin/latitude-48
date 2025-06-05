@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet';
 import { getPageTitle } from '../utils/pageTitle';
-import TextReveal from './_components/TextReveal';
+import { AnimatedTextReveal } from './_components/AnimatedTextReveal';
 
 const Contact = () => {
   return (
@@ -9,8 +9,8 @@ const Contact = () => {
         <title>{getPageTitle('Contact')}</title>
       </Helmet>
       <main>
-        <TextReveal as="h1">Want to say hello?</TextReveal>
-        {/* <TextReveal as="p">We'd love to hear from you! Whether you have a question, feedback, or just want to chat, feel free to reach out.</TextReveal> */}
+        <AnimatedTextReveal as="h1" scrollTrigger={false}>Want to say hello?</AnimatedTextReveal>
+        {/* <AnimatedTextReveal as="p" scrollTrigger={false}>We'd love to hear from you! Whether you have a question, feedback, or just want to chat, feel free to reach out.</AnimatedTextReveal> */}
         <p>Check out our upcoming events!</p>
         <ul>
           <li>Coffee Tasting - March 15, 2024</li>

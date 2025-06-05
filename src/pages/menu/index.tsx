@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet';
 import { getPageTitle } from '../../utils/pageTitle';
-import TextReveal from '../_components/TextReveal';
+import { AnimatedTextReveal } from '../_components/AnimatedTextReveal';
 
 const MenuPage = () => {
   return (
@@ -9,7 +9,7 @@ const MenuPage = () => {
         <title>{getPageTitle('Menu')}</title>
       </Helmet>
       <main>
-        <TextReveal as="h1">Menu</TextReveal>
+        <AnimatedTextReveal as="h1" scrollTrigger={false}>Menu</AnimatedTextReveal>
         <p>Welcome to our menu page. Please check back soon for updates!</p>
       </main>
     </>
