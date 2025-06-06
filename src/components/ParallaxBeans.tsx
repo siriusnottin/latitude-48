@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
-import styles from '../pages/index.module.css';
+import styles from '../styles/index.module.css';
 import bean01 from '../assets/bean01.svg';
 import bean02 from '../assets/bean02.svg';
 
