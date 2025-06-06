@@ -3,7 +3,6 @@ import { getPageTitle } from '../utils/pageTitle';
 import { AnimatedTextReveal } from './_components/AnimatedTextReveal';
 import styles from '../styles/events.module.css';
 
-// Import images with Vite imagetools
 import heroImage from '../assets/images/_DSC2978.webp?width=1920';
 import eventImage1 from '../assets/images/_DSC3076.webp?width=800';
 import eventImage2 from '../assets/images/_DSC2914.webp?width=800';

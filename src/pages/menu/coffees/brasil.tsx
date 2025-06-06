@@ -3,7 +3,6 @@ import { getPageTitle } from '../../../utils/pageTitle';
 import MenuLayout from '../_components/MenuLayout';
 import styles from '../../../styles/menuLayout.module.css';
 
-// Import images with Vite imagetools
 import macchiatoImage1 from '../../../assets/images/_DSC2868.webp?width=800';
 import macchiatoImage2 from '../../../assets/images/_DSC2914.webp?width=800';
 import macchiatoImage3 from '../../../assets/images/_DSC3076.webp?width=800';
