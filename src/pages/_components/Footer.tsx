@@ -19,7 +19,6 @@ function Footer() {
 		},
 	};
 
-	// Use only allowed route string literals for the path property
 	const menuItems: {label: string; path: Path}[] = [
 		{label: 'Coffees', path: '/menu'},
 		{label: 'Cold Drinks', path: '/menu'},
