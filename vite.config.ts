@@ -7,7 +7,17 @@ import { imagetools } from 'vite-imagetools';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), generouted(), devtoolsJson(), beep(), imagetools()],
+  plugins: [
+    react(), 
+    generouted(), 
+    devtoolsJson(), 
+    beep(), 
+    imagetools({
+      defaultDirectives: [
+        ['format', 'webp']
+      ]
+    })
+  ],
   css: {
     postcss: {
       map: true

@@ -4,9 +4,9 @@ import MenuLayout from './_components/MenuLayout';
 import styles from '../../styles/menuLayout.module.css';
 
 // Import images with Vite imagetools
-import yirgacheffeImage from '../../assets/images/_DSC2868.jpg?w=800&webp&img';
-import sidamoImage from '../../assets/images/_DSC2914.jpg?w=800&webp&img';
-import gujiImage from '../../assets/images/_DSC3076.jpg?w=800&webp&img';
+import yirgacheffeImage from '../../assets/images/_DSC2868.webp?width=800';
+import sidamoImage from '../../assets/images/_DSC2914.webp?width=800';
+import gujiImage from '../../assets/images/_DSC3076.webp?width=800';
 
 const EthiopiaMenu = () => {
   const coffees = [

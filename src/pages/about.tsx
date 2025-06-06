@@ -4,12 +4,12 @@ import { AnimatedTextReveal } from './_components/AnimatedTextReveal';
 import styles from '../styles/about.module.css';
 
 // Import images with Vite imagetools
-import heroImage from '../assets/images/_DSC2868.jpg?w=1920&webp&img';
-import storyImage from '../assets/images/_DSC2808.jpg?w=800&webp&img';
-import atmosphereImage from '../assets/images/_DSC2914.jpg?w=800&webp&img';
-import teamImage1 from '../assets/images/_DSC3227.jpg?w=600&webp&img';
-import teamImage2 from '../assets/images/_DSC3190.jpg?w=600&webp&img';
-import teamImage3 from '../assets/images/_DSC3189.jpg?w=600&webp&img';
+import heroImage from '../assets/images/_DSC2868.webp?width=1920';
+import storyImage from '../assets/images/_DSC2808.webp?width=800';
+import atmosphereImage from '../assets/images/_DSC2914.webp?width=800';
+import teamImage1 from '../assets/images/_DSC3227.webp?width=600';
+import teamImage2 from '../assets/images/_DSC3190.webp?width=600';
+import teamImage3 from '../assets/images/_DSC3189.webp?width=600';
 
 const About = () => {
   const teamMembers = [

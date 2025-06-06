@@ -4,12 +4,12 @@ import { AnimatedTextReveal } from './_components/AnimatedTextReveal';
 import styles from '../styles/events.module.css';
 
 // Import images with Vite imagetools
-import heroImage from '../assets/images/_DSC2978.jpg?w=1920&webp&img';
-import eventImage1 from '../assets/images/_DSC3076.jpg?w=800&webp&img';
-import eventImage2 from '../assets/images/_DSC2914.jpg?w=800&webp&img';
-import eventImage3 from '../assets/images/_DSC2808.jpg?w=800&webp&img';
-import atmosphereImage1 from '../assets/images/_DSC2868.jpg?w=600&webp&img';
-import atmosphereImage2 from '../assets/images/_DSC3189.jpg?w=600&webp&img';
+import heroImage from '../assets/images/_DSC2978.webp?width=1920';
+import eventImage1 from '../assets/images/_DSC3076.webp?width=800';
+import eventImage2 from '../assets/images/_DSC2914.webp?width=800';
+import eventImage3 from '../assets/images/_DSC2808.webp?width=800';
+import atmosphereImage1 from '../assets/images/_DSC2868.webp?width=600';
+import atmosphereImage2 from '../assets/images/_DSC3189.webp?width=600';
 
 const Events = () => {
   const upcomingEvents = [

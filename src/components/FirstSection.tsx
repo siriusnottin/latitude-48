@@ -2,8 +2,8 @@ import { memo } from 'react';
 import { Link } from '../router';
 import styles from '../pages/index.module.css';
 import arrowIcon from '../assets/icons/arrow.svg';
-import featuredWebp from '../assets/images/_DSC2706.jpg';
-import featuredJpg from '../assets/images/_DSC2706.jpg';
+import featuredWebp from '../assets/images/_DSC2706.webp';
+
 
 const FirstSection = () => {
   return (
@@ -14,13 +14,8 @@ const FirstSection = () => {
           type="image/webp"
           sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
         />
-        <source
-          srcSet={featuredJpg}
-          type="image/jpeg"
-          sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
-        />
         <img
-          src={featuredJpg}
+          src={featuredWebp}
           alt="A cup of hot chocolate"
           width="1200"
           height="800"

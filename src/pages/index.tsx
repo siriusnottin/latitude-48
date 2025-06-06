@@ -5,9 +5,9 @@ import ParallaxBeans from '../components/ParallaxBeans';
 import styles from './index.module.css';
 
 // Import images
-import macchiatoImage1 from '../assets/images/_DSC2868.jpg?w=800&webp&img';
-import macchiatoImage2 from '../assets/images/_DSC2914.jpg?w=800&webp&img';
-import macchiatoImage3 from '../assets/images/_DSC3076.jpg?w=800&webp&img';
+import macchiatoImage1 from '../assets/images/_DSC2868.webp?width=800';
+import macchiatoImage2 from '../assets/images/_DSC2914.webp?width=800';
+import macchiatoImage3 from '../assets/images/_DSC3076.webp?width=800';
 
 const Home = () => {
   return (
