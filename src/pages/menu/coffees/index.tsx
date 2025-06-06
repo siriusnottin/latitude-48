@@ -4,6 +4,18 @@ import { Link, type Path } from '../../../router';
 import MenuLayout from '../_components/MenuLayout';
 import styles from '../../../styles/menuLayout.module.css';
 
+// Import coffee images
+import heroImage from '../../../assets/images/_DSC2808.webp';
+import pourOverImage from '../../../assets/images/_DSC2914.webp';
+import frenchPressImage from '../../../assets/images/_DSC2917.webp';
+import espressoImage from '../../../assets/images/_DSC2920.webp';
+import selectionImage from '../../../assets/images/_DSC2775.webp';
+import roastingImage from '../../../assets/images/_DSC2780.webp';
+import qualityImage from '../../../assets/images/_DSC2778.webp';
+import brewingImage from '../../../assets/images/_DSC2774.webp';
+import winterBlendImage from '../../../assets/images/_DSC2805.webp';
+import springHarvestImage from '../../../assets/images/_DSC2828.webp';
+
 type Origin = {
   name: string;
   subtitle: string;
@@ -13,6 +25,7 @@ type Origin = {
 type CoffeeJourneyStep = {
   title: string;
   description: string;
+  image: string;
 };
 
 type CoffeeCharacteristic = {
@@ -83,34 +96,41 @@ const CoffeesMenu = () => {
   const brewingMethods = [
     {
       title: 'Pour Over',
-      description: 'A clean, crisp cup that highlights the coffee\'s subtle flavors'
+      description: 'A clean, crisp cup that highlights the coffee\'s subtle flavors',
+      image: pourOverImage
     },
     {
       title: 'French Press',
-      description: 'Full-bodied and rich with natural coffee oils'
+      description: 'Full-bodied and rich with natural coffee oils',
+      image: frenchPressImage
     },
     {
       title: 'Espresso',
-      description: 'Concentrated and intense, the foundation of many coffee drinks'
+      description: 'Concentrated and intense, the foundation of many coffee drinks',
+      image: espressoImage
     }
   ];
 
   const journeySteps: CoffeeJourneyStep[] = [
     {
       title: 'Selection',
-      description: 'We carefully select the finest coffee beans from sustainable farms around the world'
+      description: 'We carefully select the finest coffee beans from sustainable farms around the world',
+      image: selectionImage
     },
     {
       title: 'Roasting',
-      description: 'Our master roasters bring out the unique characteristics of each origin through precise roasting profiles'
+      description: 'Our master roasters bring out the unique characteristics of each origin through precise roasting profiles',
+      image: roastingImage
     },
     {
       title: 'Quality Control',
-      description: 'Rigorous testing ensures each batch meets our exacting standards'
+      description: 'Rigorous testing ensures each batch meets our exacting standards',
+      image: qualityImage
     },
     {
       title: 'Brewing',
-      description: 'Our baristas are trained in the art of coffee preparation to deliver the perfect cup'
+      description: 'Our baristas are trained in the art of coffee preparation to deliver the perfect cup',
+      image: brewingImage
     }
   ];
 
@@ -141,12 +161,14 @@ const CoffeesMenu = () => {
     {
       name: 'Winter Blend',
       description: 'Rich and warming with notes of dark chocolate and spice',
-      available: true
+      available: true,
+      image: winterBlendImage
     },
     {
       name: 'Spring Harvest',
       description: 'Light and floral with hints of citrus and jasmine',
-      available: false
+      available: false,
+      image: springHarvestImage
     }
   ];
 
@@ -166,7 +188,10 @@ const CoffeesMenu = () => {
       </Helmet>
       <MenuLayout currentPath="/menu/coffees">
         <div className={styles.menuContainer}>
+
+
           <section className={styles.heroSection}>
+            <div className={styles.heroBackground} style={{ backgroundImage: `url(${heroImage})` }} />
             <div className={styles.heroContent}>
               <h1 className={styles.heroTitle}>Our Coffee</h1>
               <p className={styles.heroSubtitle}>From Bean to Cup</p>
@@ -190,9 +215,14 @@ const CoffeesMenu = () => {
             <div className={styles.journeyGrid}>
               {journeySteps.map((step, index) => (
                 <div key={index} className={styles.journeyStep}>
+                  <div className={styles.journeyImageWrapper}>
+                    <img src={step.image} alt={step.title} className={styles.journeyImage} />
+                  </div>
                   <span className={styles.stepNumber}>{index + 1}</span>
-                  <h3 className={styles.stepTitle}>{step.title}</h3>
-                  <p className={styles.stepDescription}>{step.description}</p>
+                  <div className={styles.stepContent}>
+                    <h3 className={styles.stepTitle}>{step.title}</h3>
+                    <p className={styles.stepDescription}>{step.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -203,6 +233,9 @@ const CoffeesMenu = () => {
             <div className={styles.methodsGrid}>
               {brewingMethods.map((method, index) => (
                 <div key={index} className={styles.methodCard}>
+                  <div className={styles.methodImageWrapper}>
+                    <img src={method.image} alt={method.title} className={styles.methodImage} />
+                  </div>
                   <h3 className={styles.methodTitle}>{method.title}</h3>
                   <p className={styles.methodDescription}>{method.description}</p>
                 </div>
@@ -230,6 +263,9 @@ const CoffeesMenu = () => {
             <div className={styles.seasonalGrid}>
               {seasonalSpecials.map((special, index) => (
                 <div key={index} className={styles.seasonalCard}>
+                  <div className={styles.seasonalImageWrapper}>
+                    <img src={special.image} alt={special.name} className={styles.seasonalImage} />
+                  </div>
                   <div className={styles.seasonalHeader}>
                     <h3 className={styles.seasonalName}>{special.name}</h3>
                     <span className={`${styles.seasonalStatus} ${special.available ? styles.available : styles.comingSoon}`}>
