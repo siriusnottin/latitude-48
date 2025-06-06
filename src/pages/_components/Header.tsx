@@ -1,32 +1,31 @@
 import { Link } from '../../router';
 import siteLogo from '../../assets/ltd48.svg';
-
-import './header.module.css';
+import styles from './header.module.css';
 
 const Header = () => {
 	return (
-		<header className="site-header">
-			<Link to="/" className="logo-link">
-				<img src={siteLogo} alt="A cup of hot chocolate" className="site-logo" />
+		<header className={styles.site_header}>
+			<Link to="/" className={styles.logo_link}>
+				<img src={siteLogo} alt="A cup of hot chocolate" className={styles.site_logo} />
 				{/* <span className="site-title">Latitude 48</span> */}
 			</Link>
-			<nav className="site-nav">
-				<ul className="nav-list">
-					<li className="nav-item">
+			<nav className={styles.site_nav}>
+				<ul className={styles.nav_list}>
+					<li className={styles.nav_item}>
 						<Link to="/">Home</Link>
 					</li>
-					<li className="nav-item">
+					<li className={styles.nav_item}>
 						<Link to="/about">About</Link>
 					</li>
-					<li className="nav-item">
+					<li className={styles.nav_item}>
 						<Link to="/menu">Menu</Link>
 					</li>
-					<li className="nav-item">
+					<li className={styles.nav_item}>
 						<Link to="/events">Events</Link>
 					</li>
 				</ul>
 			</nav>
-			<div className="header-actions">
+			<div className={styles.header_actions}>
 				<Link to="/menu" className="btn secondary">
 					Get your coffee
 				</Link>

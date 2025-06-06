@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet';
 import { getPageTitle } from '../utils/pageTitle';
 import { AnimatedTextReveal } from './_components/AnimatedTextReveal';
 import ParallaxBeans from '../components/ParallaxBeans';
-import styles from './index.module.css';
+import styles from '../styles/index.module.css';
 
 // Import images
 import macchiatoImage1 from '../assets/images/_DSC2868.webp?width=800';
