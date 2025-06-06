@@ -6,6 +6,285 @@
   animation: fadeInDown 0.8s ease-out forwards;
 }
 
+.heroSection {
+  position: relative;
+  height: 60vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(to right, #1a1a1a, #2c2c2c);
+  margin-bottom: 4rem;
+}
+
+.heroContent {
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.heroTitle {
+  font-size: 5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.heroSubtitle {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  color: #a67c52;
+}
+
+.experienceSection {
+  padding: 6rem 0;
+  background: #fff;
+}
+
+.methodsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.methodCard {
+  position: relative;
+  padding: 2rem;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.methodCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.methodTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.methodDescription {
+  color: #666;
+  line-height: 1.6;
+}
+
+.journeySection {
+  padding: 6rem 0;
+  background: #f9f9f9;
+}
+
+.journeyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.journeyStep {
+  position: relative;
+  padding: 2rem;
+  text-align: center;
+}
+
+.stepNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #a67c52;
+  color: white;
+  font-weight: bold;
+  margin: 0 auto 1.5rem;
+}
+
+.stepTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.stepDescription {
+  color: #666;
+  line-height: 1.6;
+}
+
+.characteristicsSection {
+  padding: 6rem 0;
+  background: #fff;
+}
+
+.characteristicsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.characteristicCard {
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.characteristicCard:hover {
+  transform: translateY(-5px);
+}
+
+.characteristicName {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.characteristicDescription {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.intensityMeter {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.intensityDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #e2e2e2;
+  transition: background-color 0.3s ease;
+}
+
+.intensityDot.active {
+  background: #a67c52;
+}
+
+.seasonalSection {
+  padding: 6rem 0;
+  background: #f9f9f9;
+}
+
+.seasonalGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.seasonalCard {
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.seasonalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.seasonalName {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.seasonalStatus {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.available {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.comingSoon {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+
+.seasonalDescription {
+  color: #666;
+  line-height: 1.6;
+}
+
+.educationSection {
+  padding: 6rem 0;
+  background: #fff;
+}
+
+.educationContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.educationText {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #666;
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.factGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.factCard {
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.factCard:hover {
+  transform: translateY(-5px);
+}
+
+.factCard h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.factCard p {
+  color: #666;
+  line-height: 1.6;
+}
 .menuTitle {
   font-size: 4rem;
   font-weight: 700;
@@ -15,14 +294,11 @@
 }
 
 .originTitle {
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 1rem;
-  letter-spacing: 0.15em;
-  opacity: 0;
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: 0.2s;
+  margin-bottom: 2rem;
+    letter-spacing: 0.2em;
 }
 
 .subtitle {
@@ -31,9 +307,6 @@
   color: #666;
   margin-bottom: 4rem;
   letter-spacing: 0.1em;
-  opacity: 0;
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: 0.4s;
 }
 
 .navigation {
@@ -88,72 +361,76 @@
 
 .coffeeGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 3rem;
-  padding: 2rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 4rem;
+    padding: 3rem 0;
+    margin: 0 auto;
+    max-width: 1400px;
 }
 
 .coffeeItem {
   position: relative;
   border: 1px solid #e2e2e2;
-  padding: 2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: calc(0.6s + var(--animation-order, 0) * 0.2s);
+  padding: 2.5rem;
+    border-radius: 12px;
+    background: #fff;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
 }
 
-.coffeeItem:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-}
-
-.coffeeNumber {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #999;
-  opacity: 0.5;
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 2rem;
 }
 
 .coffeeImage {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
-  margin-bottom: 1.5rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
 .coffeeItem:hover .coffeeImage {
-  transform: scale(1.05);
+  transform: scale(1.1);
+}
+
+.coffeeNumber {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #999;
+    opacity: 0.7;
 }
 
 .coffeeName {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
-  margin-bottom: 1rem;
-  transition: color 0.3s ease;
-}
-
-.coffeeItem:hover .coffeeName {
-  color: #666;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.05em;
 }
 
 .coffeeDescription {
   color: #666;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   line-height: 1.6;
+  font-size: 1.1rem;
 }
 
 .coffeePrice {
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: #000;
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1.5rem;
   border: 1px solid #000;
+  border-radius: 4px;
   transition: all 0.3s ease;
 }
 
@@ -162,6 +439,51 @@
   color: #fff;
 }
 
+.infoCard {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.98);
+  padding: 2rem;
+  border-top: 1px solid #e2e2e2;
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.coffeeItem:hover .infoCard {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.infoTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.infoGrid {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.infoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed #e2e2e2;
+}
+
+.infoLabel {
+  font-weight: 600;
+  color: #666;
+}
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -193,6 +515,29 @@
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 3rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.4rem;
+  }
+
+  .methodsGrid {
+    grid-template-columns: 1fr;
+  }
+}
 .pageEnter {
   opacity: 0;
   transform: translateY(20px);
@@ -211,4 +556,334 @@
 .pageExitActive {
   opacity: 0;
   transition: opacity 0.5s ease;
-} 
+}
+/* Tea Menu Styles */
+.teaGrid,
+.drinksGrid,
+.foodGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  padding: 2rem 0;
+}
+
+.teaCategory,
+.drinkCategory,
+.foodCategory {
+  background: var(--background-secondary, #fafafa);
+  padding: 2rem;
+  border: 1px solid var(--border-color, #e2e2e2);
+  border-radius: 4px;
+}
+
+.categoryTitle {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--text-primary, #000);
+  letter-spacing: 0.1em;
+}
+
+.teaItems,
+.drinkItems,
+.foodItems {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.teaItem,
+.drinkItem,
+.foodItem {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color, #e2e2e2);
+}
+
+.teaItem:last-child,
+.drinkItem:last-child,
+.foodItem:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.teaHeader,
+.drinkHeader,
+.foodHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.teaName,
+.drinkName,
+.foodName {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary, #000);
+  margin: 0;
+}
+
+.teaPrice,
+.drinkPrice,
+.foodPrice {
+  font-size: 1.1rem;
+  color: var(--primary-color, #000);
+  font-weight: 600;
+}
+
+.teaDescription,
+.drinkDescription,
+.foodDescription {
+  color: var(--text-secondary, #666);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+
+  .teaGrid,
+  .drinksGrid,
+  .foodGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .categoryTitle {
+    font-size: 1.5rem;
+  }
+
+  .teaName,
+  .drinkName,
+  .foodName {
+    font-size: 1.1rem;
+  }
+}
+
+.heroSection {
+  position: relative;
+  height: 60vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(to right, #1a1a1a, #2c2c2c);
+  margin-bottom: 4rem;
+}
+
+.heroContent {
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.heroTitle {
+  font-size: 5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.heroSubtitle {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  color: #a67c52;
+}
+
+.coffeeBeans {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  animation: float 20s infinite linear;
+}
+
+.featuredSection {
+  padding: 6rem 0;
+  background: #f9f9f9;
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.visible {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.originsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.experienceSection {
+  padding: 6rem 0;
+  background: #fff;
+}
+
+.methodsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.methodCard {
+  position: relative;
+  padding: 2rem;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.methodCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.methodIcon {
+  font-size: 3rem;
+  color: #a67c52;
+  margin-bottom: 1.5rem;
+}
+
+.methodTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.methodDescription {
+  color: #666;
+  line-height: 1.6;
+}
+
+.factsSection {
+  padding: 6rem 0;
+  background: #f9f9f9;
+}
+
+.factCard {
+  perspective: 1000px;
+  height: 300px;
+}
+
+.factCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.factCard:hover .factCardInner {
+  transform: rotateY(180deg);
+}
+
+.factFront,
+.factBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  padding: 2rem;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.factBack {
+  transform: rotateY(180deg);
+  background: #a67c52;
+  color: #fff;
+}
+
+.flavorProfile {
+  padding: 6rem 0;
+  background: #fff;
+}
+
+.flavorGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.flavorItem {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.flavorItem.visible {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.flavorIcon {
+  font-size: 2.5rem;
+  color: #a67c52;
+  margin-bottom: 1rem;
+}
+
+.flavorLabel {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+@keyframes float {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 3rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.4rem;
+  }
+
+  .methodsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .originsGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -9,14 +9,22 @@ export type Path =
   | `/contact`
   | `/events`
   | `/menu`
-  | `/menu/argentina`
-  | `/menu/brasil`
-  | `/menu/chili`
+  | `/menu/coffees`
+  | `/menu/coffees/argentina`
   | `/menu/coffees/brasil`
+  | `/menu/coffees/chili`
+  | `/menu/coffees/colombia`
+  | `/menu/coffees/costa-rica`
+  | `/menu/coffees/ethiopia`
+  | `/menu/coffees/guatemala`
+  | `/menu/coffees/indonesia`
   | `/menu/coffees/italian`
-  | `/menu/ethiopia`
+  | `/menu/coffees/jamaica`
+  | `/menu/coffees/kenya`
+  | `/menu/cold-drinks`
+  | `/menu/food`
   | `/menu/food/cookies`
-  | `/menu/italian`
+  | `/menu/tea`
   | `/merch`
 
 export type Params = {
