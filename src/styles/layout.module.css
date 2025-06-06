@@ -8,14 +8,15 @@
     "footer";
 }
 
-main {
+.main {
   grid-area: main;
 }
 
-header {
+.site_header {
   grid-area: header;
 }
 
-footer {
+.site-footer {
   grid-area: footer;
 }
+
