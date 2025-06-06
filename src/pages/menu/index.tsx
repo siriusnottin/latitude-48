@@ -3,7 +3,6 @@ import { getPageTitle } from '../../utils/pageTitle';
 import MenuLayout from './_components/MenuLayout';
 import styles from '../../styles/menu.module.css';
 
-// Import images with Vite imagetools
 import espressoImage from '../../assets/images/_DSC2868.webp?width=600';
 import latteImage from '../../assets/images/_DSC2914.webp?width=600';
 import coldBrewImage from '../../assets/images/_DSC3076.webp?width=600';
