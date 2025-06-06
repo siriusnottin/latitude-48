@@ -45,14 +45,18 @@ const CoffeeCard = ({ coffee }: CoffeeCardProps) => {
         duration: 0.3
       }, "-=0.3");
 
+    // Define event handlers
+    const handleMouseEnter = () => tl.play();
+    const handleMouseLeave = () => tl.reverse();
+
     // Add hover listeners
-    card.addEventListener('mouseenter', () => tl.play());
-    card.addEventListener('mouseleave', () => tl.reverse());
+    card.addEventListener('mouseenter', handleMouseEnter);
+    card.addEventListener('mouseleave', handleMouseLeave);
 
     // Cleanup
     return () => {
-      card.removeEventListener('mouseenter', () => tl.play());
-      card.removeEventListener('mouseleave', () => tl.reverse());
+      card.removeEventListener('mouseenter', handleMouseEnter);
+      card.removeEventListener('mouseleave', handleMouseLeave);
     };
   }, []);
 
