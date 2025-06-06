@@ -33,8 +33,6 @@ const TextReveal: React.FC<TextRevealProps> = ({
   as: Component = 'div',
   className = '',
   duration = 0.8,
-  scrollTrigger = true,
-  animationKey,
 }) => {
   const textRef = useRef<HTMLDivElement>(null);
   const index = useContext(RevealContext);

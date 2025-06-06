@@ -5,7 +5,6 @@ import ParallaxBeans from '../components/ParallaxBeans';
 import styles from './index.module.css';
 
 // Import images
-import heroImage from '../assets/images/_DSC2706.jpg?w=1920&webp&img';
 import macchiatoImage1 from '../assets/images/_DSC2868.jpg?w=800&webp&img';
 import macchiatoImage2 from '../assets/images/_DSC2914.jpg?w=800&webp&img';
 import macchiatoImage3 from '../assets/images/_DSC3076.jpg?w=800&webp&img';
