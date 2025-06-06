@@ -42,34 +42,33 @@ const ParallaxBeans = () => {
     });
   }, [mousePosition]);
 
-  // Handle mouse movement
+  const handleMouseMove = useCallback((event: MouseEvent) => {
+    if (frameRef.current) {
+      cancelAnimationFrame(frameRef.current);
+    }
+
+    frameRef.current = requestAnimationFrame(() => {
+      setMousePosition({ x: event.clientX, y: event.clientY });
+    });
+  }, []);
+
+  const handleDeviceOrientation = useCallback((event: DeviceOrientationEvent) => {
+    if (frameRef.current) {
+      cancelAnimationFrame(frameRef.current);
+    }
+
+    frameRef.current = requestAnimationFrame(() => {
+      if (event.beta && event.gamma) {
+        // Convert orientation values to mouse-like coordinates
+        const x = (event.gamma / 90) * window.innerWidth;
+        const y = (event.beta / 180) * window.innerHeight;
+        setMousePosition({ x, y });
+      }
+    });
+  }, []);
+
+  // Handle mouse movement and device orientation
   useEffect(() => {
-    const handleMouseMove = (event: MouseEvent) => {
-      if (frameRef.current) {
-        cancelAnimationFrame(frameRef.current);
-      }
-      
-      frameRef.current = requestAnimationFrame(() => {
-        setMousePosition({ x: event.clientX, y: event.clientY });
-      });
-    };
-
-    // Handle device orientation for mobile
-    const handleDeviceOrientation = (event: DeviceOrientationEvent) => {
-      if (frameRef.current) {
-        cancelAnimationFrame(frameRef.current);
-      }
-
-      frameRef.current = requestAnimationFrame(() => {
-        if (event.beta && event.gamma) {
-          // Convert orientation values to mouse-like coordinates
-          const x = (event.gamma / 90) * window.innerWidth;
-          const y = (event.beta / 180) * window.innerHeight;
-          setMousePosition({ x, y });
-        }
-      });
-    };
-
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('deviceorientation', handleDeviceOrientation);
 
@@ -80,7 +79,7 @@ const ParallaxBeans = () => {
         cancelAnimationFrame(frameRef.current);
       }
     };
-  }, []);
+  }, [handleMouseMove, handleDeviceOrientation]);
 
   // Update bean positions when mouse position changes
   useEffect(() => {
