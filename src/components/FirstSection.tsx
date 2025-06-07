@@ -1,5 +1,4 @@
 import { memo } from 'react';
-import { Link } from '../router';
 import styles from '../pages/index.module.css';
 import arrowIcon from '../assets/icons/arrow.svg';
 import featuredWebp from '../assets/images/_DSC2706.webp';
@@ -32,12 +31,10 @@ const FirstSection = () => {
         </p>
       </div>
       <p>
-        <Link to="/menu">
-          <Button variant="primary">
+          <Button variant="primary" to="/menu">
             <span>Coffee Map</span>
             <img src={arrowIcon} alt="Arrow icon" className={styles['arrow']} />
           </Button>
-        </Link>
       </p>
     </section>
   );
