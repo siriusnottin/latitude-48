@@ -12,7 +12,7 @@
 /* Typography */
 @font-face {
 	font-family: 'PPEditorialNew';
-	src: url('../assets/fonts/PPEditorialNew/PPEditorialNew-Ultralight.otf')
+	src: url('./assets/fonts/PPEditorialNew/PPEditorialNew-Ultralight.otf')
 		format('opentype');
 	font-weight: 100;
 	font-style: normal;
@@ -21,7 +21,7 @@
 
 @font-face {
 	font-family: 'PPEditorialNew';
-	src: url('../assets/fonts/PPEditorialNew/PPEditorialNew-UltralightItalic.otf')
+	src: url('./assets/fonts/PPEditorialNew/PPEditorialNew-UltralightItalic.otf')
 		format('opentype');
 	font-weight: 100;
 	font-style: italic;
@@ -30,7 +30,7 @@
 
 @font-face {
 	font-family: 'Aqua Grotesque';
-	src: url('../assets/fonts/AquaGrotesque/aqua.ttf') format('truetype');
+	src: url('./assets/fonts/AquaGrotesque/aqua.ttf') format('truetype');
 	font-weight: 300;
 	font-style: normal;
 	font-display: swap;
