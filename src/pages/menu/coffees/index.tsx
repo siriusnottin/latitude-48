@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet';
 import { getPageTitle } from '../../../utils/pageTitle';
 import { Link, type Path } from '../../../router';
 import MenuLayout from '../_components/MenuLayout';
-import styles from '../_components/menu.module.css';
+import styles from '../_components/menuLayout.module.css';
 
 type Origin = {
   name: string;
