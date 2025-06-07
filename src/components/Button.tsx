@@ -2,14 +2,24 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { Link, type Path } from '../router';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+type ButtonBaseProps = {
   variant?: 'primary' | 'secondary';
   children: React.ReactNode;
-  to?: Path;
-}
+  className?: string;
+};
+
+type ButtonAsButtonProps = ButtonBaseProps & React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  to?: never;
+};
+
+type ButtonAsLinkProps = ButtonBaseProps & {
+  to: Path;
+};
+
+type ButtonProps = ButtonAsButtonProps | ButtonAsLinkProps;
 
 export const Button = ({ variant = 'primary', children, className = '', to, ...props }: ButtonProps) => {
-  const elementRef = useRef<HTMLButtonElement | HTMLAnchorElement>(null);
+  const elementRef = useRef<HTMLButtonElement | HTMLDivElement>(null);
   const isHovering = useRef(false);
 
   useEffect(() => {
@@ -83,17 +93,15 @@ export const Button = ({ variant = 'primary', children, className = '', to, ...p
 
   if (to) {
     return (
-      <Link to={to}>
-        <button
-          ref={elementRef as React.RefObject<HTMLButtonElement>}
-          className={`btn ${variant} ${className}`}
-          style={buttonStyle}
-          type="button"
-          {...props}
-        >
+      <div 
+        ref={elementRef as React.RefObject<HTMLDivElement>}
+        className={`btn ${variant} ${className}`}
+        style={buttonStyle}
+      >
+        <Link to={to}>
           {children}
-        </button>
-      </Link>
+        </Link>
+      </div>
     );
   }
 
