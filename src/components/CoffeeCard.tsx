@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import styles from '../styles/menuLayout.module.css';
+import styles from '../pages/menu/_components/menu.module.css';
 
 export interface CoffeeDetails {
   altitude: string;

@@ -2,8 +2,8 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { Routes } from '@generouted/react-router';
 import 'modern-normalize/modern-normalize.css';
-import '@fontsource-variable/syne';
-import './styles/index.css';
+import '@fontsource/syne';
+import './main.css';
 import ErrorBoundary from './components/ErrorBoundary';
 import MouseTracker from './components/MouseTracker';
 

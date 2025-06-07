@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet';
 import { getPageTitle } from '../../../utils/pageTitle';
 import MenuLayout from '../_components/MenuLayout';
-import styles from '../../../styles/menuLayout.module.css';
+import styles from '../_components/menu.module.css';
 
 const FoodMenu = () => {
   const foods = [

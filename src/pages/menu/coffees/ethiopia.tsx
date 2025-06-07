@@ -1,12 +1,11 @@
 import { Helmet } from 'react-helmet';
 import { getPageTitle } from '../../../utils/pageTitle';
 import MenuLayout from '../_components/MenuLayout';
-import styles from '../../../styles/menuLayout.module.css';
+import styles from '../_components/menu.module.css';
 import CoffeeCard from '../../../components/CoffeeCard';
 import type { CoffeeItem } from '../../../components/CoffeeCard';
 
 import yirgacheffeImage from '../../../assets/images/_DSC2868.webp?width=800';
-import ethiopianBlendImage from '../../../assets/images/_DSC2914.webp?width=800';
 import sidamoImage from '../../../assets/images/_DSC3076.webp?width=800';
 import gujiImage from '../../../assets/images/_DSC3076.webp?width=800';
 
