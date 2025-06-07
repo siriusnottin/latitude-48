@@ -16,8 +16,8 @@ const Home = () => {
       <HeroSection />
       <StorySection />
       <ExperienceSection />
-      <MenuPreviewSection />
-      <CTASection />
+      {/* <MenuPreviewSection /> */}
+      {/* <CTASection /> */}
     </>
   );
 };
