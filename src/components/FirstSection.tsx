@@ -3,7 +3,7 @@ import { Link } from '../router';
 import styles from '../pages/index.module.css';
 import arrowIcon from '../assets/icons/arrow.svg';
 import featuredWebp from '../assets/images/_DSC2706.webp';
-
+import { Button } from './Button';
 
 const FirstSection = () => {
   return (
@@ -32,9 +32,11 @@ const FirstSection = () => {
         </p>
       </div>
       <p>
-        <Link to="/menu" className="btn primary">
-          <span>Cofee Map</span>
-          <img src={arrowIcon} alt="Arrow icon" className={styles['arrow']} />
+        <Link to="/menu">
+          <Button variant="primary">
+            <span>Coffee Map</span>
+            <img src={arrowIcon} alt="Arrow icon" className={styles['arrow']} />
+          </Button>
         </Link>
       </p>
     </section>

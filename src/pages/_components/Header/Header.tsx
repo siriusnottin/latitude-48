@@ -1,6 +1,7 @@
 import { Link } from '../../../router';
 import siteLogo from '../../../assets/ltd48.svg';
 import styles from './header.module.css';
+import { Button } from '../../../components/Button';
 
 const Header = () => {
 	return (
@@ -26,8 +27,8 @@ const Header = () => {
 				</ul>
 			</nav>
 			<div className={styles.header_actions}>
-				<Link to="/menu" className="btn secondary">
-					Get your coffee
+				<Link to="/menu">
+					<Button variant="secondary">Get your coffee</Button>
 				</Link>
 			</div>
 		</header>

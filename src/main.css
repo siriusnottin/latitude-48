@@ -71,34 +71,48 @@ div {
 }
 
 .btn {
-	text-transform: uppercase;
-	text-decoration: none;
-	padding: 0.5rem 1rem;
-	transition:
-		background-color 0.3s ease,
-		color 0.3s ease;
+  display: flex;
+  align-items: center;
+  font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+  padding: 0.6rem .8rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: color 0.3s ease;
 
-	&.primary {
-		background-color: black;
-		color: white;
-		transition:
-			background-color 0.3s ease,
-			color 0.3s ease;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    transform: translate(var(--moveX, 0), var(--moveY, 0)) scale(var(--scale, 0));
+    transition: transform 0.1s ease;
+    left: var(--x, 0);
+    top: var(--y, 0);
+    z-index: -1;
+  }
 
-		&:hover {
-			background-color: var(--bg-color-light);
-			color: hsl(var(--primary-color, 0.8));
-		}
-	}
+  &.primary {
+    background-color: black;
+    color: white;
+    transition: color 0.3s ease;
 
-	&.secondary {
-		border: 1px solid black;
+    &:hover {
+      color: white;
+    }
+  }
 
-		&:hover {
-			background-color: var(--bg-color-dark);
-			color: var(--secondary-color);
-		}
-	}
+  &.secondary {
+    border: 1px solid black;
+
+    &:hover {
+      color: white;
+    }
+  }
 }
 
 a {
