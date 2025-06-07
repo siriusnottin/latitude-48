@@ -37,17 +37,34 @@ const TextReveal: React.FC<TextRevealProps> = ({
   const textRef = useRef<HTMLDivElement>(null);
   const index = useContext(RevealContext);
   const timelineRef = useRef<gsap.core.Timeline | null>(null);
+  const [fontsLoaded, setFontsLoaded] = useState(false);
 
   useEffect(() => {
-    if (!textRef.current) return;
+    if ('fonts' in document) {
+      document.fonts.ready.then(() => {
+        setFontsLoaded(true);
+      });
+    } else {
+      // Fallback for browsers that don't support document.fonts
+      // Wait a short moment to allow fonts to load
+      const timeoutId = setTimeout(() => {
+        setFontsLoaded(true);
+      }, 500);
+      return () => clearTimeout(timeoutId);
+    }
+  }, []);
 
-    // Create a SplitText instance
+  useEffect(() => {
+    if (!textRef.current || !fontsLoaded) return;
+
+    // Create SplitText with settings that preserve the original markup structure
     const splitText = new SplitText(textRef.current, {
       type: 'lines',
-      linesClass: 'line',
+      linesClass: 'split-line',
+      lineThreshold: 0.5,
+      tagName: 'div'
     });
 
-    // Set initial state - hidden
     const setInitialState = () => {
       gsap.set(splitText.lines, {
         y: 50,
@@ -57,7 +74,6 @@ const TextReveal: React.FC<TextRevealProps> = ({
 
     setInitialState();
 
-    // Create the animation timeline
     timelineRef.current = gsap.timeline({
       paused: true,
     }).to(splitText.lines, {
@@ -69,7 +85,6 @@ const TextReveal: React.FC<TextRevealProps> = ({
       delay: index * 0.2,
     });
 
-    // Create ScrollTrigger
     const trigger = ScrollTrigger.create({
       trigger: textRef.current,
       start: 'top 85%',
@@ -79,13 +94,12 @@ const TextReveal: React.FC<TextRevealProps> = ({
       onLeaveBack: () => timelineRef.current?.progress(0),
     });
 
-    // Cleanup function
     return () => {
       timelineRef.current?.kill();
       splitText.revert();
       trigger.kill();
     };
-  }, [duration, index]);
+  }, [duration, index, fontsLoaded]);
 
   // Dynamically create the component type (h1, p, div, etc.)
   return React.createElement(

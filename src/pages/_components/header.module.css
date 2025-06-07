@@ -4,6 +4,8 @@
   grid-template-columns: max-content auto max-content;
   align-items: center;
   gap: 2.6875rem;
+  font-family: var(--font-menu);
+  font-weight: 300;
 }
 
 .site_nav {
@@ -23,7 +25,8 @@
 .nav_item {
   padding: 0.5rem 0;
   a {
-    font-weight: bold;
+    font-family: var(--font-menu);
+    font-weight: 300;
     text-transform: uppercase;
     text-decoration: none;
     padding: 0.5rem 1rem;

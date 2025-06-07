@@ -15,8 +15,10 @@
 	a {
 		position: relative;
 		display: inline-block;
-		transition: transform 0.3s ease, color 0.3s ease;
-		
+		transition:
+			transform 0.3s ease,
+			color 0.3s ease;
+
 		&:hover {
 			color: var(--primary-color);
 			transform: translateY(-2px);
@@ -33,12 +35,13 @@
 	justify-content: space-between;
 	padding: 7.3125rem 0;
 	width: 100%;
-	
+
 	.contact-infos {
 	}
 
 	.get-coffee {
-		.title {}
+		.title {
+		}
 
 		.menu_items {
 			display: flex;
@@ -61,7 +64,7 @@
 						right: calc(var(--gap) / -2 - var(--width) / 2);
 						background-color: #0f0401;
 						border-radius: 50%;
-						border: 1px solid #8C8C8C;
+						border: 1px solid #8c8c8c;
 					}
 				}
 			}
@@ -73,7 +76,7 @@
 		ul {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
-			column-gap: .75rem;
+			column-gap: 0.75rem;
 			row-gap: 1.25rem;
 		}
 	}
@@ -86,19 +89,23 @@
 	display: flex;
 	gap: 1.625rem;
 	align-items: center;
-	line-height: .7;
+	line-height: 0.5;
 
 	.title {
+		font-family: var(--font-text);
+		font-variant-numeric: lining-nums;
+		letter-spacing: -0.5rem;
 		font-size: 4.375rem;
 		margin: 0;
 		text-transform: uppercase;
-		font-weight: bolder;
-		color: #8C8C8C;
+		font-weight: 600;
+		color: #8c8c8c;
+		line-height: 70%;
 	}
 
 	.copy,
 	.made {
-		color: #DDDDDD;
+		color: #dddddd;
 	}
 
 	.made {

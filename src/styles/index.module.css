@@ -6,14 +6,6 @@
   --bean-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Typography */
-@font-face {
-  font-family: 'Editorial';
-  src: url('../assets/fonts/EditorialNew-Light.woff2') format('woff2');
-  font-weight: 300;
-  font-style: normal;
-}
-
 /* Hero Section */
 .hero {
   min-height: 100vh;
@@ -57,11 +49,9 @@
 }
 
 .heroTitle {
-  font-family: 'Editorial', serif;
   font-size: clamp(4rem, 8vw, 7rem);
   line-height: 0.9;
   margin-bottom: calc(var(--spacing-unit) * 4);
-  font-weight: 300;
   position: relative;
 }
 
@@ -129,7 +119,7 @@
 }
 
 .sectionTitle {
-  font-family: 'Editorial', serif;
+  font-family: var(--font-heading);
   font-size: clamp(3rem, 6vw, 5rem);
   line-height: 0.9;
   margin-bottom: calc(var(--spacing-unit) * 4);
@@ -172,7 +162,7 @@
 }
 
 .experienceTitle {
-  font-family: 'Editorial', serif;
+  font-family: var(--font-heading);
   font-size: clamp(3rem, 6vw, 5rem);
   line-height: 0.9;
   margin-bottom: calc(var(--spacing-unit) * 8);
@@ -214,7 +204,7 @@
 }
 
 .menuTitle {
-  font-family: 'Editorial', serif;
+  font-family: var(--font-heading);
   font-size: clamp(3rem, 6vw, 5rem);
   line-height: 0.9;
   margin-bottom: calc(var(--spacing-unit) * 8);
@@ -267,7 +257,7 @@
 }
 
 .arrow {
-  font-family: serif;
+  font-family: var(--font-heading);
 }
 
 /* CTA Section */
@@ -284,7 +274,7 @@
 }
 
 .ctaTitle {
-  font-family: 'Editorial', serif;
+  font-family: var(--font-heading);
   font-size: clamp(3rem, 6vw, 5rem);
   line-height: 0.9;
   margin-bottom: calc(var(--spacing-unit) * 4);
