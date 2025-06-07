@@ -3,8 +3,6 @@ import { getPageTitle } from '../utils/pageTitle';
 import { HeroSection } from './_sections/HeroSection';
 import { StorySection } from './_sections/StorySection';
 import { ExperienceSection } from './_sections/ExperienceSection';
-import { MenuPreviewSection } from './_sections/MenuPreviewSection';
-import { CTASection } from './_sections/CTASection';
 
 const Home = () => {
   return (
@@ -16,8 +14,8 @@ const Home = () => {
       <HeroSection />
       <StorySection />
       <ExperienceSection />
-      {/* <MenuPreviewSection /> */}
-      {/* <CTASection /> */}
+      {/* <MenuPreviewSection />
+      <CTASection /> */}
     </>
   );
 };
