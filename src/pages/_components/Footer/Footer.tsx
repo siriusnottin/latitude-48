@@ -1,10 +1,10 @@
-import type {Path} from '../../router';
-import {Link} from '../../router';
-import { AnimatedTextReveal } from './AnimatedTextReveal';
+import type {Path} from '../../../router';
+import  {Link} from '../../../router';
+import { AnimatedTextReveal } from '../AnimatedTextReveal';
 
 import styles from './footer.module.css';
 
-import bean from '../../assets/bean01.svg';
+import bean from '../../../assets/bean01.svg';
 
 function Footer() {
 	const currentYear = new Date().getFullYear();
