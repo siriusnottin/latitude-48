@@ -1,8 +1,8 @@
 import { Link } from '../../../router';
-import styles from '../../../styles/menu.module.css';
+import styles from './menu.module.css';
 import React from 'react';
 import TopMenu from './TopMenu';
-
+  
 interface MenuLayoutProps {
   children: React.ReactNode;
   currentPath: string;

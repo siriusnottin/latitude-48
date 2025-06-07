@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet';
 import { getPageTitle } from '../../utils/pageTitle';
 import MenuLayout from './_components/MenuLayout';
-import styles from '../../styles/menu.module.css';
+import styles from './_components/menu.module.css';
 
 import espressoImage from '../../assets/images/_DSC2868.webp?width=600';
 import latteImage from '../../assets/images/_DSC2914.webp?width=600';

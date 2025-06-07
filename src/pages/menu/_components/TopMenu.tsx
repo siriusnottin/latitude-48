@@ -1,5 +1,5 @@
 import { Link, type Path } from '../../../router';
-import styles from '../../../styles/menu.module.css';
+import styles from './menu.module.css';
 
 interface TopMenuProps {
   currentPath: string;
