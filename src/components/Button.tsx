@@ -1,48 +1,52 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { Link, type Path } from '../router';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary';
   children: React.ReactNode;
+  to?: Path;
 }
 
-export const Button = ({ variant = 'primary', children, className = '', ...props }: ButtonProps) => {
-  const buttonRef = useRef<HTMLButtonElement>(null);
+export const Button = ({ variant = 'primary', children, className = '', to, ...props }: ButtonProps) => {
+  const elementRef = useRef<HTMLButtonElement | HTMLAnchorElement>(null);
   const isHovering = useRef(false);
 
   useEffect(() => {
-    const button = buttonRef.current;
-    if (!button) return;
+    const element = elementRef.current;
+    if (!element) return;
 
-    const handleMouseEnter = (e: MouseEvent) => {
+    const handleMouseEnter = (e: Event) => {
+      if (!(e instanceof MouseEvent)) return;
       isHovering.current = true;
-      const rect = button.getBoundingClientRect();
+      const rect = element.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
 
       // Set initial position
-      gsap.set(button, {
+      gsap.set(element, {
         "--x": `${x - 15}px`,
         "--y": `${y - 15}px`,
         "--scale": 0
       });
 
       // Animate the circle in
-      gsap.to(button, {
+      gsap.to(element, {
         "--scale": 15,
         duration: 0.5,
         ease: "power1.out"
       });
     };
 
-    const handleMouseMove = (e: MouseEvent) => {
+    const handleMouseMove = (e: Event) => {
+      if (!(e instanceof MouseEvent)) return;
       if (!isHovering.current) return;
       
-      const rect = button.getBoundingClientRect();
+      const rect = element.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
 
-      gsap.to(button, {
+      gsap.to(element, {
         "--x": `${x - 15}px`,
         "--y": `${y - 15}px`,
         duration: 0.1,
@@ -52,22 +56,22 @@ export const Button = ({ variant = 'primary', children, className = '', ...props
 
     const handleMouseLeave = () => {
       isHovering.current = false;
-      gsap.to(button, {
+      gsap.to(element, {
         "--scale": 0,
         duration: 0.3,
         ease: "power2.in"
       });
     };
 
-    button.addEventListener('mouseenter', handleMouseEnter);
-    button.addEventListener('mousemove', handleMouseMove);
-    button.addEventListener('mouseleave', handleMouseLeave);
+    element.addEventListener('mouseenter', handleMouseEnter);
+    element.addEventListener('mousemove', handleMouseMove);
+    element.addEventListener('mouseleave', handleMouseLeave);
 
     return () => {
-      button.removeEventListener('mouseenter', handleMouseEnter);
-      button.removeEventListener('mousemove', handleMouseMove);
-      button.removeEventListener('mouseleave', handleMouseLeave);
-      gsap.killTweensOf(button);
+      element.removeEventListener('mouseenter', handleMouseEnter);
+      element.removeEventListener('mousemove', handleMouseMove);
+      element.removeEventListener('mouseleave', handleMouseLeave);
+      gsap.killTweensOf(element);
     };
   }, []);
 
@@ -77,9 +81,25 @@ export const Button = ({ variant = 'primary', children, className = '', ...props
     "--scale": 0,
   } as React.CSSProperties;
 
+  if (to) {
+    return (
+      <Link to={to}>
+        <button
+          ref={elementRef as React.RefObject<HTMLButtonElement>}
+          className={`btn ${variant} ${className}`}
+          style={buttonStyle}
+          type="button"
+          {...props}
+        >
+          {children}
+        </button>
+      </Link>
+    );
+  }
+
   return (
     <button
-      ref={buttonRef}
+      ref={elementRef as React.RefObject<HTMLButtonElement>}
       className={`btn ${variant} ${className}`}
       style={buttonStyle}
       {...props}

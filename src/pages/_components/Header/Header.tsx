@@ -27,9 +27,7 @@ const Header = () => {
 				</ul>
 			</nav>
 			<div className={styles.header_actions}>
-				<Link to="/menu">
-					<Button variant="secondary">Get your coffee</Button>
-				</Link>
+				<Button variant="secondary" to="/menu">Get your coffee</Button>
 			</div>
 		</header>
 	);
