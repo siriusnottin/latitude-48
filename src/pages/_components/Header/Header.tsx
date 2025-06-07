@@ -1,5 +1,5 @@
-import { Link } from '../../router';
-import siteLogo from '../../assets/ltd48.svg';
+import { Link } from '../../../router';
+import siteLogo from '../../../assets/ltd48.svg';
 import styles from './header.module.css';
 
 const Header = () => {
