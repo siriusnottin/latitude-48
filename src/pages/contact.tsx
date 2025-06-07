@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet';
 import { getPageTitle } from '../utils/pageTitle';
 import { AnimatedTextReveal } from './_components/AnimatedTextReveal';
-import styles from '../styles/contact.module.css';
+import styles from './contact.module.css';
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 
