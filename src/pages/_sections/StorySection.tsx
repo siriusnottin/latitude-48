@@ -1,5 +1,5 @@
 import styles from '../index.module.css';
-import macchiatoImage2 from '../../assets/images/_DSC2914.webp?width=800';
+import macchiatoImage2 from '../../assets/images/_DSC2932.webp?width=800';
 
 export const StorySection = () => {
   return (
