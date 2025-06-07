@@ -2,9 +2,9 @@ import { AnimatedTextReveal } from '../_components/AnimatedTextReveal';
 import ParallaxBeans from '../../components/ParallaxBeans';
 import styles from '../index.module.css';
 
-import macchiatoImage1 from '../../assets/images/_DSC2868.webp?width=800';
-import macchiatoImage2 from '../../assets/images/_DSC2914.webp?width=800';
-import macchiatoImage3 from '../../assets/images/_DSC3076.webp?width=800';
+import macchiatoImage1 from '../../assets/images/_DSC2865.webp?width=800';
+import macchiatoImage2 from '../../assets/images/_DSC2926.webp?width=800';
+import macchiatoImage3 from '../../assets/images/_DSC2711.webp?width=800';
 
 export const HeroSection = () => {
   return (
@@ -26,7 +26,6 @@ export const HeroSection = () => {
             <img src={macchiatoImage3} alt="Coffee beans" className={`${styles.heroImage} ${styles.image3}`} />
           </div>
         </div>
-        <ParallaxBeans />
       </div>
     </section>
   );
