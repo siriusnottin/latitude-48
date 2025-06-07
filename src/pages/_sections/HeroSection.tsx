@@ -1,5 +1,4 @@
 import { AnimatedTextReveal } from '../_components/AnimatedTextReveal';
-import ParallaxBeans from '../../components/ParallaxBeans';
 import styles from '../index.module.css';
 
 import macchiatoImage1 from '../../assets/images/_DSC2865.webp?width=800';
