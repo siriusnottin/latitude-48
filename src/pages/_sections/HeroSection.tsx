@@ -1,6 +1,6 @@
 import { AnimatedTextReveal } from '../_components/AnimatedTextReveal';
 import ParallaxBeans from '../../components/ParallaxBeans';
-import styles from '../../styles/index.module.css';
+import styles from '../../styles/sections/hero.module.css';
 
 import macchiatoImage1 from '../../assets/images/_DSC2868.webp?width=800';
 import macchiatoImage2 from '../../assets/images/_DSC2914.webp?width=800';

@@ -1,0 +1,41 @@
+/* CTA Section */
+.cta {
+  padding: var(--section-spacing) calc(var(--spacing-unit) * 4);
+  background-color: var(--background-color);
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-family: 'Editorial', serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 0.9;
+  margin-bottom: calc(var(--spacing-unit) * 4);
+  font-weight: 300;
+}
+
+.ctaText {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: calc(var(--spacing-unit) * 6);
+  opacity: 0.8;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 4);
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  background-color: var(--primary-color-dark);
+}

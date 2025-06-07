@@ -1,4 +1,4 @@
-import styles from '../../styles/index.module.css';
+import styles from '../../styles/sections/menu-preview.module.css';
 
 export const MenuPreviewSection = () => {
   return (

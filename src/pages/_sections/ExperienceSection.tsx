@@ -1,4 +1,4 @@
-import styles from '../../styles/index.module.css';
+import styles from '../../styles/sections/experience.module.css';
 import macchiatoImage1 from '../../assets/images/_DSC2868.webp?width=800';
 import macchiatoImage2 from '../../assets/images/_DSC2914.webp?width=800';
 import macchiatoImage3 from '../../assets/images/_DSC3076.webp?width=800';

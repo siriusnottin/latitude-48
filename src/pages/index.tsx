@@ -5,6 +5,7 @@ import { StorySection } from './_sections/StorySection';
 import { ExperienceSection } from './_sections/ExperienceSection';
 import { MenuPreviewSection } from './_sections/MenuPreviewSection';
 import { CTASection } from './_sections/CTASection';
+import { TestSection } from './_sections/TestSection';
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
 
       <HeroSection />
       <StorySection />
+      <TestSection />
       <ExperienceSection />
       <MenuPreviewSection />
       <CTASection />
