@@ -1,33 +1,17 @@
 /// <reference types="vite/client" />
 
-// Vite imagetools declarations
-declare module '*?width=*' {
+// Vite imagetools declarations - allowed widths: 600, 800, 1920
+declare module '*.webp?width=600' {
   const src: string
   export default src
 }
 
-declare module '*.jpg?width=*' {
-  const src: string
-  export default src
-}
-
-declare module '*.png?width=*' {
-  const src: string
-  export default src
-}
-
-declare module '*.jpeg?width=*' {
-  const src: string
-  export default src
-}
-
-declare module '*.webp?width=*' {
-  const src: string
-  export default src
-}
-
-// Image imports with query parameters
 declare module '*.webp?width=800' {
-  const src: string;
-  export default src;
+  const src: string
+  export default src
+}
+
+declare module '*.webp?width=1920' {
+  const src: string
+  export default src
 }
