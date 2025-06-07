@@ -74,13 +74,31 @@ div {
   display: flex;
   align-items: center;
   font-size: clamp(0.875rem, 1.5vw, 1.125rem);
-  padding: 0.6rem .8rem;
+  padding: 1rem 1.4rem;
   text-transform: uppercase;
   text-decoration: none;
   position: relative;
   overflow: hidden;
   isolation: isolate;
   transition: color 0.3s ease;
+  cursor: pointer;
+  width: fit-content;
+
+  /* Make sure the Link component inherits styles */
+  a {
+    color: inherit;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    text-transform: inherit;
+    transition: none;
+    transform: none;
+  }
+
+  a:hover {
+    color: inherit;
+    transform: none;
+  }
 
   &::before {
     content: '';
