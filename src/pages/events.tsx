@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet';
 import { getPageTitle } from '../utils/pageTitle';
 import { AnimatedTextReveal } from './_components/AnimatedTextReveal';
-import styles from '../styles/events.module.css';
+import styles from './events.module.css';
 
 import heroImage from '../assets/images/_DSC2978.webp?width=1920';
 import eventImage1 from '../assets/images/_DSC3076.webp?width=800';
