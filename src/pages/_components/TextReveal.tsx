@@ -45,9 +45,21 @@ const TextReveal: React.FC<TextRevealProps> = ({
   const textRef = useRef<HTMLDivElement>(null);
   const index = useContext(RevealContext);
   const timelineRef = useRef<gsap.core.Timeline | null>(null);
+  const [fontsReady, setFontsReady] = useState(false);
+
+  // Check if fonts are loaded
+  useEffect(() => {
+    if (document.fonts) {
+      document.fonts.ready.then(() => {
+        setFontsReady(true);
+      });
+    } else {
+      setFontsReady(true);
+    }
+  }, []);
 
   useEffect(() => {
-    if (!textRef.current) return;
+    if (!textRef.current || !fontsReady) return;
 
     // Create a SplitText instance
     const splitText = new SplitText(textRef.current, {
@@ -96,7 +108,7 @@ const TextReveal: React.FC<TextRevealProps> = ({
       splitText.revert();
       trigger.kill();
     };
-  }, [duration, index, fontsLoaded, delay]);
+  }, [duration, index, delay, fontsReady]);
 
   // Dynamically create the component type (h1, p, div, etc.)
   return React.createElement(
