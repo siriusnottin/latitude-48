@@ -20,8 +20,6 @@ p:has(.split-line) {
   width: fit-content;
 }
 
-/* Prevent layout shifts by maintaining consistent width for text elements during GSAP SplitText animation */
-
 /* Typography */
 @font-face {
   font-family: 'PPEditorialNew';
@@ -30,12 +28,6 @@ p:has(.split-line) {
   font-weight: 100;
   font-style: normal;
   font-display: swap;
-  font-family: 'PPEditorialNew';
-  src: url('./assets/fonts/PPEditorialNew/PPEditorialNew-Ultralight.otf')
-    format('opentype');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
@@ -45,20 +37,9 @@ p:has(.split-line) {
   font-weight: 100;
   font-style: italic;
   font-display: swap;
-  font-family: 'PPEditorialNew';
-  src: url('./assets/fonts/PPEditorialNew/PPEditorialNew-UltralightItalic.otf')
-    format('opentype');
-  font-weight: 100;
-  font-style: italic;
-  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Aqua Grotesque';
-  src: url('./assets/fonts/AquaGrotesque/aqua.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
   font-family: 'Aqua Grotesque';
   src: url('./assets/fonts/AquaGrotesque/aqua.ttf') format('truetype');
   font-weight: 300;
@@ -113,8 +94,6 @@ div {
 .highlight {
   color: var(--primary-color);
   font-style: italic;
-  color: var(--primary-color);
-  font-style: italic;
 }
 
 .btn {
@@ -130,29 +109,7 @@ div {
   transition: color 0.3s ease;
   cursor: pointer;
   width: fit-content;
-  display: flex;
-  align-items: center;
-  font-size: clamp(0.875rem, 1.5vw, 1.125rem);
-  padding: 1rem 1.4rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  transition: color 0.3s ease;
-  cursor: pointer;
-  width: fit-content;
 
-  /* Make sure the Link component inherits styles */
-  a {
-    color: inherit;
-    text-decoration: none;
-    font-family: inherit;
-    font-size: inherit;
-    text-transform: inherit;
-    transition: none;
-    transform: none;
-  }
   /* Make sure the Link component inherits styles */
   a {
     color: inherit;
@@ -168,25 +125,7 @@ div {
     color: inherit;
     transform: none;
   }
-  a:hover {
-    color: inherit;
-    transform: none;
-  }
 
-  &::before {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background: var(--primary-color);
-    border-radius: 50%;
-    transform: translate(var(--moveX, 0), var(--moveY, 0))
-      scale(var(--scale, 0));
-    transition: transform 0.1s ease;
-    left: var(--x, 0);
-    top: var(--y, 0);
-    z-index: -1;
-  }
   &::before {
     content: '';
     position: absolute;
@@ -206,15 +145,7 @@ div {
     background-color: black;
     color: white;
     transition: color 0.3s ease;
-    &.primary {
-      background-color: black;
-      color: white;
-      transition: color 0.3s ease;
 
-      &:hover {
-        color: white;
-      }
-    }
     &:hover {
       color: white;
     }
@@ -222,13 +153,7 @@ div {
 
   &.secondary {
     border: 1px solid black;
-    &.secondary {
-      border: 1px solid black;
 
-      &:hover {
-        color: white;
-      }
-    }
     &:hover {
       color: white;
     }
@@ -243,18 +168,7 @@ a {
   transition:
     transform 0.3s ease,
     color 0.3s ease;
-  text-decoration: none;
-  color: inherit;
-  position: relative;
-  display: inline-block;
-  transition:
-    transform 0.3s ease,
-    color 0.3s ease;
 
-  &:hover {
-    color: var(--primary-color);
-    transform: translateY(-1px);
-  }
   &:hover {
     color: var(--primary-color);
     transform: translateY(-1px);
