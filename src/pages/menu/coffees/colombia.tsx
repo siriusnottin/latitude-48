@@ -14,7 +14,8 @@ const ColombiaMenu = () => {
     {
       number: '01',
       name: 'Sierra Nevada',
-      description: 'A perfectly balanced coffee with bright citrus notes, caramel sweetness, and a smooth chocolate finish.',
+      description:
+        'A perfectly balanced coffee with bright citrus notes, caramel sweetness, and a smooth chocolate finish.',
       price: '$5.25',
       image: colombiaImage1,
       details: {
@@ -22,13 +23,14 @@ const ColombiaMenu = () => {
         process: 'Washed',
         varietals: 'Caturra, Colombia',
         cupping_notes: 'Citrus, Caramel, Chocolate',
-        roast_level: 'Medium'
-      }
+        roast_level: 'Medium',
+      },
     },
     {
       number: '02',
       name: 'Huila Reserve',
-      description: 'Complex and full-bodied with notes of red fruits, brown sugar, and a wine-like acidity.',
+      description:
+        'Complex and full-bodied with notes of red fruits, brown sugar, and a wine-like acidity.',
       price: '$5.50',
       image: colombiaImage2,
       details: {
@@ -36,13 +38,14 @@ const ColombiaMenu = () => {
         process: 'Washed',
         varietals: 'Castillo, Caturra',
         cupping_notes: 'Red Fruits, Brown Sugar, Wine',
-        roast_level: 'Medium-Light'
-      }
+        roast_level: 'Medium-Light',
+      },
     },
     {
       number: '03',
       name: 'Medellin Supremo',
-      description: 'Sweet and aromatic with hints of tropical fruit, vanilla, and a clean, bright finish.',
+      description:
+        'Sweet and aromatic with hints of tropical fruit, vanilla, and a clean, bright finish.',
       price: '$5.25',
       image: colombiaImage3,
       details: {
@@ -50,9 +53,9 @@ const ColombiaMenu = () => {
         process: 'Washed',
         varietals: 'Colombia, Typica',
         cupping_notes: 'Tropical Fruit, Vanilla, Clean',
-        roast_level: 'Medium'
-      }
-    }
+        roast_level: 'Medium',
+      },
+    },
   ];
 
   return (
@@ -76,4 +79,4 @@ const ColombiaMenu = () => {
   );
 };
 
-export default ColombiaMenu; 
+export default ColombiaMenu;

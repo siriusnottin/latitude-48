@@ -19,6 +19,6 @@ const Merch = () => {
       </main>
     </>
   );
-}
+};
 
 export default Merch;

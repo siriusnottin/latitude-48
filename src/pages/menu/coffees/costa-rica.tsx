@@ -14,7 +14,8 @@ const CostaRicaMenu = () => {
     {
       number: '01',
       name: 'Tarrazu Reserve',
-      description: 'Bright citrus notes and honey-like sweetness with a clean, crisp finish from the prestigious Tarrazu region.',
+      description:
+        'Bright citrus notes and honey-like sweetness with a clean, crisp finish from the prestigious Tarrazu region.',
       price: '$5.75',
       image: costaRicaImage1,
       details: {
@@ -22,13 +23,14 @@ const CostaRicaMenu = () => {
         process: 'Washed',
         varietals: 'Caturra, Catuai',
         cupping_notes: 'Citrus, Honey, Clean',
-        roast_level: 'Medium'
-      }
+        roast_level: 'Medium',
+      },
     },
     {
       number: '02',
       name: 'Monte Crisol',
-      description: 'Well-balanced with notes of chocolate, ripe berries, and a subtle hint of orange blossom.',
+      description:
+        'Well-balanced with notes of chocolate, ripe berries, and a subtle hint of orange blossom.',
       price: '$5.50',
       image: costaRicaImage2,
       details: {
@@ -36,13 +38,14 @@ const CostaRicaMenu = () => {
         process: 'Honey',
         varietals: 'Caturra, Villa Sarchi',
         cupping_notes: 'Chocolate, Berries, Orange Blossom',
-        roast_level: 'Medium-Light'
-      }
+        roast_level: 'Medium-Light',
+      },
     },
     {
       number: '03',
       name: 'Tres Rios',
-      description: 'Smooth and mild with perfect acidity, featuring notes of vanilla, citrus, and a sweet caramel finish.',
+      description:
+        'Smooth and mild with perfect acidity, featuring notes of vanilla, citrus, and a sweet caramel finish.',
       price: '$5.50',
       image: costaRicaImage3,
       details: {
@@ -50,9 +53,9 @@ const CostaRicaMenu = () => {
         process: 'Washed',
         varietals: 'Caturra',
         cupping_notes: 'Vanilla, Citrus, Caramel',
-        roast_level: 'Medium'
-      }
-    }
+        roast_level: 'Medium',
+      },
+    },
   ];
 
   return (
@@ -76,4 +79,4 @@ const CostaRicaMenu = () => {
   );
 };
 
-export default CostaRicaMenu; 
+export default CostaRicaMenu;

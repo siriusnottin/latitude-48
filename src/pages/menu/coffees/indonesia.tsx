@@ -14,7 +14,8 @@ const IndonesiaMenu = () => {
     {
       number: '01',
       name: 'Sumatra Mandheling',
-      description: 'Full-bodied Indonesian coffee with rich, earthy flavors and hints of wood and dark chocolate.',
+      description:
+        'Full-bodied Indonesian coffee with rich, earthy flavors and hints of wood and dark chocolate.',
       price: '$5.50',
       image: indonesiaImage1,
       details: {
@@ -22,13 +23,14 @@ const IndonesiaMenu = () => {
         process: 'Wet-Hulled',
         varietals: 'Typica, Catimor',
         cupping_notes: 'Earth, Wood, Dark Chocolate',
-        roast_level: 'Dark'
-      }
+        roast_level: 'Dark',
+      },
     },
     {
       number: '02',
       name: 'Java Estate',
-      description: 'Heavy-bodied with a smooth, syrupy consistency and notes of herbs and dark cocoa.',
+      description:
+        'Heavy-bodied with a smooth, syrupy consistency and notes of herbs and dark cocoa.',
       price: '$5.75',
       image: indonesiaImage2,
       details: {
@@ -36,13 +38,14 @@ const IndonesiaMenu = () => {
         process: 'Washed',
         varietals: 'Typica, S795',
         cupping_notes: 'Herbs, Dark Cocoa, Syrup',
-        roast_level: 'Medium-Dark'
-      }
+        roast_level: 'Medium-Dark',
+      },
     },
     {
       number: '03',
       name: 'Sulawesi Toraja',
-      description: 'Well-balanced with a clean, sweet finish featuring notes of spice and dark fruits.',
+      description:
+        'Well-balanced with a clean, sweet finish featuring notes of spice and dark fruits.',
       price: '$5.75',
       image: indonesiaImage3,
       details: {
@@ -50,9 +53,9 @@ const IndonesiaMenu = () => {
         process: 'Wet-Hulled',
         varietals: 'Typica, S795, Catimor',
         cupping_notes: 'Spice, Dark Fruits, Sweet',
-        roast_level: 'Medium'
-      }
-    }
+        roast_level: 'Medium',
+      },
+    },
   ];
 
   return (
@@ -76,4 +79,4 @@ const IndonesiaMenu = () => {
   );
 };
 
-export default IndonesiaMenu; 
+export default IndonesiaMenu;

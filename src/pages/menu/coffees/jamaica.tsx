@@ -14,7 +14,8 @@ const JamaicaMenu = () => {
     {
       number: '01',
       name: 'Blue Mountain',
-      description: 'The legendary Jamaica Blue Mountain coffee, known for its smooth, clean taste with no bitter notes.',
+      description:
+        'The legendary Jamaica Blue Mountain coffee, known for its smooth, clean taste with no bitter notes.',
       price: '$8.50',
       image: jamaicaImage1,
       details: {
@@ -22,13 +23,14 @@ const JamaicaMenu = () => {
         process: 'Washed',
         varietals: 'Typica',
         cupping_notes: 'Sweet, Clean, No Bitterness',
-        roast_level: 'Medium'
-      }
+        roast_level: 'Medium',
+      },
     },
     {
       number: '02',
       name: 'High Mountain Supreme',
-      description: 'Perfectly balanced with a sweet flavor profile, featuring notes of chocolate and herbs.',
+      description:
+        'Perfectly balanced with a sweet flavor profile, featuring notes of chocolate and herbs.',
       price: '$7.75',
       image: jamaicaImage2,
       details: {
@@ -36,13 +38,14 @@ const JamaicaMenu = () => {
         process: 'Washed',
         varietals: 'Typica',
         cupping_notes: 'Chocolate, Herbs, Sweet',
-        roast_level: 'Medium-Light'
-      }
+        roast_level: 'Medium-Light',
+      },
     },
     {
       number: '03',
       name: 'Wallenford Estate',
-      description: 'Smooth and refined with a perfect balance of floral aroma and sweet flavor.',
+      description:
+        'Smooth and refined with a perfect balance of floral aroma and sweet flavor.',
       price: '$8.25',
       image: jamaicaImage3,
       details: {
@@ -50,9 +53,9 @@ const JamaicaMenu = () => {
         process: 'Washed',
         varietals: 'Typica',
         cupping_notes: 'Floral, Sweet, Refined',
-        roast_level: 'Light-Medium'
-      }
-    }
+        roast_level: 'Light-Medium',
+      },
+    },
   ];
 
   return (
@@ -76,4 +79,4 @@ const JamaicaMenu = () => {
   );
 };
 
-export default JamaicaMenu; 
+export default JamaicaMenu;

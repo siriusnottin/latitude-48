@@ -28,10 +28,13 @@ const ParallaxBeans = () => {
       const rotation = (deltaX + deltaY) * rotationIntensity;
 
       // Base rotation for each bean
-      const baseRotation = bean.className.includes('bean1') ? 64.948 : 
-                          bean.className.includes('bean2') ? 124.525 :
-                          bean.className.includes('bean3') ? -154.204 : 
-                          -16.323;
+      const baseRotation = bean.className.includes('bean1')
+        ? 64.948
+        : bean.className.includes('bean2')
+          ? 124.525
+          : bean.className.includes('bean3')
+            ? -154.204
+            : -16.323;
 
       // Apply transform with enhanced movement and rotation
       (bean as HTMLElement).style.transform = `
@@ -52,20 +55,23 @@ const ParallaxBeans = () => {
     });
   }, []);
 
-  const handleDeviceOrientation = useCallback((event: DeviceOrientationEvent) => {
-    if (frameRef.current) {
-      cancelAnimationFrame(frameRef.current);
-    }
-
-    frameRef.current = requestAnimationFrame(() => {
-      if (event.beta && event.gamma) {
-        // Convert orientation values to mouse-like coordinates
-        const x = (event.gamma / 90) * window.innerWidth;
-        const y = (event.beta / 180) * window.innerHeight;
-        setMousePosition({ x, y });
+  const handleDeviceOrientation = useCallback(
+    (event: DeviceOrientationEvent) => {
+      if (frameRef.current) {
+        cancelAnimationFrame(frameRef.current);
       }
-    });
-  }, []);
+
+      frameRef.current = requestAnimationFrame(() => {
+        if (event.beta && event.gamma) {
+          // Convert orientation values to mouse-like coordinates
+          const x = (event.gamma / 90) * window.innerWidth;
+          const y = (event.beta / 180) * window.innerHeight;
+          setMousePosition({ x, y });
+        }
+      });
+    },
+    []
+  );
 
   // Handle mouse movement and device orientation
   useEffect(() => {
@@ -104,4 +110,4 @@ const ParallaxBeans = () => {
   );
 };
 
-export default ParallaxBeans; 
+export default ParallaxBeans;

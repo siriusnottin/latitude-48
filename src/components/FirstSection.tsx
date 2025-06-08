@@ -24,20 +24,20 @@ const FirstSection = () => {
       </picture>
       <div>
         <p className={styles['text']}>
-          At Lattitude 48, every cup tells the story of handpicked beans from the world's finest origins from the highlands of Ethiopia to the lush valleys of Latin America.
+          At Lattitude 48, every cup tells the story of handpicked beans from
+          the world's finest origins from the highlands of Ethiopia to the lush
+          valleys of Latin America.
         </p>
-        <p>
-          Crafted with care, our coffee reveals rich, authentic flavors.
-        </p>
+        <p>Crafted with care, our coffee reveals rich, authentic flavors.</p>
       </div>
       <p>
-          <Button variant="primary" to="/menu">
-            <span>Coffee Map</span>
-            <img src={arrowIcon} alt="Arrow icon" className={styles['arrow']} />
-          </Button>
+        <Button variant="primary" to="/menu">
+          <span>Coffee Map</span>
+          <img src={arrowIcon} alt="Arrow icon" className={styles['arrow']} />
+        </Button>
       </p>
     </section>
   );
 };
 
-export default memo(FirstSection); 
+export default memo(FirstSection);

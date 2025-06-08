@@ -8,7 +8,9 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>{getPageTitle('Artisanal Coffee Experience', { inverted: true })}</title>
+        <title>
+          {getPageTitle('Artisanal Coffee Experience', { inverted: true })}
+        </title>
       </Helmet>
 
       <HeroSection />

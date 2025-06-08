@@ -16,29 +16,32 @@ const Events = () => {
       title: 'Coffee Tasting Experience',
       date: 'March 15, 2024',
       time: '6:00 PM - 8:00 PM',
-      description: 'Join us for an exclusive coffee tasting session featuring our finest single-origin beans. Learn about different roasting techniques and brewing methods.',
+      description:
+        'Join us for an exclusive coffee tasting session featuring our finest single-origin beans. Learn about different roasting techniques and brewing methods.',
       image: eventImage1,
       price: '$45',
-      spots: '12 spots available'
+      spots: '12 spots available',
     },
     {
       title: 'Barista Workshop',
       date: 'April 20, 2024',
       time: '2:00 PM - 5:00 PM',
-      description: 'Master the art of coffee making with our expert baristas. Perfect your latte art and learn professional brewing techniques.',
+      description:
+        'Master the art of coffee making with our expert baristas. Perfect your latte art and learn professional brewing techniques.',
       image: eventImage2,
       price: '$75',
-      spots: '8 spots available'
+      spots: '8 spots available',
     },
     {
       title: 'Live Music & Coffee Night',
       date: 'May 5, 2024',
       time: '7:00 PM - 10:00 PM',
-      description: 'Enjoy an evening of acoustic performances while sipping on your favorite coffee blend. Special menu items available.',
+      description:
+        'Enjoy an evening of acoustic performances while sipping on your favorite coffee blend. Special menu items available.',
       image: eventImage3,
       price: '$25',
-      spots: '30 spots available'
-    }
+      spots: '30 spots available',
+    },
   ];
 
   const regularEvents = [
@@ -46,16 +49,18 @@ const Events = () => {
       title: 'Open Mic Nights',
       schedule: 'Every Thursday',
       time: '7:00 PM - 9:00 PM',
-      description: 'Share your talent with our welcoming community. Poetry, music, and spoken word welcome.',
-      image: atmosphereImage1
+      description:
+        'Share your talent with our welcoming community. Poetry, music, and spoken word welcome.',
+      image: atmosphereImage1,
     },
     {
       title: 'Coffee & Conversations',
       schedule: 'Every Sunday',
       time: '10:00 AM - 12:00 PM',
-      description: 'Join our weekly discussion group covering topics from coffee culture to current events.',
-      image: atmosphereImage2
-    }
+      description:
+        'Join our weekly discussion group covering topics from coffee culture to current events.',
+      image: atmosphereImage2,
+    },
   ];
 
   return (
@@ -68,10 +73,18 @@ const Events = () => {
           <div className={styles.heroImage}>
             <img src={heroImage} alt="Latitude 48 events space" />
           </div>
-          <AnimatedTextReveal as="h1" scrollTrigger={false} className={styles.title}>
+          <AnimatedTextReveal
+            as="h1"
+            scrollTrigger={false}
+            className={styles.title}
+          >
             Upcoming Events
           </AnimatedTextReveal>
-          <AnimatedTextReveal as="p" scrollTrigger={false} className={styles.subtitle}>
+          <AnimatedTextReveal
+            as="p"
+            scrollTrigger={false}
+            className={styles.subtitle}
+          >
             Join us for special events, workshops, and community gatherings
           </AnimatedTextReveal>
         </section>
@@ -95,7 +108,9 @@ const Events = () => {
                     <span className={styles.eventPrice}>{event.price}</span>
                     <span className={styles.eventSpots}>{event.spots}</span>
                   </div>
-                  <button className={styles.registerButton}>Register Now</button>
+                  <button className={styles.registerButton}>
+                    Register Now
+                  </button>
                 </div>
               </div>
             ))}
@@ -125,24 +140,48 @@ const Events = () => {
 
         <section className={styles.callToAction}>
           <h2>Host Your Event</h2>
-          <p>Looking for a unique venue? Our space is available for private events and gatherings.</p>
-          
-          <form className={styles.hostingForm} onSubmit={(e) => e.preventDefault()}>
+          <p>
+            Looking for a unique venue? Our space is available for private
+            events and gatherings.
+          </p>
+
+          <form
+            className={styles.hostingForm}
+            onSubmit={(e) => e.preventDefault()}
+          >
             <div className={styles.formGrid}>
               <div className={styles.inputGroup}>
-                <label className={styles.label} htmlFor="eventType">Event Type</label>
-                <input className={styles.input} type="text" id="eventType" placeholder="Corporate, Wedding, Birthday..." />
+                <label className={styles.label} htmlFor="eventType">
+                  Event Type
+                </label>
+                <input
+                  className={styles.input}
+                  type="text"
+                  id="eventType"
+                  placeholder="Corporate, Wedding, Birthday..."
+                />
               </div>
               <div className={styles.inputGroup}>
-                <label className={styles.label} htmlFor="guestCount">Expected Guests</label>
-                <input className={styles.input} type="number" id="guestCount" placeholder="Number of guests" />
+                <label className={styles.label} htmlFor="guestCount">
+                  Expected Guests
+                </label>
+                <input
+                  className={styles.input}
+                  type="number"
+                  id="guestCount"
+                  placeholder="Number of guests"
+                />
               </div>
               <div className={styles.inputGroup}>
-                <label className={styles.label} htmlFor="eventDate">Preferred Date</label>
+                <label className={styles.label} htmlFor="eventDate">
+                  Preferred Date
+                </label>
                 <input className={styles.input} type="date" id="eventDate" />
               </div>
               <div className={styles.inputGroup}>
-                <label className={styles.label} htmlFor="budget">Budget Range</label>
+                <label className={styles.label} htmlFor="budget">
+                  Budget Range
+                </label>
                 <select className={styles.input} id="budget">
                   <option value="">Select a range</option>
                   <option value="500-1000">$500 - $1,000</option>
@@ -151,10 +190,12 @@ const Events = () => {
                 </select>
               </div>
               <div className={styles.inputGroup + ' ' + styles.fullWidth}>
-                <label className={styles.label} htmlFor="message">Tell us about your event</label>
-                <textarea 
-                  className={styles.textarea} 
-                  id="message" 
+                <label className={styles.label} htmlFor="message">
+                  Tell us about your event
+                </label>
+                <textarea
+                  className={styles.textarea}
+                  id="message"
                   placeholder="Share your vision and requirements..."
                   rows={4}
                 />
@@ -173,6 +214,6 @@ const Events = () => {
       </main>
     </>
   );
-}
+};
 
 export default Events;

@@ -11,14 +11,14 @@ const FoodMenu = () => {
         {
           name: 'Croissant',
           description: 'Buttery, flaky French pastry.',
-          price: '$3.75'
+          price: '$3.75',
         },
         {
           name: 'Pain au Chocolat',
           description: 'Chocolate-filled croissant.',
-          price: '$4.00'
-        }
-      ]
+          price: '$4.00',
+        },
+      ],
     },
     {
       name: 'Cookies',
@@ -26,14 +26,14 @@ const FoodMenu = () => {
         {
           name: 'Chocolate Chip',
           description: 'Classic cookie with dark chocolate chunks.',
-          price: '$2.75'
+          price: '$2.75',
         },
         {
           name: 'Double Chocolate',
           description: 'Rich chocolate cookie with chocolate chips.',
-          price: '$3.00'
-        }
-      ]
+          price: '$3.00',
+        },
+      ],
     },
     {
       name: 'Light Bites',
@@ -41,15 +41,15 @@ const FoodMenu = () => {
         {
           name: 'Avocado Toast',
           description: 'Sourdough toast with mashed avocado and seeds.',
-          price: '$8.50'
+          price: '$8.50',
         },
         {
           name: 'Granola Bowl',
           description: 'House-made granola with yogurt and fresh fruits.',
-          price: '$7.50'
-        }
-      ]
-    }
+          price: '$7.50',
+        },
+      ],
+    },
   ];
 
   return (
@@ -73,7 +73,9 @@ const FoodMenu = () => {
                         <h4 className={styles.foodName}>{item.name}</h4>
                         <span className={styles.foodPrice}>{item.price}</span>
                       </div>
-                      <p className={styles.foodDescription}>{item.description}</p>
+                      <p className={styles.foodDescription}>
+                        {item.description}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -86,4 +88,4 @@ const FoodMenu = () => {
   );
 };
 
-export default FoodMenu; 
+export default FoodMenu;

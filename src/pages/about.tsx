@@ -64,29 +64,48 @@ const About = () => {
           <div className={styles.heroImage}>
             <img src={heroImage} alt="Latitude 48 café interior" />
           </div>
-          <AnimatedTextReveal as="h1" scrollTrigger={false} className={styles.title}>
+          <AnimatedTextReveal
+            as="h1"
+            scrollTrigger={false}
+            className={styles.title}
+          >
             Our Story
           </AnimatedTextReveal>
-          <AnimatedTextReveal as="p" scrollTrigger={false} className={styles.subtitle}>
+          <AnimatedTextReveal
+            as="p"
+            scrollTrigger={false}
+            className={styles.subtitle}
+          >
             Crafting exceptional coffee experiences at the 48th parallel
           </AnimatedTextReveal>
         </section>
 
         <div className={styles.contentGrid}>
-          <div className={`${styles.storySection} ${styles.animate}`} style={{ animationDelay: '0.2s' }}>
+          <div
+            className={`${styles.storySection} ${styles.animate}`}
+            style={{ animationDelay: '0.2s' }}
+          >
             <div className={styles.storyImage}>
               <img src={storyImage} alt="Coffee roasting process" />
             </div>
             <h2>The Journey</h2>
             <p>
-              Founded in 2018, Latitude 48 began with a simple mission: to create a space where coffee, community, and culture intersect. Our name draws inspiration from the 48th parallel north, where some of the world's finest coffee beans are grown.
+              Founded in 2018, Latitude 48 began with a simple mission: to
+              create a space where coffee, community, and culture intersect. Our
+              name draws inspiration from the 48th parallel north, where some of
+              the world's finest coffee beans are grown.
             </p>
             <p>
-              What started as a small coffee cart has grown into a beloved neighborhood destination, where every cup tells a story and every visitor becomes part of our extended family.
+              What started as a small coffee cart has grown into a beloved
+              neighborhood destination, where every cup tells a story and every
+              visitor becomes part of our extended family.
             </p>
           </div>
 
-          <div className={`${styles.atmosphereSection} ${styles.animate}`} style={{ animationDelay: '0.4s' }}>
+          <div
+            className={`${styles.atmosphereSection} ${styles.animate}`}
+            style={{ animationDelay: '0.4s' }}
+          >
             <div className={styles.atmosphereImage}>
               <img src={atmosphereImage} alt="Café atmosphere" />
             </div>
@@ -106,6 +125,6 @@ const About = () => {
       </main>
     </>
   );
-}
+};
 
 export default About;

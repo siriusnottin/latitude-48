@@ -11,14 +11,15 @@ const ColdDrinksMenu = () => {
         {
           name: 'Classic Cold Brew',
           description: 'Smooth and rich cold-brewed coffee served over ice.',
-          price: '$4.75'
+          price: '$4.75',
         },
         {
           name: 'Nitro Cold Brew',
-          description: 'Creamy, nitrogen-infused cold brew with a cascading effect.',
-          price: '$5.25'
-        }
-      ]
+          description:
+            'Creamy, nitrogen-infused cold brew with a cascading effect.',
+          price: '$5.25',
+        },
+      ],
     },
     {
       name: 'Iced Coffee',
@@ -26,14 +27,14 @@ const ColdDrinksMenu = () => {
         {
           name: 'Iced Latte',
           description: 'Espresso and cold milk served over ice.',
-          price: '$5.00'
+          price: '$5.00',
         },
         {
           name: 'Iced Mocha',
           description: 'Espresso, chocolate, and cold milk over ice.',
-          price: '$5.50'
-        }
-      ]
+          price: '$5.50',
+        },
+      ],
     },
     {
       name: 'Refreshers',
@@ -41,15 +42,15 @@ const ColdDrinksMenu = () => {
         {
           name: 'Citrus Cold Brew',
           description: 'Cold brew coffee with a bright citrus twist.',
-          price: '$5.50'
+          price: '$5.50',
         },
         {
           name: 'Coffee Tonic',
           description: 'Espresso and tonic water with a slice of lime.',
-          price: '$5.75'
-        }
-      ]
-    }
+          price: '$5.75',
+        },
+      ],
+    },
   ];
 
   return (
@@ -73,7 +74,9 @@ const ColdDrinksMenu = () => {
                         <h4 className={styles.drinkName}>{item.name}</h4>
                         <span className={styles.drinkPrice}>{item.price}</span>
                       </div>
-                      <p className={styles.drinkDescription}>{item.description}</p>
+                      <p className={styles.drinkDescription}>
+                        {item.description}
+                      </p>
                     </div>
                   ))}
                 </div>

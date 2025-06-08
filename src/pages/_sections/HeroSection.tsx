@@ -12,20 +12,39 @@ export const HeroSection = () => {
       <div className={styles.heroContent}>
         <div className={styles.heroGrid}>
           <div className={styles.heroText}>
-            <AnimatedTextReveal as="h1" className={styles.heroTitle} duration={1.2} scrollTrigger={false}>
-              Heritage<br /><span className='highlight'>In Coffee</span>
+            <AnimatedTextReveal
+              as="h1"
+              className={styles.heroTitle}
+              duration={1.2}
+              scrollTrigger={false}
+            >
+              Heritage
+              <br />
+              <span className="highlight">In Coffee</span>
             </AnimatedTextReveal>
             <p className={styles.heroSubtitle}>
               A Journey Through Time and Taste
             </p>
           </div>
           <div className={styles.heroImageGrid}>
-            <img src={macchiatoImage1} alt="Coffee art" className={`${styles.heroImage} ${styles.image1}`} />
-            <img src={macchiatoImage2} alt="Coffee preparation" className={`${styles.heroImage} ${styles.image2}`} />
-            <img src={macchiatoImage3} alt="Coffee beans" className={`${styles.heroImage} ${styles.image3}`} />
+            <img
+              src={macchiatoImage1}
+              alt="Coffee art"
+              className={`${styles.heroImage} ${styles.image1}`}
+            />
+            <img
+              src={macchiatoImage2}
+              alt="Coffee preparation"
+              className={`${styles.heroImage} ${styles.image2}`}
+            />
+            <img
+              src={macchiatoImage3}
+              alt="Coffee beans"
+              className={`${styles.heroImage} ${styles.image3}`}
+            />
           </div>
         </div>
       </div>
     </section>
   );
-}; 
+};

@@ -21,21 +21,23 @@ const imageOrder = [
   '_DSC2968',
   '_DSC2897',
   '_DSC2947',
-  '_DSC2828'
+  '_DSC2828',
 ];
 
 // Import all images and maintain order
-const imageImports = imageOrder.map(name => 
-  import.meta.glob('../../assets/images/*.webp', { 
-    eager: true,
-    query: '?width=800',
-    import: 'default' 
-  })[`../../assets/images/${name}.webp`] as string
+const imageImports = imageOrder.map(
+  (name) =>
+    import.meta.glob('../../assets/images/*.webp', {
+      eager: true,
+      query: '?width=800',
+      import: 'default',
+    })[`../../assets/images/${name}.webp`] as string
 );
 
 // Group images into sets of 6 (3x2 grid)
-const imageGroups = Array.from({ length: Math.ceil(imageImports.length / 6) }, (_, i) =>
-  imageImports.slice(i * 6, (i + 1) * 6)
+const imageGroups = Array.from(
+  { length: Math.ceil(imageImports.length / 6) },
+  (_, i) => imageImports.slice(i * 6, (i + 1) * 6)
 );
 
 export const ExperienceSection = () => {
@@ -56,22 +58,22 @@ export const ExperienceSection = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: section,
-        start: "top top",
+        start: 'top top',
         end: `+=${scrollDistance}`,
         scrub: 1,
         pin: true,
         anticipatePin: 1,
-        toggleClass: "active",
-      }
+        toggleClass: 'active',
+      },
     });
 
     tl.to(grid, {
       x: -scrollDistance,
-      ease: "none",
+      ease: 'none',
     });
 
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 
@@ -81,14 +83,20 @@ export const ExperienceSection = () => {
         <h2 className={styles.experienceTitle}>
           Let Your Senses
           <br />
-          <span className='highlight'>Travel</span>
+          <span className="highlight">Travel</span>
         </h2>
         <div ref={gridRef} className={styles.experienceGrid}>
           {imageGroups.map((group, groupIndex) => (
             <div key={groupIndex} className={styles.imageGroup}>
               {group.map((image, index) => (
-                <div key={`${groupIndex}-${index}`} className={styles.experienceItem}>
-                  <img src={image} alt={`Coffee experience ${groupIndex * 6 + index + 1}`} />
+                <div
+                  key={`${groupIndex}-${index}`}
+                  className={styles.experienceItem}
+                >
+                  <img
+                    src={image}
+                    alt={`Coffee experience ${groupIndex * 6 + index + 1}`}
+                  />
                 </div>
               ))}
             </div>
@@ -97,4 +105,4 @@ export const ExperienceSection = () => {
       </div>
     </section>
   );
-}; 
+};

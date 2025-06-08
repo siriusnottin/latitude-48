@@ -2,7 +2,7 @@ import { Link } from '../../../router';
 import styles from './menu.module.css';
 import React from 'react';
 import TopMenu from './TopMenu';
-  
+
 interface MenuLayoutProps {
   children: React.ReactNode;
   currentPath: string;
@@ -21,7 +21,7 @@ const MenuLayout = ({ children, currentPath }: MenuLayoutProps) => {
     { path: '/menu/coffees/costa-rica' as const, label: 'COSTA RICA' },
     { path: '/menu/coffees/kenya' as const, label: 'KENYA' },
     { path: '/menu/coffees/indonesia' as const, label: 'INDONESIA' },
-    { path: '/menu/coffees/jamaica' as const, label: 'JAMAICA' }
+    { path: '/menu/coffees/jamaica' as const, label: 'JAMAICA' },
   ];
 
   const showOriginsMenu = currentPath.startsWith('/menu/coffees');
@@ -36,8 +36,9 @@ const MenuLayout = ({ children, currentPath }: MenuLayoutProps) => {
               <li key={item.path} className={styles.navItem}>
                 <Link
                   to={item.path}
-                  className={`${styles.navLink} ${currentPath === item.path ? styles.activeLink : ''
-                    }`}
+                  className={`${styles.navLink} ${
+                    currentPath === item.path ? styles.activeLink : ''
+                  }`}
                 >
                   {item.label}
                 </Link>
@@ -51,4 +52,4 @@ const MenuLayout = ({ children, currentPath }: MenuLayoutProps) => {
   );
 };
 
-export default MenuLayout; 
+export default MenuLayout;

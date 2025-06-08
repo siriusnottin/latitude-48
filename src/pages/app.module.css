@@ -2,10 +2,10 @@
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  grid-template-areas: 
-    "header"
-    "main"
-    "footer";
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
 }
 
 .main {
@@ -19,4 +19,3 @@
 .site-footer {
   grid-area: footer;
 }
-
