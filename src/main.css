@@ -70,6 +70,11 @@ div {
 	font-family: var(--font-text);
 }
 
+.highlight {
+	color: var(--primary-color);
+	font-style: italic;
+}
+
 .btn {
   display: flex;
   align-items: center;

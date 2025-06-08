@@ -55,11 +55,6 @@
   position: relative;
 }
 
-.highlight {
-  color: var(--primary-color);
-  font-style: italic;
-}
-
 .heroSubtitle {
   font-size: clamp(1.5rem, 2vw, 2rem);
   opacity: 0.8;
