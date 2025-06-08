@@ -1,11 +1,11 @@
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { getPageTitle } from '../../../utils/pageTitle';
-import { AnimatedTextReveal } from '../../_components/AnimatedTextReveal';
+import TextReveal from '../../_components/TextReveal';
 
 const Cookies = () => {
   return (
-    <>
-      <Helmet>
+    <div className="container">
+      <Helmet defer={false}>
         <title>{getPageTitle('Cookies')}</title>
       </Helmet>
       <main>
@@ -14,7 +14,7 @@ const Cookies = () => {
         </AnimatedTextReveal>
         <p>Discover our delicious cookies selection!</p>
       </main>
-    </>
+    </div>
   );
 };
 

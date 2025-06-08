@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { getPageTitle } from '../../../utils/pageTitle';
 import { Link, type Path } from '../../../router';
 import MenuLayout from '../_components/MenuLayout';

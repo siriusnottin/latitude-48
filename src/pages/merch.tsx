@@ -1,10 +1,10 @@
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { getPageTitle } from '../utils/pageTitle';
 import { AnimatedTextReveal } from './_components/AnimatedTextReveal';
 
 const Merch = () => {
   return (
-    <>
+    <div className="container">
       <Helmet>
         <title>{getPageTitle('Merch')}</title>
       </Helmet>
@@ -17,7 +17,7 @@ const Merch = () => {
           <li>Tote Bag - $15</li>
         </ul>
       </main>
-    </>
+    </div>
   );
 };
 
