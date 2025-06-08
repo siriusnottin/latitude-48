@@ -258,7 +258,11 @@
 /* CTA Section */
 .cta {
   padding: var(--section-spacing) calc(var(--spacing-unit) * 4);
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+	background: linear-gradient(
+		45deg,
+		var(--primary-color),
+		var(--secondary-color)
+	);
   color: white;
 }
 
@@ -357,7 +361,10 @@
   z-index: 1;
 }
 
-.bean1, .bean2, .bean3, .bean4 {
+.bean1,
+.bean2,
+.bean3,
+.bean4 {
   position: absolute;
   filter: drop-shadow(var(--bean-shadow));
   transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
