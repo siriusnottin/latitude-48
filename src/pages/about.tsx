@@ -1,41 +1,13 @@
 import { Helmet } from 'react-helmet';
 import { getPageTitle } from '../utils/pageTitle';
 import { AnimatedTextReveal } from './_components/AnimatedTextReveal';
-import { TeamSection } from './_components/TeamSection';
 import styles from './about.module.css';
 
 import heroImage from '../assets/images/_DSC2868.webp?width=1920';
 import storyImage from '../assets/images/_DSC2808.webp?width=800';
 import atmosphereImage from '../assets/images/_DSC2914.webp?width=800';
-import teamImage1 from '../assets/images/_DSC3227.webp?width=600';
-import teamImage2 from '../assets/images/_DSC3190.webp?width=600';
-import teamImage3 from '../assets/images/_DSC3189.webp?width=600';
 
 const About = () => {
-  const teamMembers = [
-    {
-      name: 'Sarah Chen',
-      role: 'Founder & Head Roaster',
-      description:
-        "With over 15 years of experience in specialty coffee, Sarah's passion for the perfect roast drives our commitment to quality.",
-      image: teamImage1,
-    },
-    {
-      name: 'Marcus Rodriguez',
-      role: 'Head Barista',
-      description:
-        'A certified Q-grader with a background in coffee education, Marcus leads our barista training program and quality control.',
-      image: teamImage2,
-    },
-    {
-      name: 'Emma Thompson',
-      role: 'Café Manager',
-      description:
-        'Emma ensures every visit to Latitude 48 is memorable, bringing her hospitality expertise and warm personality to our daily operations.',
-      image: teamImage3,
-    },
-  ];
-
   const values = [
     {
       title: 'Sustainability',
@@ -59,6 +31,7 @@ const About = () => {
       <Helmet>
         <title>{getPageTitle('About')}</title>
       </Helmet>
+
       <main className={styles.aboutContainer}>
         <section className={`${styles.heroSection} ${styles.animate}`}>
           <div className={styles.heroImage}>
@@ -120,8 +93,6 @@ const About = () => {
             </div>
           </div>
         </div>
-
-        <TeamSection teamMembers={teamMembers} />
       </main>
     </>
   );
