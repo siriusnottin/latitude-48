@@ -32,8 +32,7 @@ const About = () => {
         <title>{getPageTitle('About')}</title>
       </Helmet>
 
-      <main className={styles.aboutContainer}>
-        <section className={`${styles.heroSection} ${styles.animate}`}>
+              <section className={`${styles.heroSection} ${styles.animate}`}>
           <div className={styles.heroImage}>
             <img src={heroImage} alt="Latitude 48 café interior" />
           </div>
@@ -93,8 +92,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </main>
-    </>
+          </>
   );
 };
 
