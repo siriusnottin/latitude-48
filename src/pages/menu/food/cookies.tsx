@@ -9,7 +9,9 @@ const Cookies = () => {
         <title>{getPageTitle('Cookies')}</title>
       </Helmet>
       <main>
-        <TextReveal as="h1">Cookies</TextReveal>
+        <AnimatedTextReveal as="h1" scrollTrigger={false}>
+          Cookies
+        </AnimatedTextReveal>
         <p>Discover our delicious cookies selection!</p>
       </main>
     </div>
