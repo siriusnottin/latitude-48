@@ -1,14 +1,27 @@
 :root {
-  --font-heading: 'PPEditorialNew';
+  --font-heading: 'PPEditorialNew', serif;
   --font-text: 'Syne Variable', sans-serif;
   --font-menu: 'Aqua Grotesque', sans-serif;
   --primary-color: #b2522c;
   --secondary-color: #f2f2f2;
   --text-color: #333;
-  --bg-color-light: #f5f5f5;
-  --bg-color-light: white;
-  --bg-color-dark: #333;
+  --text-color-rgb: 51, 51, 51;
+  --background-color: #ffffff;
+  --background-color-light: #f5f5f5;
+  --background-color-dark: #333;
 }
+
+/* Fix the width of elements created by the text animation */
+p:has(.split-line) {
+  width: fit-content;
+  height: fit-content;
+}
+
+.split-line {
+  width: fit-content;
+}
+
+/* Prevent layout shifts by maintaining consistent width for text elements during GSAP SplitText animation */
 
 /* Typography */
 @font-face {
@@ -37,14 +50,28 @@
   font-display: swap;
 }
 
+/* Base text styles */
+body {
+  font-family: var(--font-text);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Heading styles */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+  font-size: 4.5rem;
   font-family: var(--font-heading);
   font-weight: 100;
+  color: var(--text-color);
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 /* Ensure split text elements inside headings maintain heading font */
@@ -61,6 +88,9 @@ h4 span,
 h5 span,
 h6 span {
   font-family: var(--font-heading);
+  color: inherit;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 p,
@@ -69,6 +99,9 @@ li,
 span,
 div {
   font-family: var(--font-text);
+  color: var(--text-color);
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .highlight {
@@ -153,4 +186,10 @@ a {
     color: var(--primary-color);
     transform: translateY(-1px);
   }
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
