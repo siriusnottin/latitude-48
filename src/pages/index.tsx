@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { getPageTitle } from '../utils/pageTitle';
 import { HeroSection } from './_sections/HeroSection';
 import { StorySection } from './_sections/StorySection';
@@ -8,7 +8,9 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>{getPageTitle('Artisanal Coffee Experience', { inverted: true })}</title>
+        <title>
+          {getPageTitle('Artisanal Coffee Experience', { inverted: true })}
+        </title>
       </Helmet>
 
       <HeroSection />

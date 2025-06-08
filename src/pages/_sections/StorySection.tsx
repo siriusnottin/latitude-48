@@ -7,12 +7,16 @@ export const StorySection = () => {
       <div className={styles.storyContent}>
         <div className={styles.storyGrid}>
           <div className={styles.storyText}>
-            <h2 className={styles.sectionTitle}>Aromatic<br />Crossroads</h2>
+            <h2 className={styles.sectionTitle}>
+              Aromatic
+              <br />
+              Crossroads
+            </h2>
             <p className={styles.storyDescription}>
-              At Latitude 48, we're crafting more than coffee – we're creating moments.
-              Our journey spans continents, from the misty highlands of Ethiopia to the
-              volcanic soils of Guatemala, bringing you a curated selection of the world's
-              finest beans.
+              At Latitude 48, we're crafting more than coffee – we're creating
+              moments. Our journey spans continents, from the misty highlands of
+              Ethiopia to the volcanic soils of Guatemala, bringing you a
+              curated selection of the world's finest beans.
             </p>
             <div className={styles.storyStats}>
               <div className={styles.statItem}>
@@ -26,10 +30,14 @@ export const StorySection = () => {
             </div>
           </div>
           <div className={styles.storyImageContainer}>
-            <img src={macchiatoImage2} alt="Coffee crafting" className={styles.storyImage} />
+            <img
+              src={macchiatoImage2}
+              alt="Coffee crafting"
+              className={styles.storyImage}
+            />
           </div>
         </div>
       </div>
     </section>
   );
-}; 
+};

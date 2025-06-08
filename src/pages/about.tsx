@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet';
 import { getPageTitle } from '../utils/pageTitle';
 import { AnimatedTextReveal } from './_components/AnimatedTextReveal';
+import { TeamSection } from './_components/TeamSection';
 import styles from './about.module.css';
 
 import heroImage from '../assets/images/_DSC2868.webp?width=1920';
@@ -15,36 +16,42 @@ const About = () => {
     {
       name: 'Sarah Chen',
       role: 'Founder & Head Roaster',
-      description: 'With over 15 years of experience in specialty coffee, Sarah\'s passion for the perfect roast drives our commitment to quality.',
-      image: teamImage1
+      description:
+        "With over 15 years of experience in specialty coffee, Sarah's passion for the perfect roast drives our commitment to quality.",
+      image: teamImage1,
     },
     {
       name: 'Marcus Rodriguez',
       role: 'Head Barista',
-      description: 'A certified Q-grader with a background in coffee education, Marcus leads our barista training program and quality control.',
-      image: teamImage2
+      description:
+        'A certified Q-grader with a background in coffee education, Marcus leads our barista training program and quality control.',
+      image: teamImage2,
     },
     {
       name: 'Emma Thompson',
       role: 'Café Manager',
-      description: 'Emma ensures every visit to Latitude 48 is memorable, bringing her hospitality expertise and warm personality to our daily operations.',
-      image: teamImage3
-    }
+      description:
+        'Emma ensures every visit to Latitude 48 is memorable, bringing her hospitality expertise and warm personality to our daily operations.',
+      image: teamImage3,
+    },
   ];
 
   const values = [
     {
       title: 'Sustainability',
-      description: 'We source our beans through direct trade partnerships, ensuring fair compensation for farmers and sustainable farming practices.'
+      description:
+        'We source our beans through direct trade partnerships, ensuring fair compensation for farmers and sustainable farming practices.',
     },
     {
       title: 'Community',
-      description: 'Our café is more than just a coffee shop—it\'s a gathering place for neighbors, artists, and coffee enthusiasts.'
+      description:
+        "Our café is more than just a coffee shop—it's a gathering place for neighbors, artists, and coffee enthusiasts.",
     },
     {
       title: 'Quality',
-      description: 'From bean selection to brewing, we maintain rigorous standards to serve you the perfect cup every time.'
-    }
+      description:
+        'From bean selection to brewing, we maintain rigorous standards to serve you the perfect cup every time.',
+    },
   ];
 
   return (
@@ -57,29 +64,48 @@ const About = () => {
           <div className={styles.heroImage}>
             <img src={heroImage} alt="Latitude 48 café interior" />
           </div>
-          <AnimatedTextReveal as="h1" scrollTrigger={false} className={styles.title}>
+          <AnimatedTextReveal
+            as="h1"
+            scrollTrigger={false}
+            className={styles.title}
+          >
             Our Story
           </AnimatedTextReveal>
-          <AnimatedTextReveal as="p" scrollTrigger={false} className={styles.subtitle}>
+          <AnimatedTextReveal
+            as="p"
+            scrollTrigger={false}
+            className={styles.subtitle}
+          >
             Crafting exceptional coffee experiences at the 48th parallel
           </AnimatedTextReveal>
         </section>
 
         <div className={styles.contentGrid}>
-          <div className={`${styles.storySection} ${styles.animate}`} style={{ animationDelay: '0.2s' }}>
+          <div
+            className={`${styles.storySection} ${styles.animate}`}
+            style={{ animationDelay: '0.2s' }}
+          >
             <div className={styles.storyImage}>
               <img src={storyImage} alt="Coffee roasting process" />
             </div>
             <h2>The Journey</h2>
             <p>
-              Founded in 2018, Latitude 48 began with a simple mission: to create a space where coffee, community, and culture intersect. Our name draws inspiration from the 48th parallel north, where some of the world's finest coffee beans are grown.
+              Founded in 2018, Latitude 48 began with a simple mission: to
+              create a space where coffee, community, and culture intersect. Our
+              name draws inspiration from the 48th parallel north, where some of
+              the world's finest coffee beans are grown.
             </p>
             <p>
-              What started as a small coffee cart has grown into a beloved neighborhood destination, where every cup tells a story and every visitor becomes part of our extended family.
+              What started as a small coffee cart has grown into a beloved
+              neighborhood destination, where every cup tells a story and every
+              visitor becomes part of our extended family.
             </p>
           </div>
 
-          <div className={`${styles.atmosphereSection} ${styles.animate}`} style={{ animationDelay: '0.4s' }}>
+          <div
+            className={`${styles.atmosphereSection} ${styles.animate}`}
+            style={{ animationDelay: '0.4s' }}
+          >
             <div className={styles.atmosphereImage}>
               <img src={atmosphereImage} alt="Café atmosphere" />
             </div>
@@ -95,24 +121,10 @@ const About = () => {
           </div>
         </div>
 
-        <section className={`${styles.teamSection} ${styles.animate}`} style={{ animationDelay: '0.6s' }}>
-          <h2>Meet Our Team</h2>
-          <div className={styles.teamGrid}>
-            {teamMembers.map((member, index) => (
-              <div key={index} className={styles.teamCard}>
-                <div className={styles.teamMemberImage}>
-                  <img src={member.image} alt={member.name} />
-                </div>
-                <h3 className={styles.memberName}>{member.name}</h3>
-                <span className={styles.memberRole}>{member.role}</span>
-                <p className={styles.memberDescription}>{member.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+        <TeamSection teamMembers={teamMembers} />
       </main>
     </>
   );
-}
+};
 
 export default About;

@@ -11,7 +11,9 @@ const getBackgroundColor = (element: HTMLElement): string => {
   if (bgcolor !== 'rgba(0, 0, 0, 0)' && bgcolor !== 'transparent') {
     return bgcolor;
   }
-  return element.parentElement ? getBackgroundColor(element.parentElement) : '#ffffff';
+  return element.parentElement
+    ? getBackgroundColor(element.parentElement)
+    : '#ffffff';
 };
 
 // Helper function to determine if a color is light or dark
@@ -31,7 +33,7 @@ const MouseTracker = () => {
   useEffect(() => {
     let animationFrameId: number;
     let currentPosition = getInitialPosition();
-    
+
     const handleInitialPosition = () => {
       const handleFirstMove = (event: MouseEvent) => {
         currentPosition = { x: event.clientX, y: event.clientY };
@@ -57,12 +59,12 @@ const MouseTracker = () => {
         // Smooth interpolation
         const dx = targetX - currentPosition.x;
         const dy = targetY - currentPosition.y;
-        
+
         currentPosition = {
           x: currentPosition.x + dx * 0.5,
-          y: currentPosition.y + dy * 0.5
+          y: currentPosition.y + dy * 0.5,
         };
-        
+
         setPosition(currentPosition);
 
         if (Math.abs(dx) > 0.01 || Math.abs(dy) > 0.01) {
@@ -76,14 +78,24 @@ const MouseTracker = () => {
 
     const handleMouseOver = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
-      if (target.tagName === 'A' || target.tagName === 'BUTTON' || target.classList.contains('btn') || target.classList.contains('interactive')) {
+      if (
+        target.tagName === 'A' ||
+        target.tagName === 'BUTTON' ||
+        target.classList.contains('btn') ||
+        target.classList.contains('interactive')
+      ) {
         setIsHovering(true);
       }
     };
 
     const handleMouseOut = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
-      if (target.tagName === 'A' || target.tagName === 'BUTTON' || target.classList.contains('btn') || target.classList.contains('interactive')) {
+      if (
+        target.tagName === 'A' ||
+        target.tagName === 'BUTTON' ||
+        target.classList.contains('btn') ||
+        target.classList.contains('interactive')
+      ) {
         setIsHovering(false);
       }
     };
@@ -112,7 +124,8 @@ const MouseTracker = () => {
         backgroundColor: isHovering ? 'var(--primary-color)' : 'transparent',
         border: isHovering ? 'none' : `2px solid ${borderColor}`,
         pointerEvents: 'none',
-        transition: 'transform 0.04s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s ease, border 0.15s ease',
+        transition:
+          'transform 0.04s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s ease, border 0.15s ease',
         zIndex: 1000,
       }}
     />

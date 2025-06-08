@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { getPageTitle } from '../../../utils/pageTitle';
 import MenuLayout from '../_components/MenuLayout';
 import styles from '../_components/menu.module.css';
@@ -10,15 +10,16 @@ const TeaMenu = () => {
       items: [
         {
           name: 'Sencha',
-          description: 'Classic Japanese green tea with a fresh, grassy flavor.',
-          price: '$4.50'
+          description:
+            'Classic Japanese green tea with a fresh, grassy flavor.',
+          price: '$4.50',
         },
         {
           name: 'Dragon Well',
           description: 'Premium Chinese green tea with a sweet, nutty taste.',
-          price: '$5.00'
-        }
-      ]
+          price: '$5.00',
+        },
+      ],
     },
     {
       name: 'Black Tea',
@@ -26,14 +27,14 @@ const TeaMenu = () => {
         {
           name: 'Earl Grey',
           description: 'Fragrant black tea flavored with oil of bergamot.',
-          price: '$4.00'
+          price: '$4.00',
         },
         {
           name: 'English Breakfast',
           description: 'Full-bodied blend perfect for starting your day.',
-          price: '$4.00'
-        }
-      ]
+          price: '$4.00',
+        },
+      ],
     },
     {
       name: 'Herbal Tea',
@@ -41,15 +42,15 @@ const TeaMenu = () => {
         {
           name: 'Chamomile',
           description: 'Soothing herbal infusion with honey-like sweetness.',
-          price: '$4.00'
+          price: '$4.00',
         },
         {
           name: 'Peppermint',
           description: 'Refreshing mint tea with a cool, crisp finish.',
-          price: '$4.00'
-        }
-      ]
-    }
+          price: '$4.00',
+        },
+      ],
+    },
   ];
 
   return (
@@ -73,7 +74,9 @@ const TeaMenu = () => {
                         <h4 className={styles.teaName}>{item.name}</h4>
                         <span className={styles.teaPrice}>{item.price}</span>
                       </div>
-                      <p className={styles.teaDescription}>{item.description}</p>
+                      <p className={styles.teaDescription}>
+                        {item.description}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -86,4 +89,4 @@ const TeaMenu = () => {
   );
 };
 
-export default TeaMenu; 
+export default TeaMenu;

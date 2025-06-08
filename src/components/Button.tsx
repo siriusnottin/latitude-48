@@ -8,9 +8,10 @@ type ButtonBaseProps = {
   className?: string;
 };
 
-type ButtonAsButtonProps = ButtonBaseProps & React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  to?: never;
-};
+type ButtonAsButtonProps = ButtonBaseProps &
+  React.ButtonHTMLAttributes<HTMLButtonElement> & {
+    to?: never;
+  };
 
 type ButtonAsLinkProps = ButtonBaseProps & {
   to: Path;
@@ -18,7 +19,13 @@ type ButtonAsLinkProps = ButtonBaseProps & {
 
 type ButtonProps = ButtonAsButtonProps | ButtonAsLinkProps;
 
-export const Button = ({ variant = 'primary', children, className = '', to, ...props }: ButtonProps) => {
+export const Button = ({
+  variant = 'primary',
+  children,
+  className = '',
+  to,
+  ...props
+}: ButtonProps) => {
   const elementRef = useRef<HTMLButtonElement | HTMLDivElement>(null);
   const isHovering = useRef(false);
 
@@ -35,41 +42,41 @@ export const Button = ({ variant = 'primary', children, className = '', to, ...p
 
       // Set initial position
       gsap.set(element, {
-        "--x": `${x - 15}px`,
-        "--y": `${y - 15}px`,
-        "--scale": 0
+        '--x': `${x - 15}px`,
+        '--y': `${y - 15}px`,
+        '--scale': 0,
       });
 
       // Animate the circle in
       gsap.to(element, {
-        "--scale": 15,
+        '--scale': 15,
         duration: 0.5,
-        ease: "power1.out"
+        ease: 'power1.out',
       });
     };
 
     const handleMouseMove = (e: Event) => {
       if (!(e instanceof MouseEvent)) return;
       if (!isHovering.current) return;
-      
+
       const rect = element.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
 
       gsap.to(element, {
-        "--x": `${x - 15}px`,
-        "--y": `${y - 15}px`,
+        '--x': `${x - 15}px`,
+        '--y': `${y - 15}px`,
         duration: 0.1,
-        ease: "none"
+        ease: 'none',
       });
     };
 
     const handleMouseLeave = () => {
       isHovering.current = false;
       gsap.to(element, {
-        "--scale": 0,
+        '--scale': 0,
         duration: 0.3,
-        ease: "power2.in"
+        ease: 'power2.in',
       });
     };
 
@@ -86,21 +93,19 @@ export const Button = ({ variant = 'primary', children, className = '', to, ...p
   }, []);
 
   const buttonStyle = {
-    "--x": "0px",
-    "--y": "0px",
-    "--scale": 0,
+    '--x': '0px',
+    '--y': '0px',
+    '--scale': 0,
   } as React.CSSProperties;
 
   if (to) {
     return (
-      <div 
+      <div
         ref={elementRef as React.RefObject<HTMLDivElement>}
         className={`btn ${variant} ${className}`}
         style={buttonStyle}
       >
-        <Link to={to}>
-          {children}
-        </Link>
+        <Link to={to}>{children}</Link>
       </div>
     );
   }
@@ -115,4 +120,4 @@ export const Button = ({ variant = 'primary', children, className = '', to, ...p
       {children}
     </button>
   );
-}; 
+};

@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { getPageTitle } from '../../../utils/pageTitle';
 import MenuLayout from '../_components/MenuLayout';
 import styles from '../_components/menu.module.css';
@@ -14,7 +14,8 @@ const BrasilMenu = () => {
     {
       number: '01',
       name: 'Brazilian Espresso',
-      description: 'Our signature Brazilian espresso combines rich coffee with a smooth, velvety texture, creating a perfect balance of bold flavors.',
+      description:
+        'Our signature Brazilian espresso combines rich coffee with a smooth, velvety texture, creating a perfect balance of bold flavors.',
       price: '$4.50',
       image: macchiatoImage1,
       details: {
@@ -22,13 +23,14 @@ const BrasilMenu = () => {
         process: 'Natural',
         varietals: 'Mundo Novo, Bourbon',
         cupping_notes: 'Chocolate, Nuts, Caramel',
-        roast_level: 'Medium-Dark'
-      }
+        roast_level: 'Medium-Dark',
+      },
     },
     {
       number: '02',
       name: 'Café com Leite',
-      description: 'A traditional Brazilian preparation featuring locally sourced beans with steamed milk, offering notes of chocolate and caramel with a smooth finish.',
+      description:
+        'A traditional Brazilian preparation featuring locally sourced beans with steamed milk, offering notes of chocolate and caramel with a smooth finish.',
       price: '$4.75',
       image: macchiatoImage2,
       details: {
@@ -36,13 +38,14 @@ const BrasilMenu = () => {
         process: 'Natural',
         varietals: 'Yellow Bourbon, Catuai',
         cupping_notes: 'Milk Chocolate, Caramel, Hazelnut',
-        roast_level: 'Medium'
-      }
+        roast_level: 'Medium',
+      },
     },
     {
       number: '03',
       name: 'Santos Special',
-      description: 'Our special Ritmo do Grao blend creates a unique coffee experience with hints of nuts and citrus, perfectly balanced and smooth.',
+      description:
+        'Our special Ritmo do Grao blend creates a unique coffee experience with hints of nuts and citrus, perfectly balanced and smooth.',
       price: '$5.00',
       image: macchiatoImage3,
       details: {
@@ -50,9 +53,9 @@ const BrasilMenu = () => {
         process: 'Pulped Natural',
         varietals: 'Yellow Bourbon, Mundo Novo',
         cupping_notes: 'Nuts, Citrus, Brown Sugar',
-        roast_level: 'Medium'
-      }
-    }
+        roast_level: 'Medium',
+      },
+    },
   ];
 
   return (
@@ -76,4 +79,4 @@ const BrasilMenu = () => {
   );
 };
 
-export default BrasilMenu; 
+export default BrasilMenu;

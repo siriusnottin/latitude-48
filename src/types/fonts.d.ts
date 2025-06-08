@@ -1,1 +1,1 @@
-declare module '@fontsource/syne'; 
+declare module '@fontsource/syne';

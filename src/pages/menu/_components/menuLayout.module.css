@@ -16,76 +16,80 @@
   overflow: hidden;
   margin-bottom: 4rem;
   border-radius: 2px;
-  }
-  
-  .heroSection::before,
-  .heroSection::after {
-    content: '';
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    border: 1px solid rgba(166, 124, 82, 0.2);
-    pointer-events: none;
-  }
-  
-  .heroSection::before {
-    top: 20px;
-    left: 20px;
-    border-right: none;
-    border-bottom: none;
-  }
-  
-  .heroSection::after {
-    bottom: 20px;
-    right: 20px;
-    border-left: none;
-    border-top: none;
-  }
-  
-  .heroBackground {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 1;
-  }
-  
-  .heroBackground::before,
-  .heroBackground::after {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    z-index: 2;
-  }
-  
-  .heroBackground::before {
-    top: 40px;
-    right: 40px;
-    border-left: none;
-    border-bottom: none;
-  }
-  
-  .heroBackground::after {
-    bottom: 40px;
-    left: 40px;
-    border-right: none;
-    border-top: none;
-  }
-  
-  .heroBackground::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(26, 26, 26, 0.95), rgba(44, 44, 44, 0.9));
+}
+
+.heroSection::before,
+.heroSection::after {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgba(166, 124, 82, 0.2);
+  pointer-events: none;
+}
+
+.heroSection::before {
+  top: 20px;
+  left: 20px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.heroSection::after {
+  bottom: 20px;
+  right: 20px;
+  border-left: none;
+  border-top: none;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.heroBackground::before,
+.heroBackground::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 2;
+}
+
+.heroBackground::before {
+  top: 40px;
+  right: 40px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.heroBackground::after {
+  bottom: 40px;
+  left: 40px;
+  border-right: none;
+  border-top: none;
+}
+
+.heroBackground::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(26, 26, 26, 0.95),
+    rgba(44, 44, 44, 0.9)
+  );
 }
 
 .heroContent {
@@ -95,30 +99,32 @@
   opacity: 0;
   animation: fadeIn 1s ease-out forwards;
   position: relative;
-    padding: 3rem;
-  }
-  
-  .heroContent::before,
-  .heroContent::after {
-    content: '';
-    position: absolute;
-    width: 40%;
-    height: 1px;
-    background: linear-gradient(90deg,
-        transparent,
-        rgba(166, 124, 82, 0.3) 20%,
-        rgba(166, 124, 82, 0.3) 80%,
-        transparent);
-  }
-  
-  .heroContent::before {
-    top: 0;
-    left: 30%;
-  }
-  
-  .heroContent::after {
-    bottom: 0;
-    left: 30%;
+  padding: 3rem;
+}
+
+.heroContent::before,
+.heroContent::after {
+  content: '';
+  position: absolute;
+  width: 40%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(166, 124, 82, 0.3) 20%,
+    rgba(166, 124, 82, 0.3) 80%,
+    transparent
+  );
+}
+
+.heroContent::before {
+  top: 0;
+  left: 30%;
+}
+
+.heroContent::after {
+  bottom: 0;
+  left: 30%;
 }
 
 .heroTitle {
@@ -128,30 +134,30 @@
   letter-spacing: 0.3em;
   text-transform: uppercase;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    position: relative;
-  }
-  
-  .heroTitle::before,
-  .heroTitle::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border: 1px solid rgba(166, 124, 82, 0.3);
-  }
-  
-  .heroTitle::before {
-    top: -10px;
-    left: -10px;
-    border-right: none;
-    border-bottom: none;
-  }
-  
-  .heroTitle::after {
-    bottom: -10px;
-    right: -10px;
-    border-left: none;
-    border-top: none;
+  position: relative;
+}
+
+.heroTitle::before,
+.heroTitle::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(166, 124, 82, 0.3);
+}
+
+.heroTitle::before {
+  top: -10px;
+  left: -10px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.heroTitle::after {
+  bottom: -10px;
+  right: -10px;
+  border-left: none;
+  border-top: none;
 }
 
 .heroSubtitle {
@@ -160,29 +166,29 @@
   letter-spacing: 0.2em;
   color: #a67c52;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-    position: relative;
-    display: inline-block;
-    padding: 0 2rem;
-  }
-  
-  .heroSubtitle::before,
-  .heroSubtitle::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 30px;
-    height: 1px;
-    background: rgba(166, 124, 82, 0.3);
-  }
-  
-  .heroSubtitle::before {
-    left: -20px;
-    transform: rotate(-45deg);
-  }
-  
-  .heroSubtitle::after {
-    right: -20px;
-    transform: rotate(45deg);
+  position: relative;
+  display: inline-block;
+  padding: 0 2rem;
+}
+
+.heroSubtitle::before,
+.heroSubtitle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 1px;
+  background: rgba(166, 124, 82, 0.3);
+}
+
+.heroSubtitle::before {
+  left: -20px;
+  transform: rotate(-45deg);
+}
+
+.heroSubtitle::after {
+  right: -20px;
+  transform: rotate(45deg);
 }
 
 .experienceSection {
@@ -233,7 +239,7 @@
   font-size: 1.8rem;
   font-weight: 600;
   margin: 1.5rem;
-    color: #333;
+  color: #333;
 }
 
 .methodDescription {
@@ -244,137 +250,149 @@
 
 .journeySection {
   padding: 8rem 0;
-    position: relative;
-    overflow: hidden;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    width: 100vw;
-  }
-  
-  .journeySection::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background:
-      radial-gradient(circle at 15% 50%, rgba(166, 124, 82, 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 85% 50%, rgba(166, 124, 82, 0.05) 0%, transparent 50%);
-    pointer-events: none;
-  }
-  
-  .journeySection .pageTitle {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 2rem;
+  position: relative;
+  overflow: hidden;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  width: 100vw;
+}
+
+.journeySection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(
+      circle at 15% 50%,
+      rgba(166, 124, 82, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 85% 50%,
+      rgba(166, 124, 82, 0.05) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+}
+
+.journeySection .pageTitle {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2rem;
 }
 
 .journeyGrid {
   display: flex;
-    flex-direction: column;
-    gap: 8rem;
+  flex-direction: column;
+  gap: 8rem;
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
-  }
-  
-  .journeyGrid::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 1px;
-    height: 100%;
-    background: linear-gradient(180deg,
-        rgba(166, 124, 82, 0) 0%,
-        rgba(166, 124, 82, 0.3) 10%,
-        rgba(166, 124, 82, 0.3) 90%,
-        rgba(166, 124, 82, 0) 100%);
-    transform: translateX(-50%);
+}
+
+.journeyGrid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(166, 124, 82, 0) 0%,
+    rgba(166, 124, 82, 0.3) 10%,
+    rgba(166, 124, 82, 0.3) 90%,
+    rgba(166, 124, 82, 0) 100%
+  );
+  transform: translateX(-50%);
 }
 
 .journeyStep {
   position: relative;
   width: calc(50% - 5rem);
-    margin: 0;
-    padding: 0;
-    border-radius: 2px;
-    overflow: visible;
-    transition: transform 0.3s ease;
-  }
-  
-  .journeyStep:hover {
-    transform: translateY(-5px);
-  }
-  
-  .journeyStep:nth-child(odd) {
-    margin-right: auto;
-  }
-  
-  .journeyStep:nth-child(even) {
-    margin-left: auto;
-  }
-  
-  .journeyStep::before {
-    content: '';
-    position: absolute;
-    top: 40%;
-    width: 4rem;
-    height: 1px;
-    background: linear-gradient(90deg,
-        rgba(166, 124, 82, 0.3),
-        rgba(166, 124, 82, 0.6));
-  }
-  
-  .journeyStep::after {
-    content: '';
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    border: 1px solid rgba(166, 124, 82, 0.1);
-    border-radius: 50%;
-    z-index: -1;
-  }
-  
-  .journeyStep:nth-child(odd)::before {
-    right: -4rem;
-  }
-  
-  .journeyStep:nth-child(even)::before {
-    left: -4rem;
-  }
-  
-  .journeyStep:nth-child(odd)::after {
-    top: -30px;
-    right: -60px;
-  }
-  
-  .journeyStep:nth-child(even)::after {
-    bottom: -30px;
-    left: -60px;
-  }
-  
-  .journeyImageWrapper {
-    width: 100%;
-    height: 280px;
-    overflow: hidden;
-    position: relative;
-    border-radius: 2px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  }
-  
-  .journeyImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-  }
-  
-  .journeyStep:hover .journeyImage {
-    transform: scale(1.05);
+  margin: 0;
+  padding: 0;
+  border-radius: 2px;
+  overflow: visible;
+  transition: transform 0.3s ease;
+}
+
+.journeyStep:hover {
+  transform: translateY(-5px);
+}
+
+.journeyStep:nth-child(odd) {
+  margin-right: auto;
+}
+
+.journeyStep:nth-child(even) {
+  margin-left: auto;
+}
+
+.journeyStep::before {
+  content: '';
+  position: absolute;
+  top: 40%;
+  width: 4rem;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(166, 124, 82, 0.3),
+    rgba(166, 124, 82, 0.6)
+  );
+}
+
+.journeyStep::after {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border: 1px solid rgba(166, 124, 82, 0.1);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.journeyStep:nth-child(odd)::before {
+  right: -4rem;
+}
+
+.journeyStep:nth-child(even)::before {
+  left: -4rem;
+}
+
+.journeyStep:nth-child(odd)::after {
+  top: -30px;
+  right: -60px;
+}
+
+.journeyStep:nth-child(even)::after {
+  bottom: -30px;
+  left: -60px;
+}
+
+.journeyImageWrapper {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 2px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.journeyImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.journeyStep:hover .journeyImage {
+  transform: scale(1.05);
 }
 
 .stepNumber {
@@ -382,58 +400,58 @@
   align-items: center;
   justify-content: center;
   width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #fff;
-    color: #a67c52;
-    font-weight: bold;
-    font-size: 1.4rem;
-    position: absolute;
-    top: 40%;
-    transform: translateY(-50%);
-    z-index: 2;
-    border: 1px solid rgba(166, 124, 82, 0.3);
-    box-shadow: 0 5px 15px rgba(166, 124, 82, 0.1);
-    transition: all 0.3s ease;
-  }
-  
-  .journeyStep:hover .stepNumber {
-    background: #a67c52;
-    color: #fff;
-    border-color: #a67c52;
-  }
-  
-  .journeyStep:nth-child(odd) .stepNumber {
-    right: -5rem;
-  }
-  
-  .journeyStep:nth-child(even) .stepNumber {
-    left: -5rem;
-  }
-  
-  .stepContent {
-    padding: 2rem 0;
-    position: relative;
-  }
-  
-  .stepContent::before {
-    content: '';
-    position: absolute;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;
+  color: #a67c52;
+  font-weight: bold;
+  font-size: 1.4rem;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 2;
+  border: 1px solid rgba(166, 124, 82, 0.3);
+  box-shadow: 0 5px 15px rgba(166, 124, 82, 0.1);
+  transition: all 0.3s ease;
+}
+
+.journeyStep:hover .stepNumber {
+  background: #a67c52;
+  color: #fff;
+  border-color: #a67c52;
+}
+
+.journeyStep:nth-child(odd) .stepNumber {
+  right: -5rem;
+}
+
+.journeyStep:nth-child(even) .stepNumber {
+  left: -5rem;
+}
+
+.stepContent {
+  padding: 2rem 0;
+  position: relative;
+}
+
+.stepContent::before {
+  content: '';
+  position: absolute;
   width: 40px;
   height: 40px;
   border: 1px solid rgba(166, 124, 82, 0.1);
-    transform: rotate(45deg);
-    z-index: -1;
-  }
-  
-  .journeyStep:nth-child(odd) .stepContent::before {
-    top: -20px;
-    right: 20px;
-  }
-  
-  .journeyStep:nth-child(even) .stepContent::before {
-    bottom: -20px;
-    left: 20px;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.journeyStep:nth-child(odd) .stepContent::before {
+  top: -20px;
+  right: 20px;
+}
+
+.journeyStep:nth-child(even) .stepContent::before {
+  bottom: -20px;
+  left: 20px;
 }
 
 .stepTitle {
@@ -442,14 +460,14 @@
   margin: 0 0 1rem;
   color: #333;
   position: relative;
-    letter-spacing: 0.02em;
+  letter-spacing: 0.02em;
 }
 
 .stepDescription {
   color: #666;
   line-height: 1.8;
-    position: relative;
-    font-size: 1.1rem;
+  position: relative;
+  font-size: 1.1rem;
 }
 
 .characteristicsSection {
@@ -527,24 +545,24 @@
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   overflow: hidden;
-  }
-  
-  .seasonalImageWrapper {
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .seasonalImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  
-  .seasonalCard:hover .seasonalImage {
-    transform: scale(1.05);
+}
+
+.seasonalImageWrapper {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.seasonalImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.seasonalCard:hover .seasonalImage {
+  transform: scale(1.05);
 }
 
 .seasonalHeader {
@@ -647,7 +665,7 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 2rem;
-    letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
 }
 
 .subtitle {
@@ -707,259 +725,278 @@
   margin: 0 auto;
   padding: 2rem;
   position: relative;
-    overflow: hidden;
+  overflow: hidden;
+}
+
+.menuContainer::before,
+.menuContainer::after {
+  content: '';
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(166, 124, 82, 0.1);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.menuContainer::before {
+  top: 10%;
+  left: -150px;
+}
+
+.menuContainer::after {
+  bottom: 20%;
+  right: -150px;
+}
+
+/* Decorative elements */
+.decorativeLine {
+  position: absolute;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(166, 124, 82, 0.1),
+    transparent
+  );
+  height: 1px;
+  width: 200px;
+  z-index: -1;
+}
+
+.decorativeCircle {
+  position: absolute;
+  border: 1px solid rgba(166, 124, 82, 0.1);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Add specific decorative elements */
+.pageTitle {
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.pageTitle::before,
+.pageTitle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(166, 124, 82, 0.2),
+    transparent
+  );
+}
+
+.pageTitle::before {
+  right: calc(50% + 120px);
+}
+
+.pageTitle::after {
+  left: calc(50% + 120px);
+}
+
+/* Journey section decorations */
+.journeySection {
+  position: relative;
+}
+
+.journeySection::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -100px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgba(166, 124, 82, 0.1);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.journeySection::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgba(166, 124, 82, 0.1);
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+/* Origins grid decorations */
+.originsGrid {
+  position: relative;
+}
+
+.originsGrid::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: -80px;
+  width: 160px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(166, 124, 82, 0.15),
+    transparent
+  );
+  transform: rotate(-45deg);
+  z-index: -1;
+}
+
+.originsGrid::after {
+  content: '';
+  position: absolute;
+  bottom: 30%;
+  right: -80px;
+  width: 160px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(166, 124, 82, 0.15),
+    transparent
+  );
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+/* Characteristics section decorations */
+.characteristicsSection {
+  position: relative;
+}
+
+.characteristicsSection::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -100px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgba(166, 124, 82, 0.1);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Seasonal section decorations */
+.seasonalSection {
+  position: relative;
+}
+
+.seasonalSection::before,
+.seasonalSection::after {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border: 1px solid rgba(166, 124, 82, 0.1);
+  z-index: -1;
+}
+
+.seasonalSection::before {
+  top: 30px;
+  left: 10%;
+  transform: rotate(15deg);
+}
+
+.seasonalSection::after {
+  bottom: 40px;
+  right: 15%;
+  transform: rotate(-15deg);
+}
+
+/* Methods section decorations */
+.methodsGrid {
+  position: relative;
+}
+
+.methodsGrid::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: 20%;
+  width: 80px;
+  height: 80px;
+  border: 1px solid rgba(166, 124, 82, 0.1);
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.methodsGrid::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: 30%;
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgba(166, 124, 82, 0.1);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Add floating animations for some elements */
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0);
   }
-  
+
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+.characteristicsSection::before,
+.seasonalSection::before,
+.seasonalSection::after {
+  animation: float 8s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .menuContainer::before,
-  .menuContainer::after {
-    content: '';
-    position: fixed;
-    width: 300px;
-    height: 300px;
-    border: 1px solid rgba(166, 124, 82, 0.1);
-    border-radius: 50%;
-    z-index: -1;
-  }
-  
-  .menuContainer::before {
-    top: 10%;
-    left: -150px;
-  }
-  
-  .menuContainer::after {
-    bottom: 20%;
-    right: -150px;
-  }
-  
-  /* Decorative elements */
-  .decorativeLine {
-    position: absolute;
-    background: linear-gradient(90deg, transparent, rgba(166, 124, 82, 0.1), transparent);
-    height: 1px;
-    width: 200px;
-    z-index: -1;
-  }
-  
-  .decorativeCircle {
-    position: absolute;
-    border: 1px solid rgba(166, 124, 82, 0.1);
-    border-radius: 50%;
-    z-index: -1;
-  }
-  
-  /* Add specific decorative elements */
-  .pageTitle {
-    position: relative;
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-  
-  .pageTitle::before,
-  .pageTitle::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 100px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(166, 124, 82, 0.2), transparent);
-  }
-  
-  .pageTitle::before {
-    right: calc(50% + 120px);
-  }
-  
-  .pageTitle::after {
-    left: calc(50% + 120px);
-  }
-  
-  /* Journey section decorations */
-  .journeySection {
-    position: relative;
-  }
-  
-  .journeySection::before {
-    content: '';
-    position: absolute;
-    top: -50px;
-    left: -100px;
-    width: 200px;
-    height: 200px;
-    border: 1px solid rgba(166, 124, 82, 0.1);
-    border-radius: 50%;
-    z-index: -1;
-  }
-  
-  .journeySection::after {
-    content: '';
-    position: absolute;
-    bottom: -100px;
-    right: -50px;
-    width: 150px;
-    height: 150px;
-    border: 1px solid rgba(166, 124, 82, 0.1);
-    transform: rotate(45deg);
-    z-index: -1;
-  }
-  
-  /* Origins grid decorations */
-  .originsGrid {
-    position: relative;
-  }
-  
-  .originsGrid::before {
-    content: '';
-    position: absolute;
-    top: 20%;
-    left: -80px;
-    width: 160px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(166, 124, 82, 0.15), transparent);
-    transform: rotate(-45deg);
-    z-index: -1;
-  }
-  
-  .originsGrid::after {
-    content: '';
-    position: absolute;
-    bottom: 30%;
-    right: -80px;
-    width: 160px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(166, 124, 82, 0.15), transparent);
-    transform: rotate(45deg);
-    z-index: -1;
-  }
-  
-  /* Characteristics section decorations */
-  .characteristicsSection {
-    position: relative;
-  }
-  
-  .characteristicsSection::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -100px;
-    width: 200px;
-    height: 200px;
-    border: 1px solid rgba(166, 124, 82, 0.1);
-    border-radius: 50%;
-    z-index: -1;
-  }
-  
-  /* Seasonal section decorations */
-  .seasonalSection {
-    position: relative;
-  }
-  
-  .seasonalSection::before,
-  .seasonalSection::after {
-    content: '';
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    border: 1px solid rgba(166, 124, 82, 0.1);
-    z-index: -1;
-  }
-  
-  .seasonalSection::before {
-    top: 30px;
-    left: 10%;
-    transform: rotate(15deg);
-  }
-  
-  .seasonalSection::after {
-    bottom: 40px;
-    right: 15%;
-    transform: rotate(-15deg);
-  }
-  
-  /* Methods section decorations */
-  .methodsGrid {
-    position: relative;
-  }
-  
-  .methodsGrid::before {
-    content: '';
-    position: absolute;
-    top: -30px;
-    right: 20%;
-    width: 80px;
-    height: 80px;
-    border: 1px solid rgba(166, 124, 82, 0.1);
-    transform: rotate(45deg);
-    z-index: -1;
-  }
-  
-  .methodsGrid::after {
-    content: '';
-    position: absolute;
-    bottom: -40px;
-    left: 30%;
-    width: 100px;
-    height: 100px;
-    border: 1px solid rgba(166, 124, 82, 0.1);
-    border-radius: 50%;
-    z-index: -1;
-  }
-  
-  /* Add floating animations for some elements */
-  @keyframes float {
-    0% {
-      transform: translateY(0) rotate(0);
-    }
-  
-    50% {
-      transform: translateY(-10px) rotate(2deg);
-    }
-  
-    100% {
-      transform: translateY(0) rotate(0);
-    }
-  }
-  
+  .menuContainer::after,
+  .journeySection::before,
+  .journeySection::after,
+  .originsGrid::before,
+  .originsGrid::after,
   .characteristicsSection::before,
   .seasonalSection::before,
-  .seasonalSection::after {
-    animation: float 8s ease-in-out infinite;
+  .seasonalSection::after,
+  .methodsGrid::before,
+  .methodsGrid::after {
+    display: none;
   }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-  
-    .menuContainer::before,
-    .menuContainer::after,
-    .journeySection::before,
-    .journeySection::after,
-    .originsGrid::before,
-    .originsGrid::after,
-    .characteristicsSection::before,
-    .seasonalSection::before,
-    .seasonalSection::after,
-    .methodsGrid::before,
-    .methodsGrid::after {
-      display: none;
-    }
 }
 
 .coffeeGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 4rem;
-    padding: 3rem 0;
-    margin: 0 auto;
-    max-width: 1400px;
+  gap: 4rem;
+  padding: 3rem 0;
+  margin: 0 auto;
+  max-width: 1400px;
 }
 
 .coffeeItem {
   position: relative;
   border: 1px solid #e2e2e2;
   padding: 2.5rem;
-    border-radius: 12px;
-    background: #fff;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    overflow: hidden;
+  border-radius: 12px;
+  background: #fff;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .imageWrapper {
@@ -989,7 +1026,7 @@
   font-size: 1.4rem;
   font-weight: 600;
   color: #999;
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .coffeeName {
@@ -1120,30 +1157,30 @@
   .methodsGrid {
     grid-template-columns: 1fr;
   }
-.journeyGrid::before {
-  left: 2rem;
-}
+  .journeyGrid::before {
+    left: 2rem;
+  }
 
-.journeyStep {
-  width: calc(100% - 4rem);
-  margin-left: 4rem !important;
-}
+  .journeyStep {
+    width: calc(100% - 4rem);
+    margin-left: 4rem !important;
+  }
 
-.journeyStep::before {
-  width: 2rem;
-}
+  .journeyStep::before {
+    width: 2rem;
+  }
 
-.journeyStep:nth-child(odd)::before,
-.journeyStep:nth-child(even)::before {
-  left: -2rem;
-}
+  .journeyStep:nth-child(odd)::before,
+  .journeyStep:nth-child(even)::before {
+    left: -2rem;
+  }
 
-.stepNumber {
-  left: -3.5rem !important;
-  width: 40px;
-  height: 40px;
-  font-size: 1rem;
-}
+  .stepNumber {
+    left: -3.5rem !important;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
 }
 .pageEnter {
   opacity: 0;
@@ -1153,7 +1190,9 @@
 .pageEnterActive {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 
 .pageExit {
@@ -1249,7 +1288,6 @@
 }
 
 @media (max-width: 768px) {
-
   .teaGrid,
   .drinksGrid,
   .foodGrid {

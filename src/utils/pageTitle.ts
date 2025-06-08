@@ -1,4 +1,4 @@
-import {getSiteTitle} from './siteTitle';
+import { getSiteTitle } from './siteTitle';
 
 // Utility to generate a consistent page title
 export function getPageTitle(page: string, options?: { inverted?: boolean }) {

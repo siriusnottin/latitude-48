@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { getPageTitle } from '../../../utils/pageTitle';
 import MenuLayout from '../_components/MenuLayout';
 import styles from '../_components/menu.module.css';
@@ -14,7 +14,8 @@ const ArgentinaMenu = () => {
     {
       number: '01',
       name: 'Cortado Porteño',
-      description: 'The Buenos Aires classic - equal parts espresso and steamed milk, perfectly balanced.',
+      description:
+        'The Buenos Aires classic - equal parts espresso and steamed milk, perfectly balanced.',
       price: '$4.25',
       image: cortadoImage,
       details: {
@@ -22,13 +23,14 @@ const ArgentinaMenu = () => {
         process: 'Washed',
         varietals: 'Arabica Blend',
         cupping_notes: 'Smooth, Balanced, Sweet',
-        roast_level: 'Medium'
-      }
+        roast_level: 'Medium',
+      },
     },
     {
       number: '02',
       name: 'Café Submarino',
-      description: 'Rich espresso served with a dark chocolate "submarine" that melts into your cup.',
+      description:
+        'Rich espresso served with a dark chocolate "submarine" that melts into your cup.',
       price: '$5.00',
       image: submarineImage,
       details: {
@@ -36,13 +38,14 @@ const ArgentinaMenu = () => {
         process: 'Washed',
         varietals: 'Arabica/Robusta Blend',
         cupping_notes: 'Dark Chocolate, Rich, Bold',
-        roast_level: 'Dark'
-      }
+        roast_level: 'Dark',
+      },
     },
     {
       number: '03',
       name: 'Mate Latte',
-      description: 'Our signature fusion - yerba mate blended with espresso and steamed milk.',
+      description:
+        'Our signature fusion - yerba mate blended with espresso and steamed milk.',
       price: '$5.50',
       image: mateLatteImage,
       details: {
@@ -50,9 +53,9 @@ const ArgentinaMenu = () => {
         process: 'Washed',
         varietals: 'Premium Arabica, Yerba Mate',
         cupping_notes: 'Herbal, Earthy, Creamy',
-        roast_level: 'Medium-Light'
-      }
-    }
+        roast_level: 'Medium-Light',
+      },
+    },
   ];
 
   return (
@@ -76,4 +79,4 @@ const ArgentinaMenu = () => {
   );
 };
 
-export default ArgentinaMenu; 
+export default ArgentinaMenu;

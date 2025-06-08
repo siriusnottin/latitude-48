@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { getPageTitle } from '../../../utils/pageTitle';
 import MenuLayout from '../_components/MenuLayout';
 import styles from '../_components/menu.module.css';
@@ -14,7 +14,8 @@ const GuatemalaMenu = () => {
     {
       number: '01',
       name: 'Antigua Valley',
-      description: 'Elegant complexity from volcanic soils with floral aromas, subtle spiciness, and rich chocolate undertones.',
+      description:
+        'Elegant complexity from volcanic soils with floral aromas, subtle spiciness, and rich chocolate undertones.',
       price: '$5.50',
       image: guatemalaImage1,
       details: {
@@ -22,13 +23,14 @@ const GuatemalaMenu = () => {
         process: 'Washed',
         varietals: 'Bourbon, Caturra, Catuai',
         cupping_notes: 'Chocolate, Floral, Spice',
-        roast_level: 'Medium'
-      }
+        roast_level: 'Medium',
+      },
     },
     {
       number: '02',
       name: 'Huehuetenango',
-      description: 'High-altitude grown with bright acidity, full body, and distinctive notes of honey and citrus fruit.',
+      description:
+        'High-altitude grown with bright acidity, full body, and distinctive notes of honey and citrus fruit.',
       price: '$5.75',
       image: guatemalaImage2,
       details: {
@@ -36,13 +38,14 @@ const GuatemalaMenu = () => {
         process: 'Washed',
         varietals: 'Bourbon, Caturra',
         cupping_notes: 'Honey, Citrus, Apple',
-        roast_level: 'Medium-Light'
-      }
+        roast_level: 'Medium-Light',
+      },
     },
     {
       number: '03',
       name: 'Atitlan',
-      description: 'Complex and full-bodied with notes of dark chocolate, caramel, and subtle hints of spice.',
+      description:
+        'Complex and full-bodied with notes of dark chocolate, caramel, and subtle hints of spice.',
       price: '$5.50',
       image: guatemalaImage3,
       details: {
@@ -50,9 +53,9 @@ const GuatemalaMenu = () => {
         process: 'Washed',
         varietals: 'Bourbon, Typica',
         cupping_notes: 'Dark Chocolate, Caramel, Spice',
-        roast_level: 'Medium-Dark'
-      }
-    }
+        roast_level: 'Medium-Dark',
+      },
+    },
   ];
 
   return (
@@ -76,4 +79,4 @@ const GuatemalaMenu = () => {
   );
 };
 
-export default GuatemalaMenu; 
+export default GuatemalaMenu;

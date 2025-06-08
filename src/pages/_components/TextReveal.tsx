@@ -1,4 +1,10 @@
-import React, { useRef, useEffect, createContext, useContext, useState } from 'react';
+import React, {
+  useRef,
+  useEffect,
+  createContext,
+  useContext,
+  useState,
+} from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
@@ -9,12 +15,12 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 // Create context for managing reveal sequence
 const RevealContext = createContext<number>(0);
 
-export const RevealProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const RevealProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [count] = useState(0);
   return (
-    <RevealContext.Provider value={count}>
-      {children}
-    </RevealContext.Provider>
+    <RevealContext.Provider value={count}>{children}</RevealContext.Provider>
   );
 };
 
@@ -62,7 +68,7 @@ const TextReveal: React.FC<TextRevealProps> = ({
       type: 'lines',
       linesClass: 'split-line',
       lineThreshold: 0.5,
-      tagName: 'div'
+      tagName: 'div',
     });
 
     const setInitialState = () => {
@@ -74,16 +80,18 @@ const TextReveal: React.FC<TextRevealProps> = ({
 
     setInitialState();
 
-    timelineRef.current = gsap.timeline({
-      paused: true,
-    }).to(splitText.lines, {
-      y: 0,
-      opacity: 1,
-      duration: duration,
-      stagger: 0.15,
-      ease: 'power3.out',
-      delay: index * 0.2,
-    });
+    timelineRef.current = gsap
+      .timeline({
+        paused: true,
+      })
+      .to(splitText.lines, {
+        y: 0,
+        opacity: 1,
+        duration: duration,
+        stagger: 0.15,
+        ease: 'power3.out',
+        delay: index * 0.2,
+      });
 
     const trigger = ScrollTrigger.create({
       trigger: textRef.current,
@@ -110,7 +118,6 @@ const TextReveal: React.FC<TextRevealProps> = ({
     },
     children
   );
-}
+};
 
 export default TextReveal;
-
