@@ -112,7 +112,8 @@ div {
     height: 30px;
     background: var(--primary-color);
     border-radius: 50%;
-    transform: translate(var(--moveX, 0), var(--moveY, 0)) scale(var(--scale, 0));
+		transform: translate(var(--moveX, 0), var(--moveY, 0))
+			scale(var(--scale, 0));
     transition: transform 0.1s ease;
     left: var(--x, 0);
     top: var(--y, 0);
