@@ -13,7 +13,7 @@ export const HeroSection = () => {
         <div className={styles.heroGrid}>
           <div className={styles.heroText}>
             <AnimatedTextReveal as="h1" className={styles.heroTitle} duration={1.2} scrollTrigger={false}>
-              Heritage<br /><span className={styles.highlight}>In Coffee</span>
+              Heritage<br /><span className='highlight'>In Coffee</span>
             </AnimatedTextReveal>
             <p className={styles.heroSubtitle}>
               A Journey Through Time and Taste
