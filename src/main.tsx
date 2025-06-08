@@ -1,5 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
 import { Routes } from '@generouted/react-router';
 import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -10,13 +12,13 @@ import './main.css';
 
 const root = createRoot(document.getElementById('root')!);
 
-root.render(
-  <StrictMode>
-    <ErrorBoundary>
-      <HelmetProvider>
-        <MouseTracker />
+createRoot(document.getElementById('root')!).render(
+  <>
+    <StrictMode>
+      <MouseTracker />
+      <ErrorBoundary>
         <Routes />
-      </HelmetProvider>
-    </ErrorBoundary>
-  </StrictMode>
+      </ErrorBoundary>
+    </StrictMode>
+  </>
 );
