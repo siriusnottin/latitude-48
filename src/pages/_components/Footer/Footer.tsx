@@ -1,6 +1,7 @@
 import type { Path } from '../../../router';
 import { Link } from '../../../router';
 import { AnimatedTextReveal } from '../AnimatedTextReveal';
+import React from 'react';
 
 import styles from './footer.module.css';
 
@@ -61,17 +62,28 @@ function Footer() {
           <AnimatedTextReveal as="h1" className={styles['title']} delay={0.3}>
             Get Some Coffee
           </AnimatedTextReveal>
-          <AnimatedTextReveal
-            as="ul"
-            className={styles['menu_items']}
-            delay={0.5}
-          >
+          <div className={styles['menu_items']}>
             {menuItems.map((item, index) => (
-              <li key={`${item.path}-${index}`} className={styles['menu_item']}>
-                <Link to={item.path}>{item.label}</Link>
-              </li>
+              <React.Fragment key={`${item.path}-${index}`}>
+                <AnimatedTextReveal
+                  as="div"
+                  className={styles['menu_item']}
+                  delay={0.5 + index * 0.1}
+                >
+                  <Link to={item.path}>{item.label}</Link>
+                </AnimatedTextReveal>
+                {index < menuItems.length - 1 && (
+                  <AnimatedTextReveal
+                    as="div"
+                    className={styles['menu_separator']}
+                    delay={0.6 + index * 0.1}
+                  >
+                    <span className={styles['dot']}></span>
+                  </AnimatedTextReveal>
+                )}
+              </React.Fragment>
             ))}
-          </AnimatedTextReveal>
+          </div>
         </div>
         <article className={styles['infos']}>
           <AnimatedTextReveal as="h1" delay={0.4}>

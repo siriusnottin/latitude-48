@@ -45,27 +45,28 @@
 
     .menu_items {
       display: flex;
+      align-items: center;
       --gap: 0.9125rem;
       gap: var(--gap);
 
       .menu_item {
         text-wrap: nowrap;
+      }
 
-        &:not(:last-child) {
-          position: relative;
-          &::after {
-            content: '';
-            --width: 0.23438rem;
-            --height: 0.23438rem;
-            width: var(--width);
-            height: var(--height);
-            position: absolute;
-            top: 50%;
-            right: calc(var(--gap) / -2 - var(--width) / 2);
-            background-color: #0f0401;
-            border-radius: 50%;
-            border: 1px solid #8c8c8c;
-          }
+      .menu_separator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .dot {
+          --width: 0.23438rem;
+          --height: 0.23438rem;
+          width: var(--width);
+          height: var(--height);
+          background-color: #0f0401;
+          border-radius: 50%;
+          border: 1px solid #8c8c8c;
+          display: block;
         }
       }
     }
