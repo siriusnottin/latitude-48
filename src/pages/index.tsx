@@ -3,6 +3,7 @@ import { getPageTitle } from '../utils/pageTitle';
 import { HeroSection } from './_sections/HeroSection';
 import { StorySection } from './_sections/StorySection';
 import { ExperienceSection } from './_sections/ExperienceSection';
+import styles from './index.module.css';
 
 const Home = () => {
   return (
@@ -13,11 +14,13 @@ const Home = () => {
         </title>
       </Helmet>
 
-      <HeroSection />
-      <StorySection />
-      <ExperienceSection />
-      {/* <MenuPreviewSection />
-      <CTASection /> */}
+      <main className={styles.main}>
+        <HeroSection />
+        <StorySection />
+        <ExperienceSection />
+        {/* <MenuPreviewSection />
+        <CTASection /> */}
+      </main>
     </>
   );
 };
