@@ -26,10 +26,11 @@
   pointer-events: none;
   background-color: var(--bg-color-light);
   padding: calc(var(--spacing-unit) * 4);
-  width: max(calc(var(--spacing-unit) * 30), 30%);
+  width: max(calc(var(--spacing-unit) * 30), 40%);
   height: 100vh;
   display: flex;
   align-items: center;
+  margin: 0;
 }
 
 .experienceGrid {
