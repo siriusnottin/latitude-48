@@ -1,5 +1,6 @@
 import styles from '../index.module.css';
 import macchiatoImage2 from '../../assets/images/_DSC2932.webp?width=800';
+import { AnimatedTextReveal } from '../_components/AnimatedTextReveal';
 
 export const StorySection = () => {
   return (
@@ -7,25 +8,27 @@ export const StorySection = () => {
       <div className={styles.storyContent}>
         <div className={styles.storyGrid}>
           <div className={styles.storyText}>
-            <h2 className={styles.sectionTitle}>
+            <AnimatedTextReveal as="h2" className={styles.sectionTitle}>
               Aromatic
               <br />
-              Crossroads
-            </h2>
-            <p className={styles.storyDescription}>
+              <span className="highlight">Crossroads</span>
+            </AnimatedTextReveal>
+            <AnimatedTextReveal as="p" className={styles.storyDescription}>
               At Latitude 48, we're crafting more than coffee – we're creating
               moments. Our journey spans continents, from the misty highlands of
               Ethiopia to the volcanic soils of Guatemala, bringing you a
               curated selection of the world's finest beans.
-            </p>
+            </AnimatedTextReveal>
             <div className={styles.storyStats}>
               <div className={styles.statItem}>
-                <span className={styles.statNumber}>15+</span>
-                <span className={styles.statLabel}>Origins</span>
+                <AnimatedTextReveal as="span" className={styles.statNumber}>
+                  15+ Origins
+                </AnimatedTextReveal>
               </div>
               <div className={styles.statItem}>
-                <span className={styles.statNumber}>1948</span>
-                <span className={styles.statLabel}>Est.</span>
+                <AnimatedTextReveal as="span" className={styles.statNumber}>
+                  1948 Est.
+                </AnimatedTextReveal>
               </div>
             </div>
           </div>

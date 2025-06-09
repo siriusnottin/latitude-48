@@ -16,15 +16,14 @@ export const HeroSection = () => {
               as="h1"
               className={styles.heroTitle}
               duration={1.2}
-              scrollTrigger={false}
             >
               Heritage
               <br />
               <span className="highlight">In Coffee</span>
             </AnimatedTextReveal>
-            <p className={styles.heroSubtitle}>
+            <AnimatedTextReveal as="p" className={styles.heroSubtitle}>
               A Journey Through Time and Taste
-            </p>
+            </AnimatedTextReveal>
           </div>
           <div className={styles.heroImageGrid}>
             <img
