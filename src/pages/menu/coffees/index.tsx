@@ -26,6 +26,7 @@ type CoffeeJourneyStep = {
   title: string;
   description: string;
   image: string;
+  image: string;
 };
 
 type CoffeeCharacteristic = {
@@ -236,6 +237,10 @@ const CoffeesMenu = () => {
                     />
                   </div>
                   <span className={styles.stepNumber}>{index + 1}</span>
+                  <div className={styles.stepContent}>
+                    <h3 className={styles.stepTitle}>{step.title}</h3>
+                    <p className={styles.stepDescription}>{step.description}</p>
+                  </div>
                   <div className={styles.stepContent}>
                     <h3 className={styles.stepTitle}>{step.title}</h3>
                     <p className={styles.stepDescription}>{step.description}</p>

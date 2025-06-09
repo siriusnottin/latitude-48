@@ -308,6 +308,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -315,10 +316,10 @@
 }
 
 .fadeIn {
-  animation: fadeUp 1s ease forwards;
+  animation: fadeUp 0.6s ease forwards;
 }
 
-/* Beans Animation */
+/* Parallax Beans */
 .beans {
   position: absolute;
   top: 0;
@@ -333,46 +334,46 @@
 .bean2,
 .bean3,
 .bean4 {
+.bean1,
+.bean2,
+.bean3,
+.bean4 {
   position: absolute;
+  width: 120px;
+  height: 120px;
   filter: drop-shadow(var(--bean-shadow));
-  transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-  opacity: 0.8;
 }
 
 .bean1 {
-  top: 20%;
-  right: -80px;
-  width: 90px;
-  height: auto;
-  transform-origin: center;
+  top: 10%;
+  left: 5%;
+  transform: rotate(15deg);
   animation: floatBean 8s ease-in-out infinite;
+  animation-delay: 0s;
 }
 
 .bean2 {
   top: 60%;
-  right: -40px;
-  width: 65px;
-  height: auto;
-  transform-origin: center;
-  animation: floatBean 12s ease-in-out infinite reverse;
+  right: 10%;
+  transform: rotate(-25deg);
+  animation: floatBean 8s ease-in-out infinite;
+  animation-delay: 2s;
 }
 
 .bean3 {
-  top: 40%;
-  right: -120px;
-  width: 75px;
-  height: auto;
-  transform-origin: center;
-  animation: floatBean 10s ease-in-out infinite 2s;
+  bottom: 15%;
+  left: 15%;
+  transform: rotate(45deg);
+  animation: floatBean 8s ease-in-out infinite;
+  animation-delay: 4s;
 }
 
 .bean4 {
-  top: 80%;
-  right: -60px;
-  width: 50px;
-  height: auto;
-  transform-origin: center;
-  animation: floatBean 14s ease-in-out infinite reverse 1s;
+  top: 30%;
+  right: 20%;
+  transform: rotate(-15deg);
+  animation: floatBean 8s ease-in-out infinite;
+  animation-delay: 6s;
 }
 
 .bean1 img,
@@ -380,16 +381,16 @@
 .bean3 img,
 .bean4 img {
   width: 100%;
-  height: auto;
-  filter: brightness(0.92) contrast(1.1);
-  transition: filter 0.3s ease;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
 .bean1:hover img,
 .bean2:hover img,
 .bean3:hover img,
 .bean4:hover img {
-  filter: brightness(1.1) contrast(1.2);
+  transform: scale(1.1);
 }
 
 @keyframes floatBean {
@@ -399,13 +400,15 @@
   25% {
     transform: translate(10px, -8px) rotate(5deg);
   }
+
   50% {
-    transform: translate(-3px, 10px) rotate(-3deg);
+    transform: translateY(-20px);
   }
-  75% {
-    transform: translate(-8px, -5px) rotate(2deg);
-  }
-  100% {
-    transform: translate(0, 0) rotate(0deg);
+}
+
+/* Responsive Base Styles */
+@media (max-width: 768px) {
+  :root {
+    --spacing-unit: 6px;
   }
 }
