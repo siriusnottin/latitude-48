@@ -1,6 +1,6 @@
 // import styles from '../index.module.css';
 import styles from './experienceSection.module.css';
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
@@ -44,36 +44,41 @@ export const ExperienceSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const section = sectionRef.current;
     const grid = gridRef.current;
 
     if (!section || !grid) return;
 
-    // Calculate the total scroll distance needed
-    const totalGroups = imageGroups.length;
-    const scrollDistance = window.innerWidth * (totalGroups - 1);
+    // Create GSAP context for proper cleanup
+    const ctx = gsap.context(() => {
+      // Calculate the total scroll distance needed
+      const totalGroups = imageGroups.length;
+      const scrollDistance = window.innerWidth * (totalGroups - 1.5);
 
-    // Create the horizontal scroll animation
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: section,
-        start: 'top top',
-        end: `+=${scrollDistance}`,
-        scrub: 1,
-        pin: true,
-        anticipatePin: 1,
-        toggleClass: 'active',
-      },
-    });
+      // Create the horizontal scroll animation
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: 'top top',
+          end: `+=${scrollDistance}`,
+          scrub: 1,
+          pin: true,
+          anticipatePin: 1,
+          toggleClass: 'active',
+          invalidateOnRefresh: true, // Recalculate on window resize
+        },
+      });
 
-    tl.to(grid, {
-      x: -scrollDistance,
-      ease: 'none',
-    });
+      tl.to(grid, {
+        x: -scrollDistance,
+        ease: 'none',
+      });
+    }, sectionRef); // Pass the ref as the scope
 
+    // Return cleanup function that reverts all GSAP animations in this context
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      ctx.revert();
     };
   }, []);
 
