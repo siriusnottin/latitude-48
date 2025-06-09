@@ -3,6 +3,9 @@ import styles from './experienceSection.module.css';
 import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { Button } from '../../components/Button';
+import arrowIcon from '../../assets/icons/arrow-right.svg';
+import { AnimatedTextReveal } from '../_components/AnimatedTextReveal';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -85,11 +88,22 @@ export const ExperienceSection = () => {
   return (
     <section ref={sectionRef} className={styles.experience}>
       <div className={styles.experienceContent}>
-        <h2 className={styles.experienceTitle}>
-          Let Your Senses
-          <br />
-          <span className="highlight">Travel</span>
-        </h2>
+        <div className={styles.experienceHeader}>
+          <AnimatedTextReveal as="h2" className={styles.experienceTitle}>
+            Let Your Senses
+            <span className="highlight">Travel</span>
+          </AnimatedTextReveal>
+          <Button
+            to="/menu"
+            variant="icon-right"
+            className={styles.experienceButton}
+          >
+            <span>Explore Menu</span>
+            <span className="icon">
+              <img src={arrowIcon} alt="Arrow icon" />
+            </span>
+          </Button>
+        </div>
         <div ref={gridRef} className={styles.experienceGrid}>
           {imageGroups.map((group, groupIndex) => (
             <div key={groupIndex} className={styles.imageGroup}>
