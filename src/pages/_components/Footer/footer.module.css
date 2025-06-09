@@ -3,7 +3,7 @@
   color: var(--secondary-color);
   row-gap: 0.625rem;
   column-gap: 1.875rem;
-  padding: 2.5rem 4.3rem 0 4.3rem;
+  padding: 0 2.3rem 0 2.3rem;
   position: relative;
   overflow: hidden;
 
@@ -33,13 +33,21 @@
 .footer-content {
   display: flex;
   justify-content: space-between;
-  padding: 7.3125rem 0;
+  padding: 0 2rem;
+  padding-right: 20rem;
+  padding-bottom: 5rem;
   width: 100%;
 
   .contact-infos {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
   }
 
   .get-coffee {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
     .title {
     }
 
@@ -74,6 +82,10 @@
 
   .infos {
     z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
     ul {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -124,7 +136,7 @@
   width: fit-content;
 
   img {
-    height: 35vw;
+    height: 27rem;
     transform: rotate(18deg);
     display: block;
     filter: blur(2.547484874725342px);
