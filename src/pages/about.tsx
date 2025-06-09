@@ -27,7 +27,6 @@ const About = () => {
             <img src={images[0]} alt="Latitude 48 café interior view" />
             <TextReveal as="h1" className={styles.title}>
               Our
-              <br />
               <span className={styles.highlight}>Story</span>
             </TextReveal>
           </div>
