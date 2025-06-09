@@ -1,9 +1,8 @@
 import { memo } from 'react';
-import { Link } from '../router';
 import styles from '../pages/index.module.css';
 import arrowIcon from '../assets/icons/arrow.svg';
 import featuredWebp from '../assets/images/_DSC2706.webp';
-
+import { Button } from './Button';
 
 const FirstSection = () => {
   return (
@@ -25,20 +24,20 @@ const FirstSection = () => {
       </picture>
       <div>
         <p className={styles['text']}>
-          At Lattitude 48, every cup tells the story of handpicked beans from the world's finest origins from the highlands of Ethiopia to the lush valleys of Latin America.
+          At Lattitude 48, every cup tells the story of handpicked beans from
+          the world's finest origins from the highlands of Ethiopia to the lush
+          valleys of Latin America.
         </p>
-        <p>
-          Crafted with care, our coffee reveals rich, authentic flavors.
-        </p>
+        <p>Crafted with care, our coffee reveals rich, authentic flavors.</p>
       </div>
       <p>
-        <Link to="/menu" className="btn primary">
-          <span>Cofee Map</span>
+        <Button variant="primary" to="/menu">
+          <span>Coffee Map</span>
           <img src={arrowIcon} alt="Arrow icon" className={styles['arrow']} />
-        </Link>
+        </Button>
       </p>
     </section>
   );
 };
 
-export default memo(FirstSection); 
+export default memo(FirstSection);

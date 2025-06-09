@@ -1,0 +1,107 @@
+.main {
+  display: grid;
+}
+
+.title {
+  font-size: clamp(3.5rem, 6vw, 5rem);
+  line-height: 1;
+  color: var(--text-color);
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.title .highlight {
+  color: #b87651;
+  font-style: italic;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.firstSection {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rem 0;
+}
+
+.firstSection .left {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.25rem;
+}
+
+.firstSection .image1Wrapper {
+  position: relative;
+  grid-area: image1;
+  width: 16.3125rem;
+  height: 23.3125rem;
+}
+
+.firstSection .title {
+  position: absolute;
+  top: -6rem;
+  left: 11rem;
+  grid-area: title;
+  margin: 0;
+  height: fit-content;
+}
+
+.firstSection .title .highlight {
+  margin-left: 5.9375rem;
+}
+
+.firstSection .subtitle {
+  height: fit-content;
+}
+
+.firstSection .right .image2Wrapper {
+  width: 27.75rem;
+  height: 20.1875rem;
+  margin: 0;
+}
+
+.secondSection {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.4rem 5rem;
+}
+
+.secondSection .text {
+  width: 30rem;
+}
+
+.thirdSection {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5rem;
+}
+
+.thirdSection .image3Wrapper {
+  width: 41.375rem;
+  height: 26.875rem;
+}
+
+.fourthSection {
+  padding: 10rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 1.25rem;
+}
+
+.fourthSection .text {
+  width: 50rem;
+}
+
+.fourthSection .image4Wrapper {
+  width: 28.4375rem;
+  height: 33.75rem;
+}

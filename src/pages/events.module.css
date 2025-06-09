@@ -1,11 +1,11 @@
 :root {
-  --coffee-dark: #2C1810;
-  --coffee-medium: #8B4513;
-  --coffee-light: #D2691E;
-  --espresso: #3C2218;
-  --cream: #FFF8DC;
-  --caramel: #C65D57;
-  --mocha: #6F4E37;
+  --coffee-dark: #2c1810;
+  --coffee-medium: #8b4513;
+  --coffee-light: #d2691e;
+  --espresso: #3c2218;
+  --cream: #fff8dc;
+  --caramel: #c65d57;
+  --mocha: #6f4e37;
 }
 
 .eventsContainer {
@@ -506,4 +506,4 @@
   .submitButton {
     width: 100%;
   }
-} 
+}

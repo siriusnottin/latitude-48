@@ -1,0 +1,98 @@
+.experience {
+  overflow: hidden;
+}
+
+.experienceContent {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.experienceHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: calc(var(--spacing-unit) * 4);
+  padding-bottom: 10rem;
+  background-color: var(--bg-color-light);
+  padding: calc(var(--spacing-unit) * 4);
+  padding-bottom: 12rem;
+  z-index: 1;
+}
+
+.experienceButton {
+  align-self: left;
+}
+
+.experienceTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 0.9;
+  font-weight: 300;
+  background-color: var(--bg-color-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.experienceGrid {
+  display: flex;
+  gap: calc(var(--spacing-unit) * 8);
+  align-items: center;
+  margin-left: max(calc(var(--spacing-unit) * 30), 30%);
+  padding-right: calc(var(--spacing-unit) * 4);
+  will-change: transform;
+}
+
+.imageGroup {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: calc(var(--grid-gap) / 1.5);
+  flex-shrink: 0;
+  width: calc(
+    100vw - max(calc(var(--spacing-unit) * 30), 30%) -
+      calc(var(--spacing-unit) * 4)
+  );
+}
+
+.experienceItem {
+  overflow: hidden;
+  height: fit-content;
+}
+
+.imageGroup:first-child .experienceItem:nth-child(2) img,
+.imageGroup:first-child .experienceItem:nth-child(5) img {
+  height: 38rem;
+}
+
+.imageGroup:not(:first-child) .experienceItem:nth-child(1) img,
+.imageGroup:not(:first-child) .experienceItem:nth-child(3) img,
+.imageGroup:not(:first-child) .experienceItem:nth-child(4) img,
+.imageGroup:not(:first-child) .experienceItem:nth-child(6) img {
+  height: 38rem;
+}
+
+.imageGroup:last-child {
+  grid-template-columns: 1fr;
+  justify-items: start;
+  width: fit-content;
+
+  .experienceItem:nth-child(1n + 1) img {
+    height: 29rem;
+  }
+}
+
+.experienceItem {
+  img {
+    width: 24.125rem;
+    height: 29rem;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+}

@@ -1,0 +1,145 @@
+.site-footer {
+  background-color: #0f0401;
+  color: var(--secondary-color);
+  row-gap: 0.625rem;
+  column-gap: 1.875rem;
+  padding: 0 2.3rem 0 2.3rem;
+  position: relative;
+  overflow: hidden;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  a {
+    position: relative;
+    display: inline-block;
+    transition:
+      transform 0.3s ease,
+      color 0.3s ease;
+
+    &:hover {
+      color: var(--primary-color);
+      transform: translateY(-2px);
+    }
+  }
+
+  a[href^='mailto:'] {
+    text-decoration: underline;
+  }
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  padding-right: 20rem;
+  padding-bottom: 5rem;
+  width: 100%;
+
+  .contact-infos {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .get-coffee {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .title {
+    }
+
+    .menu_items {
+      display: flex;
+      align-items: center;
+      --gap: 0.9125rem;
+      gap: var(--gap);
+
+      .menu_item {
+        text-wrap: nowrap;
+      }
+
+      .menu_separator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .dot {
+          --width: 0.23438rem;
+          --height: 0.23438rem;
+          width: var(--width);
+          height: var(--height);
+          background-color: #0f0401;
+          border-radius: 50%;
+          border: 1px solid #8c8c8c;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .infos {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 0.75rem;
+      row-gap: 1.25rem;
+    }
+  }
+}
+
+.footer-legal {
+  position: relative;
+  z-index: 10;
+  font-size: 0.75rem;
+  display: flex;
+  gap: 1.625rem;
+  align-items: center;
+  line-height: 0.5;
+
+  .title {
+    font-family: var(--font-text);
+    font-variant-numeric: lining-nums;
+    letter-spacing: -0.5rem;
+    font-size: 4.375rem;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #8c8c8c;
+    line-height: 70%;
+  }
+
+  .copy,
+  .made {
+    color: #dddddd;
+  }
+
+  .made {
+    display: flex;
+    gap: 0.6875rem;
+  }
+}
+
+.bean {
+  position: absolute;
+  bottom: -7rem;
+  right: -1.5rem;
+  z-index: 0;
+  height: fit-content;
+  width: fit-content;
+
+  img {
+    height: 27rem;
+    transform: rotate(18deg);
+    display: block;
+    filter: blur(2.547484874725342px);
+    opacity: 0.32;
+  }
+}

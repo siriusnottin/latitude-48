@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import styles from '../styles/menuLayout.module.css';
+import styles from '../pages/menu/_components/menu.module.css';
 
 export interface CoffeeDetails {
   altitude: string;
@@ -37,13 +37,16 @@ const CoffeeCard = ({ coffee }: CoffeeCardProps) => {
     tl.to(card, {
       scale: 1.02,
       boxShadow: '0 20px 30px rgba(0, 0, 0, 0.1)',
-      duration: 0.3
-    })
-      .to(infoCard, {
+      duration: 0.3,
+    }).to(
+      infoCard,
+      {
         opacity: 1,
         y: 0,
-        duration: 0.3
-      }, "-=0.3");
+        duration: 0.3,
+      },
+      '-=0.3'
+    );
 
     // Define event handlers
     const handleMouseEnter = () => tl.play();
@@ -103,4 +106,4 @@ const CoffeeCard = ({ coffee }: CoffeeCardProps) => {
   );
 };
 
-export default CoffeeCard; 
+export default CoffeeCard;

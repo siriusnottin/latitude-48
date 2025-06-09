@@ -1,9 +1,11 @@
 .site_header {
-  padding: 2.875rem 2.6875rem;
+  padding: 1.8rem 8rem;
   display: grid;
   grid-template-columns: max-content auto max-content;
   align-items: center;
   gap: 2.6875rem;
+  font-family: var(--font-menu);
+  font-weight: 300;
 }
 
 .site_nav {
@@ -23,15 +25,19 @@
 .nav_item {
   padding: 0.5rem 0;
   a {
-    font-weight: bold;
+    font-family: var(--font-menu);
+    font-weight: 300;
     text-transform: uppercase;
     text-decoration: none;
     padding: 0.5rem 1rem;
     color: inherit;
     position: relative;
     display: inline-block;
-    transition: transform 0.3s ease, color 0.3s ease;
-    
+    transition:
+      transform 0.3s ease,
+      color 0.3s ease;
+    font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+
     &:hover {
       color: var(--primary-color);
       transform: translateY(-2px);
@@ -50,8 +56,4 @@
 .header_actions {
   display: flex;
   align-items: center;
-}
-
-.btn {
-  font-weight: bold;
 }

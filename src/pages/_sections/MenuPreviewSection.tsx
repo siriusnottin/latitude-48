@@ -1,10 +1,14 @@
-import styles from '../../styles/sections/menu-preview.module.css';
+import styles from '../index.module.css';
 
 export const MenuPreviewSection = () => {
   return (
     <section className={styles.menuPreview}>
       <div className={styles.menuContent}>
-        <h2 className={styles.menuTitle}>World<br />Hop Aboard</h2>
+        <h2 className={styles.menuTitle}>
+          World
+          <br />
+          Hop Aboard
+        </h2>
         <div className={styles.menuGrid}>
           <div className={styles.menuItem}>
             <span className={styles.menuRegion}>Brasil</span>
@@ -29,4 +33,4 @@ export const MenuPreviewSection = () => {
       </div>
     </section>
   );
-}; 
+};

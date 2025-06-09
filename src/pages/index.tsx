@@ -1,25 +1,26 @@
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { getPageTitle } from '../utils/pageTitle';
 import { HeroSection } from './_sections/HeroSection';
 import { StorySection } from './_sections/StorySection';
 import { ExperienceSection } from './_sections/ExperienceSection';
-import { MenuPreviewSection } from './_sections/MenuPreviewSection';
-import { CTASection } from './_sections/CTASection';
-import { TestSection } from './_sections/TestSection';
+import styles from './index.module.css';
 
 const Home = () => {
   return (
     <>
       <Helmet>
-        <title>{getPageTitle('Artisanal Coffee Experience', { inverted: true })}</title>
+        <title>
+          {getPageTitle('Artisanal Coffee Experience', { inverted: true })}
+        </title>
       </Helmet>
 
-      <HeroSection />
-      <StorySection />
-      <TestSection />
-      <ExperienceSection />
-      <MenuPreviewSection />
-      <CTASection />
+      <main className={styles.main}>
+        <HeroSection />
+        <StorySection />
+        <ExperienceSection />
+        {/* <MenuPreviewSection />
+        <CTASection /> */}
+      </main>
     </>
   );
 };

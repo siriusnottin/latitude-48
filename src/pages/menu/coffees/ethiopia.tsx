@@ -1,7 +1,7 @@
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { getPageTitle } from '../../../utils/pageTitle';
 import MenuLayout from '../_components/MenuLayout';
-import styles from '../../../styles/menuLayout.module.css';
+import styles from '../_components/menu.module.css';
 import CoffeeCard from '../../../components/CoffeeCard';
 import type { CoffeeItem } from '../../../components/CoffeeCard';
 
@@ -14,7 +14,8 @@ const EthiopiaMenu = () => {
     {
       number: '01',
       name: 'Yirgacheffe',
-      description: 'A bright and complex coffee with floral notes, bergamot essence, and a delicate tea-like body.',
+      description:
+        'A bright and complex coffee with floral notes, bergamot essence, and a delicate tea-like body.',
       price: '$5.25',
       image: yirgacheffeImage,
       details: {
@@ -22,13 +23,14 @@ const EthiopiaMenu = () => {
         process: 'Washed',
         varietals: 'Heirloom Ethiopian',
         cupping_notes: 'Jasmine, Citrus, Honey',
-        roast_level: 'Light-Medium'
-      }
+        roast_level: 'Light-Medium',
+      },
     },
     {
       number: '02',
       name: 'Sidamo',
-      description: 'Sweet and wine-like with notes of blueberry and dark chocolate, showcasing Ethiopia\'s finest.',
+      description:
+        "Sweet and wine-like with notes of blueberry and dark chocolate, showcasing Ethiopia's finest.",
       price: '$5.50',
       image: sidamoImage,
       details: {
@@ -36,13 +38,14 @@ const EthiopiaMenu = () => {
         process: 'Natural',
         varietals: 'Heirloom Ethiopian',
         cupping_notes: 'Blueberry, Dark Chocolate, Wine',
-        roast_level: 'Medium'
-      }
+        roast_level: 'Medium',
+      },
     },
     {
       number: '03',
       name: 'Guji',
-      description: 'Elegant and refined with jasmine, peach, and honey notes - a true Ethiopian masterpiece.',
+      description:
+        'Elegant and refined with jasmine, peach, and honey notes - a true Ethiopian masterpiece.',
       price: '$5.75',
       image: gujiImage,
       details: {
@@ -50,9 +53,9 @@ const EthiopiaMenu = () => {
         process: 'Washed',
         varietals: 'Heirloom Ethiopian',
         cupping_notes: 'Peach, Jasmine, Honey',
-        roast_level: 'Light'
-      }
-    }
+        roast_level: 'Light',
+      },
+    },
   ];
 
   return (
@@ -76,4 +79,4 @@ const EthiopiaMenu = () => {
   );
 };
 
-export default EthiopiaMenu; 
+export default EthiopiaMenu;

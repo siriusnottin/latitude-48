@@ -1,5 +1,5 @@
 import { Link, type Path } from '../../../router';
-import styles from '../../../styles/menu.module.css';
+import styles from './menu.module.css';
 
 interface TopMenuProps {
   currentPath: string;
@@ -20,8 +20,11 @@ const TopMenu = ({ currentPath }: TopMenuProps) => {
           <li key={category.path} className={styles.topNavItem}>
             <Link
               to={category.path}
-              className={`${styles.topNavLink} ${currentPath.startsWith(category.path) ? styles.activeTopLink : ''
-                }`}
+              className={`${styles.topNavLink} ${
+                currentPath.startsWith(category.path)
+                  ? styles.activeTopLink
+                  : ''
+              }`}
             >
               {category.label}
             </Link>
@@ -32,4 +35,4 @@ const TopMenu = ({ currentPath }: TopMenuProps) => {
   );
 };
 
-export default TopMenu; 
+export default TopMenu;
