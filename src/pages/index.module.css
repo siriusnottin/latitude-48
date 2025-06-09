@@ -6,6 +6,10 @@
   --bean-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
+.main {
+  display: grid;
+}
+
 /* Hero Section */
 .hero {
   min-height: 100vh;
