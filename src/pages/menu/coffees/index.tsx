@@ -26,7 +26,6 @@ type CoffeeJourneyStep = {
   title: string;
   description: string;
   image: string;
-  image: string;
 };
 
 type CoffeeCharacteristic = {
