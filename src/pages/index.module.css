@@ -118,6 +118,10 @@
   padding-right: calc(var(--spacing-unit) * 8);
 }
 
+.storyStats {
+  color: var(--primary-color);
+}
+
 .sectionTitle {
   font-family: var(--font-heading);
   font-size: clamp(3rem, 6vw, 5rem);

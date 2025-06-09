@@ -107,6 +107,7 @@ div {
   transition: color 0.3s ease;
   cursor: pointer;
   width: fit-content;
+  padding: 1rem;
 
   a {
     display: flex;
