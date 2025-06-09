@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { Link, type Path } from '../router';
 
 type ButtonBaseProps = {
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'icon-right';
   children: React.ReactNode;
   className?: string;
 };

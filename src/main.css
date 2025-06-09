@@ -97,8 +97,6 @@ div {
 }
 
 .btn {
-  display: flex;
-  align-items: center;
   font-size: clamp(0.875rem, 1.5vw, 1.125rem);
   padding: 1rem 1.4rem;
   text-transform: uppercase;
@@ -109,6 +107,12 @@ div {
   transition: color 0.3s ease;
   cursor: pointer;
   width: fit-content;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
 
   /* Make sure the Link component inherits styles */
   a {
@@ -156,6 +160,37 @@ div {
 
     &:hover {
       color: white;
+    }
+  }
+
+  &.icon-right {
+    background: none;
+    border: none;
+    padding: 0;
+    text-transform: none;
+    font-size: 1rem;
+
+    &::before {
+      display: none;
+    }
+
+    .icon {
+      display: inline-flex;
+      transition: transform 0.3s ease;
+
+      img {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+      }
+    }
+
+    &:hover {
+      color: var(--primary-color);
+    }
+
+    &:hover .icon {
+      transform: translateX(4px);
     }
   }
 }
